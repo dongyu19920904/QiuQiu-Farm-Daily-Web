@@ -9,3 +9,7 @@ test('reject negative counts, future planting, invalid crop and duplicate reward
 test('storage unavailable uses memory; write failure is visible to UI',()=>{const fail={getItem(){throw Error();},setItem(){throw Error();}};assert.equal(load(fail).persistent,false);assert.equal(save(fail,fresh()),false);});
 test('no seed and out-of-range clicks cannot write state',()=>{const s=fresh();s.seeds.radish=0;assert(!action(s,'plant',0,'radish'));assert(!action(s,'plant',6,'tomato'));assert(!action(s,'plant',-1,'tomato'));});
 test('reward cannot move backwards',()=>{const s=fresh();assert(reward(s,'2026-10-04'));assert(!reward(s,'2026-10-03'));});
+
+test('forward jump followed by corrected clock recovers without free progress',()=>{const s=fresh(1000);tick(s,1000+365*86400000);const capped=s.logicalTime;tick(s,2000);tick(s,2000);tick(s,2000);assert.equal(s.logicalTime,capped);assert.equal(s.lastSeen,2000);tick(s,3000);assert.equal(s.logicalTime,capped+1000);});
+
+test('damaged notices and impossible reward dates are rejected',()=>{const s=fresh();s.notice=7;assert.throws(()=>validate(s));s.notice='';s.rewards=['2026-02-30'];assert.throws(()=>validate(s));assert(!reward(fresh(),'2026-02-30'));});
