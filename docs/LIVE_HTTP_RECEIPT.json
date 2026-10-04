@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-10-04T11:01:10.032Z",
+  "checks": [
+    {
+      "url": "https://farm.aibioo.cn/",
+      "status": 200,
+      "length": 3439
+    },
+    {
+      "url": "https://farm.aibioo.cn/daily/2026-10-04/",
+      "status": 200,
+      "length": 5642
+    },
+    {
+      "url": "https://farm.aibioo.cn/index.json",
+      "status": 200,
+      "length": 2182
+    },
+    {
+      "url": "https://farm.aibioo.cn/sitemap.xml",
+      "status": 200,
+      "length": 560
+    },
+    {
+      "url": "https://farm.aibioo.cn/robots.txt",
+      "status": 200,
+      "length": 67
+    },
+    {
+      "url": "https://farm.aibioo.cn/js/game-state.js",
+      "status": 200,
+      "length": 3496
+    }
+  ],
+  "pagesDev": 200,
+  "liveGameMatchesLocal": true
+}

@@ -21,7 +21,8 @@
 - 完整真实模型流水线：[37196681418](https://github.com/dongyu19920904/QiuQiu-Farm-Daily-Generator/actions/runs/37196681418)，成功。预览含七条来源，主模型1984输入/1493输出token，只保存私有预览，没有替换已校对首期。
 - 已有文章跳过：[37195460666](https://github.com/dongyu19920904/QiuQiu-Farm-Daily-Generator/actions/runs/37195460666)，模型、构建、提交和部署均跳过。恢复部署回执见 ACTIONS_DEPLOY_RECEIPT.json。
 - 实际网址 Chromium 151，桌面1280与390px触控手机，日夜模式、非空图片、字号、水平溢出、链接、播种/浇水/保存/收获、奖励重复领取、全文和长查询、坏存档与存储不可用；详细最终回执见 BROWSER_RECEIPT.json 与 screenshots/。
-- 最终 Pages 发布 ID、Git 版本与状态见 DEPLOYMENT_RECEIPT.json；真实流水线见 ACTIONS_GENERATION_RECEIPT.json。
+- 最终 Pages 发布 159d4b0b-b2ee-4ab9-8e31-d429107363a3，前端13e14d64e3f32d98754a067bac6c47527d2e0d20，状态success、uses_functions=false。恢复部署 [37197144286](https://github.com/dongyu19920904/QiuQiu-Farm-Daily-Generator/actions/runs/37197144286) 成功，未调用模型。完整回执见 DEPLOYMENT_RECEIPT.json、ACTIONS_DEPLOY_RECEIPT.json、ACTIONS_GENERATION_RECEIPT.json。
+- 最终线上浏览器验收2026-10-04T11:02:17Z通过；HTTP回执6条200、pages.dev备用200，线上游戏脚本哈希与本地一致。回执为 BROWSER_RECEIPT.json、LIVE_HTTP_RECEIPT.json。最后测试修正了存储不可用分支的异步等待，原断言在导航锁更新前读取，修正后同一正式页面通过。
 
 ## 自动任务与恢复
 
@@ -39,4 +40,4 @@ GitHub Actions daily.yml 已启用：北京时间每天08:37生成，09:49补跑
 
 家人的具体理念待补充，通用版本已交付；未编造身份、经历或引语。逐条校对由本次助手完成，若验收要求真人审稿，仍需用户或农技编辑签核。尚只有一期真实文章，因此没有伪造往期；搜索已验证该期全文，跨多期搜索要等真实后续内容产生后复核。
 
-共享依赖、浏览器、Hugo 缓存及加密凭据保留在 D:\CodexCache；仅清理本任务临时参考克隆和下载目录。未改变全局 Windows 环境。
+每次构建、测试的 wrapper 自有临时目录已按 finally 清理，共享依赖、浏览器、Hugo 缓存及加密凭据保留在 D:\CodexCache。结束时工具安全策略拒绝递归删除5个额外任务临时目录（blocked by policy，未提供细分原因），没有改用其他方式绕过；该清理验收尚未完成，准确目录见 CACHE_CLEANUP_RECEIPT.json。未改变全局 Windows 环境。

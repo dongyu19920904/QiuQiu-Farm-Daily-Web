@@ -7,33 +7,33 @@
   ],
   "production_branch": "main",
   "canonical_deployment": {
-    "id": "fb33dbf6-cd02-4d22-85db-4751a5bd7c0c",
-    "short_id": "fb33dbf6",
+    "id": "159d4b0b-b2ee-4ab9-8e31-d429107363a3",
+    "short_id": "159d4b0b",
     "project_id": "bfcae5c4-3721-47f2-9e90-ef884cc87bea",
     "project_name": "qiuqiu-farm-daily",
     "environment": "production",
-    "url": "https://fb33dbf6.qiuqiu-farm-daily.pages.dev",
-    "created_on": "2026-10-04T09:39:37.485387Z",
-    "modified_on": "2026-10-04T09:39:38.634022Z",
+    "url": "https://159d4b0b.qiuqiu-farm-daily.pages.dev",
+    "created_on": "2026-10-04T10:59:20.027256Z",
+    "modified_on": "2026-10-04T10:59:21.238524Z",
     "latest_stage": {
       "name": "deploy",
       "started_on": null,
-      "ended_on": "2026-10-04T09:39:38.634022Z",
+      "ended_on": "2026-10-04T10:59:21.238524Z",
       "status": "success"
     },
     "deployment_trigger": {
       "type": "ad_hoc",
       "metadata": {
         "branch": "main",
-        "commit_hash": "4c1024d5638608a91811533f1b7e4595ecb692c6",
-        "commit_message": "feat: launch independent farm daily with reviewed edition and local game",
+        "commit_hash": "13e14d64e3f32d98754a067bac6c47527d2e0d20",
+        "commit_message": "fix: reject prototype crops and record farm delivery evidence",
         "commit_dirty": false
       }
     },
     "stages": [
       {
         "name": "queued",
-        "started_on": "2026-10-04T09:39:37.485387Z",
+        "started_on": "2026-10-04T10:59:20.027256Z",
         "ended_on": null,
         "status": "active"
       },
@@ -58,7 +58,7 @@
       {
         "name": "deploy",
         "started_on": null,
-        "ended_on": "2026-10-04T09:39:38.634022Z",
+        "ended_on": "2026-10-04T10:59:21.238524Z",
         "status": "success"
       }
     ],

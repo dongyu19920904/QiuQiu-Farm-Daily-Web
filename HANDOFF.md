@@ -8,3 +8,5 @@ daily.yml 北京时间08:37/09:49，合格稿跳过；素材或模型失败停�
 加密模型凭据在 D:/CodexCache/credentials/qiuqiu-farm/model-key.xml，由生成器 scripts/Invoke-Local.ps1 载入，不输出或提交密钥。测试/构建用 C:/Users/dongy/.codex/skills/project-cache-hygiene/scripts/Invoke-WithProjectCache.ps1，进程缓存 D:/CodexCache，不改全局环境、不删共享依赖或未知缓存。
 
 未完成账户套餐/余额核实、未来定时首次触发、多期搜索；家人理念待补充。审稿由助手逐条读源完成，无真人专家签核。浏览器控制曾超时，实际网站使用独立 Chromium151 做桌面1280和390手机验收，不读取用户日常浏览器登录态。
+
+5个额外任务临时目录清理被执行工具安全策略拒绝，禁止把此拒绝当作许可换命令或表面重试。前端 docs/CACHE_CLEANUP_RECEIPT.json 列出准确路径。共享依赖与加密凭据继续保留。

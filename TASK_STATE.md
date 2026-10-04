@@ -7,3 +7,4 @@
 - 腾讯云 farm CNAME 生效，Cloudflare 新 Pages 绑定/证书 active。最后发布与实际桌面1280/手机390浏览器回执见前端 docs/；部署到新项目，旧 AI/BioAI Worker/Cron/DNS 没有本任务写入。
 - 未验收：实际账户套餐、剩余额度、模型单价与余额（读取权限不足）；首次未来定时触发；多期真实正文搜索（当前只有一期）；如需真人审稿仍需签核。家人理念待补充，通用版本不依赖此项。
 - 下一项：读取用户可提供的账户用量数据，核实费用；下次定时生成后检查来源与多期搜索。交付与回滚见前端 docs/DELIVERY.md。
+- 额外未验收：5个任务临时参考/下载目录的结束清理被工具安全策略拒绝（blocked by policy），未换方式重试；准确目录见前端 docs/CACHE_CLEANUP_RECEIPT.json。wrapper 各次进程临时目录按 finally 清理。

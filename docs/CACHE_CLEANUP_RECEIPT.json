@@ -1,0 +1,15 @@
+{
+  "status": "blocked_by_tool_policy",
+  "action": "Remove task-owned reference clones and downloaded CI artifacts after archiving needed evidence",
+  "reason": "blocked by policy; no more specific reason supplied",
+  "retryThroughAlternateSurface": false,
+  "retainedTaskTemporaryDirectories": [
+    "D:\\CodexCache\\runs\\qiuqiu-reference-20261004",
+    "D:\\CodexCache\\runs\\qiuqiu-ci-37193674370",
+    "D:\\CodexCache\\runs\\qiuqiu-ci-37193920716",
+    "D:\\CodexCache\\runs\\qiuqiu-ci-37194521076",
+    "D:\\CodexCache\\runs\\qiuqiu-ci-37196681418"
+  ],
+  "sharedCachesAndEncryptedCredentials": "Preserved; no global Windows environment changes",
+  "wrapperPerRunTemporaryDirectories": "Cleaned by wrapper finally after project commands"
+}
