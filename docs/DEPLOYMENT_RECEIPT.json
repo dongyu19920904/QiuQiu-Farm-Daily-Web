@@ -1,0 +1,85 @@
+{
+  "name": "qiuqiu-farm-daily",
+  "subdomain": "qiuqiu-farm-daily.pages.dev",
+  "domains": [
+    "qiuqiu-farm-daily.pages.dev",
+    "farm.aibioo.cn"
+  ],
+  "production_branch": "main",
+  "canonical_deployment": {
+    "id": "fb33dbf6-cd02-4d22-85db-4751a5bd7c0c",
+    "short_id": "fb33dbf6",
+    "project_id": "bfcae5c4-3721-47f2-9e90-ef884cc87bea",
+    "project_name": "qiuqiu-farm-daily",
+    "environment": "production",
+    "url": "https://fb33dbf6.qiuqiu-farm-daily.pages.dev",
+    "created_on": "2026-10-04T09:39:37.485387Z",
+    "modified_on": "2026-10-04T09:39:38.634022Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": null,
+      "ended_on": "2026-10-04T09:39:38.634022Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "ad_hoc",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "4c1024d5638608a91811533f1b7e4595ecb692c6",
+        "commit_message": "feat: launch independent farm daily with reviewed edition and local game",
+        "commit_dirty": false
+      }
+    },
+    "stages": [
+      {
+        "name": "queued",
+        "started_on": "2026-10-04T09:39:37.485387Z",
+        "ended_on": null,
+        "status": "active"
+      },
+      {
+        "name": "initialize",
+        "started_on": null,
+        "ended_on": null,
+        "status": "idle"
+      },
+      {
+        "name": "clone_repo",
+        "started_on": null,
+        "ended_on": null,
+        "status": "idle"
+      },
+      {
+        "name": "build",
+        "started_on": null,
+        "ended_on": null,
+        "status": "idle"
+      },
+      {
+        "name": "deploy",
+        "started_on": null,
+        "ended_on": "2026-10-04T09:39:38.634022Z",
+        "status": "success"
+      }
+    ],
+    "build_config": {
+      "build_command": null,
+      "destination_dir": "public",
+      "build_caching": null,
+      "root_dir": null,
+      "web_analytics_tag": null,
+      "web_analytics_token": null
+    },
+    "env_vars": {},
+    "compatibility_date": "2026-10-04",
+    "compatibility_flags": [],
+    "build_image_major_version": 3,
+    "usage_model": null,
+    "aliases": [
+      "https://farm.aibioo.cn"
+    ],
+    "is_skipped": false,
+    "production_branch": "main",
+    "uses_functions": false
+  }
+}
