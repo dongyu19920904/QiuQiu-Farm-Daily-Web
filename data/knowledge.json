@@ -1,0 +1,6 @@
+[
+ {"title":"先摸土，再决定要不要浇水。","text":"容器浇水频率会随植株、盆的大小、位置和温度改变。不要只看日历；先检查盆土湿度，也要确保多余的水能排走。","question":"所有盆栽蔬菜，都应该每天固定浇一次水。","correct":"false","yes":"对，每天一样","no":"不对，先看实际水分","hint":"盆的大小、光照和温度都会影响水分，请再读小知识。","url":"https://www.extension.umd.edu/resource/maintaining-container-grown-vegetables","source":"马里兰大学推广说明 · 技术资料 2023-02-20"},
+ {"title":"排水先看孔，不靠垫石头。","text":"威斯康星大学推广资料指出，容器底部另铺石头等材料会妨碍排水。水更容易通过连续的盆栽基质流动，底部还要有排水孔。","question":"盆底铺一层石头，就一定能改善排水。","correct":"false","yes":"对，石头总有用","no":"不对，分层可能碍排水","hint":"资料讨论的是连续基质与分层排水，请再读小知识。","url":"https://hort.extension.wisc.edu/articles/growing-vegetables-containers/","source":"威斯康星大学推广说明 · 技术资料 2021-02-17"},
+ {"title":"种番茄，先看成熟植株大小。","text":"爱荷华州立大学资料说明，矮生和有限生长类型的番茄通常较不容易长得超过容器可容纳的大小。还需考虑日照、季节与支撑。","question":"选容器番茄时，了解成熟植株大小有帮助。","correct":"true","yes":"对，先看植株类型","no":"不对，只看果实大小","hint":"果实大小不能代替成熟植株大小说明，请再读小知识。","url":"https://yardandgarden.extension.iastate.edu/how-to/growing-tomatoes-containers","source":"爱荷华州立大学推广说明 · 技术资料 2026-07-09"},
+ {"title":"读播种日历，也要读当地条件。","text":"英国皇家园艺学会的小萝卜资料区分沙拉萝卜与冬季萝卜，播期有所不同。海外月份安排用于当地环境，在中国种植应核对本地季节与种子包装。","question":"英国资料里的月份，可以直接当作中国各地统一播期。","correct":"false","yes":"对，全国照着播","no":"不对，还要核对本地条件","hint":"地区与品种会改变适用条件，请再读小知识。","url":"https://www.rhs.org.uk/vegetables/radishes/grow-your-own","source":"英国皇家园艺学会 · 技术资料，未标明更新时间"}
+]

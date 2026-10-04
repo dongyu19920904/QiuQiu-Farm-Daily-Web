@@ -1,0 +1,149 @@
+{
+  "date": "2026-10-04",
+  "intro": "本期从植物抗病毒研究和优质粮食供给说起，再回到身边的花盆：光照、浇水、基质、番茄与小萝卜。近期新闻与较早的技术资料分别标注日期，动手前请核对自家条件。",
+  "items": [
+    {
+      "sourceId": "s1",
+      "kind": "news",
+      "title": "植物抗病毒研究有了响应式开关",
+      "summary": "中国农科院团队研发了病毒响应型合成免疫模块。原文介绍，无病毒时系统保持静默，病毒入侵后启动防御；在烟草、番茄和拟南芥中的试验显示病害减轻。这是育种研究进展，还不能据此推出家庭种植配方。",
+      "audience": "关心农业科技与育种的普通读者。",
+      "conditions": "研究阶段的实验结果，不能当作已经上市的种苗性能说明。",
+      "action": "打开原文了解研究对象与试验范围，区分科研进展和可购买的产品。",
+      "evidence": "无病毒侵染时，系统保持静默，不影响植株正常生长；病毒入侵后，模块可识别病毒复制信号，快速激活抗病毒防御，抑制病毒增殖。在烟草、番茄、拟南芥中的试验表明，该系统能显著减轻病害，对部分近缘病毒具有交叉保护作用，且不会被真菌、细菌及高温干旱等胁迫误触发。 该研究利用病毒自身复制机制作为"
+    },
+    {
+      "sourceId": "s2",
+      "kind": "news",
+      "title": "优质粮食供给，关注产量也关注品质",
+      "summary": "农业农村信息网报道，我国将优化粮食供给结构，增加优质粮食产品供给。原文举例提到专用小麦和优质食味稻。这里讨论的是粮食生产与消费需求，不能理解为家庭阳台种菜的新补贴或新品种推荐。",
+      "audience": "想了解日常主食与农业政策的读者。",
+      "conditions": "全国粮食供给政策背景，不是阳台种植操作指南。",
+      "action": "读原文中的专用小麦与食味稻例子，留意粮食用途与品质的区别。",
+      "evidence": "粮食供给结构还需要优化。口粮供给充裕，玉米等饲料粮供给相对偏紧，尤其是用于榨油和饲料的大豆进口较多；优质粮食产品供给还不能很好满足人民群众日益增长的消费需求，比如用来做面包、蛋糕的强筋弱筋专用小麦，口感更好的优质食味稻还需要增加供给。 张柱说，“十五五”时期要进一步提高产能、逐步"
+    },
+    {
+      "sourceId": "s3",
+      "kind": "tech",
+      "title": "选菜之前，先看阳台的光照",
+      "summary": "马里兰大学推广资料提醒，温季结果类蔬菜与冷凉季叶菜对直射光的需求不同。阳台朝向、建筑遮挡都会影响实际位置选择。先观察光线，再选作物，比只凭一张好看的种菜图片决定更实用。",
+      "audience": "准备第一次在阳台摆放种植容器的新手。",
+      "conditions": "适用于阳台或窗边的选址判断；播种季节还需核对当地气候和品种。",
+      "action": "记录阳台哪些位置能接触直射阳光，再对照准备种植的品种说明。",
+      "evidence": "You’ll need 6-8 hours of direct sun for warm-season crops (tomato, pepper, eggplant, squash) and 3-5 hours of direct sun for cool-season cro"
+    },
+    {
+      "sourceId": "s4",
+      "kind": "tech",
+      "title": "浇水看盆土，别只看日历",
+      "summary": "容器蔬菜需要多少水，会随植株大小、容器大小、位置和温度改变。马里兰大学建议用手指检查盆土；干了再浇，仍湿润就等待。需要浇水时，应让水能从排水孔流出，避免反复只打湿表面。",
+      "audience": "容易担心缺水而频繁浇水的阳台种菜新手。",
+      "conditions": "适用于有排水孔的容器；室内外位置、光照和植株大小都要一起考虑。",
+      "action": "检查一盆菜的盆土湿度和排水情况，今天是否浇水由实际状态决定。",
+      "evidence": "To check and see if you need to water simply check the soil, by pressing a finger into it. If the soil is dry then water it, if not then wai"
+    },
+    {
+      "sourceId": "s5",
+      "kind": "tech",
+      "title": "花盆底垫石头，未必更好排水",
+      "summary": "威斯康星大学推广资料指出，盆底另铺石头等材料会妨碍排水，水更容易通过连续的盆栽基质流动。购买基质时可阅读成分说明，选择适合容器种植、排水良好的产品；不要把底部垫料当成排水孔的替代品。",
+      "audience": "正在准备花盆或更换盆栽基质的园艺爱好者。",
+      "conditions": "讨论的是容器分层和基质排水；不代表任何袋装土都是无菌的。",
+      "action": "检查花盆是否有排水孔，阅读基质包装说明；新装盆时避免另外铺石头层。",
+      "evidence": "Research shows layering materials in a container impedes drainage; water moves best through a continuous column of soil mix. How do I care f"
+    },
+    {
+      "sourceId": "s6",
+      "kind": "tech",
+      "title": "盆栽番茄，先了解植株类型",
+      "summary": "爱荷华州立大学资料说明，多种番茄都可能种在容器里，但矮生和有限生长类型通常较不容易长得过大。选种时先了解成熟植株的大小，再考虑容器与支撑。樱桃番茄也不能只凭果实小就认定植株一定矮小。",
+      "audience": "打算用容器种番茄、尚未决定品种的人。",
+      "conditions": "需要充足日照，并核对当地适宜季节、品种和成熟植株大小；不能把海外播期直接套用。",
+      "action": "查看种子包装的植株类型与成熟大小说明，同时安排支架或番茄笼的位置。",
+      "evidence": "Any type of tomato can potentially be grown in a container, although determinate and dwarf types tend to perform better as they are less lik"
+    },
+    {
+      "sourceId": "s7",
+      "kind": "tech",
+      "title": "小萝卜分批播，给幼苗留空间",
+      "summary": "英国皇家园艺学会介绍，小批分次播种可以错开小萝卜的采收。幼苗过密时需要间苗，给留下的植株腾出空间。资料涉及不同萝卜类型，英国的月份安排也有当地条件，不能理解成所有地区全年都适合播种。",
+      "audience": "想尝试容器种短根小萝卜的新手。",
+      "conditions": "先区分小萝卜和冬季萝卜品种，再按本地条件与种子包装决定播期。",
+      "action": "如果本地条件适合，先播少量；已经出苗的花盆则观察是否过密，按包装间苗。",
+      "evidence": "Sow small batches every few weeks to add a crunchy kick to salads in late spring and summer. There are also winter cropping, oriental and ed"
+    }
+  ],
+  "task": {
+    "sourceId": "s4",
+    "text": "挑一盆正在生长的菜，用手指检查盆土是否已经干燥，再查看底部排水孔和接水位置。仍湿润就先不浇；需要浇水时让水能排出。记下花盆的位置和植株大小，下次继续观察，别把今天的判断变成固定每天浇水的规则。",
+    "evidence": "To check and see if you need to water simply check the soil, by pressing a finger into it. If the soil is dry then water it, if not then wai"
+  },
+  "myth": {
+    "sourceId": "s4",
+    "text": "误区：所有盆栽蔬菜都要每天固定浇一次水。实际需水与植株、容器大小、位置和温度有关，浇得太多或太少都可能出问题。先检查盆土，按实际情况决定；游戏中的一次浇水规则只是模拟玩法。",
+    "evidence": "The amount needed and frequency of watering will vary based on the plant type, the size of the plant, and size of the container. As well as "
+  },
+  "editorialReview": {
+    "at": "2026-10-04T09:26:13.987Z",
+    "method": "主编逐条阅读真实来源并修订模型草稿，非自动失败兜底",
+    "changes": [
+      "删除全国秋季正适宜种菜的导语假设",
+      "抗病毒模块标注研究阶段，删除可直接购买或用于家庭防治的推断",
+      "粮食政策恢复专用小麦与食味稻语境，删除蔬菜及阳台政策推断",
+      "删除未经核对的体积、厘米、周数与生长周期，保留定性操作",
+      "修正基质装满、矮化番茄与英国萝卜日历的过度概括",
+      "任务与误区按浇水原文复核，保留模拟与现实边界"
+    ],
+    "sourceChecks": [
+      {
+        "url": "https://www.caas.cn/xwzx/kyhd/3291980149804b47987cd75612e228fe.htm",
+        "date": "2026-09-30",
+        "sha256": "cd9b3d7b67ee1d0b840a3514629c1c7b43e1a1dfb150253ef97bbfbbdefb8f60"
+      },
+      {
+        "url": "https://www.agri.cn/zx/nyyw/202609/t20260930_8874485.htm",
+        "date": "2026-09-30",
+        "sha256": "39d358501dbcdff8aea17d28f494a38192aa07eaa8d22b5de5751900c207d613"
+      },
+      {
+        "url": "https://www.extension.umd.edu/resource/growing-vegetables-containers",
+        "date": "2026-03-23",
+        "sha256": "6120ed6729a8ffca5bc3ab7e09cbc0a9b655f3293d4730749abee78f24b8f5b2"
+      },
+      {
+        "url": "https://www.extension.umd.edu/resource/maintaining-container-grown-vegetables",
+        "date": "2023-02-20",
+        "sha256": "2592c39b1e7ab1f710a84ca8049458e977536bba60897bf386b6de5158c991bd"
+      },
+      {
+        "url": "https://hort.extension.wisc.edu/articles/growing-vegetables-containers/",
+        "date": "2021-02-17",
+        "sha256": "7a33516eafebd0d39539099024990c8cdd911751b652f438a9332973226b8217"
+      },
+      {
+        "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-tomatoes-containers",
+        "date": "2026-07-09",
+        "sha256": "648695b42f738950dacfbbccd1466fc6148e55ee6b140371c051a0b5de09c04a"
+      },
+      {
+        "url": "https://www.rhs.org.uk/vegetables/radishes/grow-your-own",
+        "date": null,
+        "sha256": "2527e69db03d89b66b439a891d31d89b9b366a71ade7854c64e7c8919354b84b"
+      }
+    ]
+  },
+  "generatedAt": "2026-10-04T09:31:33.074Z",
+  "model": "claude-sonnet-5",
+  "usage": {
+    "input_tokens": 3,
+    "output_tokens": 6660,
+    "cache_creation_input_tokens": 16409,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 16409,
+      "ephemeral_1h_input_tokens": 0
+    }
+  },
+  "draftHash": "a56bc5ceeb6b908b1a92621b5ee0f3a29601170be0073b1d531a663062648f91",
+  "markdownHash": "6291ab164e48fe341057115806d578b164dd0f7fc6e3935feed2b91a1af91322"
+}

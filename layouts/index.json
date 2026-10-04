@@ -1,0 +1,1 @@
+{{ $entries := slice }}{{ range where .Site.RegularPages "Section" "daily" }}{{ $entries = $entries | append (dict "title" .Title "url" .RelPermalink "date" (.Date.Format "2006-01-02") "body" .Plain) }}{{ end }}{{ $entries | jsonify }}

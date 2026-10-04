@@ -1,0 +1,15 @@
+baseURL = 'https://farm.aibioo.cn/'
+title = '秋秋农场日报'
+locale = 'zh-CN'
+defaultContentLanguage = 'zh'
+timeZone = 'Asia/Shanghai'
+hasCJKLanguage = true
+enableRobotsTXT = true
+disableKinds = ['taxonomy', 'term']
+[outputs]
+home = ['HTML', 'RSS', 'JSON']
+section = ['HTML', 'RSS']
+[markup.goldmark.renderer]
+unsafe = false
+[params]
+description = '每天读一点农业，种好身边的小菜地。真实来源、阳台种菜实践与轻松农场游戏。'

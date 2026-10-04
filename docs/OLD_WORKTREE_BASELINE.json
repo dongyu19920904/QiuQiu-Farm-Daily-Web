@@ -1,0 +1,77 @@
+[
+  {
+    "file": "layouts/partials/custom/aivora-promo.html",
+    "repo": "D:\\GitHub\\Hextra-AI-Insight-Daily",
+    "sha256": "8184CCDB208B2393AFCA6B91E5B79627C7813D89488FA5801F0BFC1B6AE78EBC"
+  },
+  {
+    "file": "\"\\351\\241\\271\\347\\233\\256\\345\\217\\244\\350\\257\\227.md\"",
+    "repo": "D:\\GitHub\\Hextra-AI-Insight-Daily",
+    "sha256": "DELETED"
+  },
+  {
+    "file": ".github/workflows/ensure-daily-journal.yml",
+    "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+    "sha256": "80F9ABC4E554081D70349417222F87A5B328EF9104A8389DBC3FEEABE5B2C685"
+  },
+  {
+    "file": "src/accountOpportunityPlaybook.js",
+    "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+    "sha256": "FAA345F361F5E57853C18A3A3B71F4C52304B0D2573EF8D015FF17F52124D507"
+  },
+  {
+    "file": "src/ad.js",
+    "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+    "sha256": "2F20DD4DF2BC3A0848E1E8FA9EC6F50BDAFB452C026579229B5B4F706EB9AA53"
+  },
+  {
+    "file": "src/contentUtils.js",
+    "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+    "sha256": "A9BA7E74488A3EBFA86B557A03965CCC5AB43A0E2BFCDE20293FBE8FD043301E"
+  },
+  {
+    "file": "src/opportunityPlaybook.js",
+    "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+    "sha256": "20C087DD062860465EAC2474C655C3007C1517251722C2328D16D485A5E6924D"
+  },
+  {
+    "file": "src/opportunityScoring.js",
+    "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+    "sha256": "E4535A361FC46B7E961F8A0EA817353E9CFF9CF8F3D3637EB0FD383283D9136A"
+  },
+  {
+    "file": "src/prompt/aiOpportunityPrompt.js",
+    "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+    "sha256": "696CD3E73C962F0462B1AAC7D899B7E8AB952D3F2A259D8BD43C6A79CEFCB3BE"
+  },
+  {
+    "file": "src/prompt/summarizationPromptStepZero.js",
+    "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+    "sha256": "A2C230D590C75CC548200376B0362D28B4DB3E574042FACC3BBDD39D2A9C1451"
+  },
+  {
+    "file": "src/publishValidation.js",
+    "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+    "sha256": "E6044BD6DB0C2D2D7B867332C802A96CE8E11E059016BBCA58117D875BC62CF3"
+  },
+  {
+    "file": "tests/aiOpportunityPrompt.test.mjs",
+    "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+    "sha256": "E0B7736CFD74E03DCDF9DC9BA26C96E7B63A5E148BA26767EA6F979685B66561"
+  },
+  {
+    "file": "tests/opportunityScoring.test.mjs",
+    "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+    "sha256": "899351A1380E68D4108836DD9B06741ADE4790BDAF9FD840D9EFE26D6D274141"
+  },
+  {
+    "file": "tests/publishValidation.test.mjs",
+    "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+    "sha256": "9FDE5A5DA7001508F764AC8DB00458DC94909F1CECF5356E50F2D14989CC21D1"
+  },
+  {
+    "file": "wrangler.toml",
+    "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+    "sha256": "F8E26FA4F7C9D4D66239C3519E6B35D1F34276933A96917AF90261ABD68C6583"
+  }
+]

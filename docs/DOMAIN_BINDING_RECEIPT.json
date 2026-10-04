@@ -1,0 +1,15 @@
+{
+  "id": "9e05b30f-4e04-48b5-bd1a-af367487308d",
+  "domain_id": "9e05b30f-4e04-48b5-bd1a-af367487308d",
+  "name": "farm.aibioo.cn",
+  "status": "active",
+  "verification_data": {
+    "status": "active"
+  },
+  "validation_data": {
+    "status": "active",
+    "method": "http"
+  },
+  "certificate_authority": "google",
+  "created_on": "2026-10-04T09:08:50.168874Z"
+}

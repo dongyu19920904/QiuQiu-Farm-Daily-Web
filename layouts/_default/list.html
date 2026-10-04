@@ -1,0 +1,1 @@
+{{ define "main" }}<section class="archive"><p class="eyebrow">过去的收获</p><h1>{{ .Title }}</h1><p>每期保留真实日期和来源；知识可以回看，新闻按当时的时间阅读。</p>{{ range .Pages.ByDate.Reverse }}<a class="edition-row" href="{{ .RelPermalink }}"><time>{{ .Date.Format "2006.01.02" }}</time><strong>{{ .Title }}</strong><span>↗</span></a>{{ end }}</section>{{ end }}

@@ -1,0 +1,25 @@
+{
+  "url": "http://127.0.0.1:63929",
+  "testedAt": "2026-10-04T09:36:19.172Z",
+  "browser": "151.0.7922.34",
+  "checks": [
+    {
+      "label": "desktop",
+      "width": 1280,
+      "scroll": 1280,
+      "images": true,
+      "font": "17px",
+      "checks": "seed/water/persistence/harvest/reward/themes/article/search/damage passed"
+    },
+    {
+      "label": "mobile",
+      "width": 390,
+      "scroll": 390,
+      "images": true,
+      "font": "16px",
+      "checks": "seed/water/persistence/harvest/reward/themes/article/search/damage passed"
+    }
+  ],
+  "storageUnavailable": "passed",
+  "pageErrors": []
+}

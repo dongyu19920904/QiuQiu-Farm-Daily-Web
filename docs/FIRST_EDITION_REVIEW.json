@@ -1,0 +1,49 @@
+{
+  "at": "2026-10-04T09:26:13.987Z",
+  "method": "主编逐条阅读真实来源并修订模型草稿，非自动失败兜底",
+  "changes": [
+    "删除全国秋季正适宜种菜的导语假设",
+    "抗病毒模块标注研究阶段，删除可直接购买或用于家庭防治的推断",
+    "粮食政策恢复专用小麦与食味稻语境，删除蔬菜及阳台政策推断",
+    "删除未经核对的体积、厘米、周数与生长周期，保留定性操作",
+    "修正基质装满、矮化番茄与英国萝卜日历的过度概括",
+    "任务与误区按浇水原文复核，保留模拟与现实边界"
+  ],
+  "sourceChecks": [
+    {
+      "url": "https://www.caas.cn/xwzx/kyhd/3291980149804b47987cd75612e228fe.htm",
+      "date": "2026-09-30",
+      "sha256": "cd9b3d7b67ee1d0b840a3514629c1c7b43e1a1dfb150253ef97bbfbbdefb8f60"
+    },
+    {
+      "url": "https://www.agri.cn/zx/nyyw/202609/t20260930_8874485.htm",
+      "date": "2026-09-30",
+      "sha256": "39d358501dbcdff8aea17d28f494a38192aa07eaa8d22b5de5751900c207d613"
+    },
+    {
+      "url": "https://www.extension.umd.edu/resource/growing-vegetables-containers",
+      "date": "2026-03-23",
+      "sha256": "6120ed6729a8ffca5bc3ab7e09cbc0a9b655f3293d4730749abee78f24b8f5b2"
+    },
+    {
+      "url": "https://www.extension.umd.edu/resource/maintaining-container-grown-vegetables",
+      "date": "2023-02-20",
+      "sha256": "2592c39b1e7ab1f710a84ca8049458e977536bba60897bf386b6de5158c991bd"
+    },
+    {
+      "url": "https://hort.extension.wisc.edu/articles/growing-vegetables-containers/",
+      "date": "2021-02-17",
+      "sha256": "7a33516eafebd0d39539099024990c8cdd911751b652f438a9332973226b8217"
+    },
+    {
+      "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-tomatoes-containers",
+      "date": "2026-07-09",
+      "sha256": "648695b42f738950dacfbbccd1466fc6148e55ee6b140371c051a0b5de09c04a"
+    },
+    {
+      "url": "https://www.rhs.org.uk/vegetables/radishes/grow-your-own",
+      "date": null,
+      "sha256": "2527e69db03d89b66b439a891d31d89b9b366a71ade7854c64e7c8919354b84b"
+    }
+  ]
+}
