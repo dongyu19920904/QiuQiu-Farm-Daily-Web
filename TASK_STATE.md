@@ -1,8 +1,9 @@
 # 任务状态
-- 已完成：稳定远端只读审计、保存实施方案、独立Hugo前端/Node生成器、15项核心测试、真实首期模型生成后逐条主编校对、Hugo静态/SEO搜索检查、桌面与390手机日夜及游戏浏览器验收。
-- 新仓库：dongyu19920904/QiuQiu-Farm-Daily-Web（public）、QiuQiu-Farm-Daily-Generator（private）；只设新项目Secrets。
-- 新Pages：qiuqiu-farm-daily。farm.aibioo.cn腾讯云CNAME已生效，CF绑定与证书active；目前正首次推送并上传有效产物，再验线上与Actions补跑。
-- 外部限制：账单/套餐/余额API403，未核实套餐与剩余额度；专用浏览器控制超时，站点实测采用新隔离Chromium151。
-- 源：CAAS与农业农村信息网的真实近期新闻，UMD/UW/Iowa/RHS公开技术；MOA robots禁止与UMN403均未绕过。首期2新闻+5技术，旧技术如实标注。
-- 内容门禁：真实模型仍可能越界，首期为人工编辑审核后的模型稿；原始回执与更改保存在私有evidence与公开review摘要。自动稿不通过时停发并保留合格线上稿。
-- 下一步：首次SSH推送、Pages部署、farm实际浏览器验收、真实Actions回执、旧项目只读复核、最终成本与回滚交接。
+- 已交付：独立网站 https://farm.aibioo.cn/ 与真实首期 https://farm.aibioo.cn/daily/2026-10-04/ ，备用 qiuqiu-farm-daily.pages.dev。
+- 新仓库 SSH 推送：QiuQiu-Farm-Daily-Web（public）、QiuQiu-Farm-Daily-Generator（private），独立历史与必要 Secrets；没有旧内容、凭据或部署配置。
+- 六块地/四种作物/本地保存/离线/知识奖励、静态日报/往期/全文搜索/日夜/手机完成。游戏10项与生成器11项测试、Hugo及SEO检查通过。
+- 首期真实模型生成，由本次助手逐条读源校对，2新闻+5技术。证据在私有 evidence；无真人农技专家签核。完整自动模型预览 Actions 37196681418 成功，只保存预览未替换首期；已有稿跳过 Actions 37195460666 成功。
+- GitHub Actions 已启用，北京时间08:37生成、09:49补跑，dispatch/并发锁/超时/有限重试/完整产物才发布。不新增 Worker/Cron/KV。
+- 腾讯云 farm CNAME 生效，Cloudflare 新 Pages 绑定/证书 active。最后发布与实际桌面1280/手机390浏览器回执见前端 docs/；部署到新项目，旧 AI/BioAI Worker/Cron/DNS 没有本任务写入。
+- 未验收：实际账户套餐、剩余额度、模型单价与余额（读取权限不足）；首次未来定时触发；多期真实正文搜索（当前只有一期）；如需真人审稿仍需签核。家人理念待补充，通用版本不依赖此项。
+- 下一项：读取用户可提供的账户用量数据，核实费用；下次定时生成后检查来源与多期搜索。交付与回滚见前端 docs/DELIVERY.md。

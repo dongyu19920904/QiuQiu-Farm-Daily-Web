@@ -8,6 +8,8 @@ Hugo 配置复用 Asia/Shanghai、hasCJKLanguage、robots 和 Markdown 静态阅
 
 游戏四种作物与 sprout SVG 为本项目原创几何图形，MIT。无 QQ 农场素材。无游戏引擎、Canvas、外部字体与图片依赖。新闻原图无明确使用许可因此不加入。
 
-来源自动采集：UMD公开 resource、UW Extension公开 articles、Iowa State公开 how-to。robots 原始记录在私有生成器内部证据，访问中遵守禁止路径与低频读取。农业农村部 robots Disallow:/，已从自动采集删除。UMN自动请求403，未绕过限制。natesc本次读取失败；CAAS与中国农业农村信息网公开首页和正文后来核实可读，已接入低频新闻发现，按真实发布日期过滤；未编造 RSS/API。允许抓取的公开网页不等于有图片转载许可，本站只发布短改写与自然链接，不公开原文证据全文。
+来源自动采集：UMD公开 resource、UW Extension公开 articles、Iowa State公开 how-to。抓取URL/日期/全文哈希与校对记录在私有证据，后续抓取另记录robots规则（首期审读时未保存robots原文），访问中遵守禁止路径与低频读取。农业农村部 robots Disallow:/，已从自动采集删除。UMN自动请求403，未绕过限制。natesc本次读取失败；CAAS与中国农业农村信息网公开首页和正文后来核实可读，已接入低频新闻发现，按真实发布日期过滤；未编造 RSS/API。允许抓取的公开网页不等于有图片转载许可，本站只发布短改写与自然链接，不公开原文证据全文。
 
 家人的进一步编辑理念待补充，尚未编造身份、经历或引语。
+
+生成器HTML正文解析使用Cheerio 1.2.0，MIT；npm官方元数据核实Node要求>=20.18.1，本项目Node24满足。package-lock固定依赖；使用CSS选择器保留WordPress嵌套正文，不在遇到首个div闭合时截断。[官方库与许可](https://github.com/cheeriojs/cheerio)。此依赖仅用于生成，不加载到读者浏览器。
