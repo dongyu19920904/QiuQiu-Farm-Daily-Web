@@ -92,7 +92,8 @@
       "branch": "main",
       "remoteMainNow": "e21e52fd4668e2b8fe1294416340f61b63efeebe",
       "aheadBehindBasis": "本机已有tracking；没有fetch/reset/rebase旧工作树，不把缓存tracking称作实时远端",
-      "remoteGraphBasis": "真实远端SHA本机对象缺失，实时分叉计数未核实；tracking计数已明确为缓存"
+      "remoteGraphBasis": "GitHub只读compare API，base为本机HEAD、head为本次ls-remote远端main；未fetch旧目录",
+      "aheadBehindRemote": "0\t1653"
     },
     {
       "dirty": [
