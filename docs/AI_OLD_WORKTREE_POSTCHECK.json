@@ -91,7 +91,8 @@
       "head": "a4fa154d7aa7816ef1e890484e1d6bf35935b594",
       "branch": "main",
       "remoteMainNow": "e21e52fd4668e2b8fe1294416340f61b63efeebe",
-      "aheadBehindBasis": "本机已有tracking；没有fetch/reset/rebase旧工作树，不把缓存tracking称作实时远端"
+      "aheadBehindBasis": "本机已有tracking；没有fetch/reset/rebase旧工作树，不把缓存tracking称作实时远端",
+      "remoteGraphBasis": "真实远端SHA本机对象缺失，实时分叉计数未核实；tracking计数已明确为缓存"
     },
     {
       "dirty": [
@@ -116,7 +117,9 @@
       "head": "b405186880f2e9f6b1aa1a71284c4c3c0c542007",
       "branch": "main",
       "remoteMainNow": "1a2eb2d71a87f67ed428bea3af258dcf8d9697d6",
-      "aheadBehindBasis": "本机已有tracking；没有fetch/reset/rebase旧工作树，不把缓存tracking称作实时远端"
+      "aheadBehindBasis": "本机已有tracking；没有fetch/reset/rebase旧工作树，不把缓存tracking称作实时远端",
+      "aheadBehindRemote": "1\t318",
+      "remoteGraphBasis": "以本次ls-remote真实main SHA和已存在的本机提交对象计算，只读、不fetch"
     }
   ],
   "checkedAt": "2026-10-05T06:37:06.5384669Z"
