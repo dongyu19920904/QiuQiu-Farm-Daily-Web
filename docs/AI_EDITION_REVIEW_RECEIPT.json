@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-05",
+  "reviewedAt": "2026-10-05T05:58:33.636Z",
+  "reviewer": "本次助手逐条读原始网页与完整README；无真人农技专家签核",
+  "originalModelDraftHash": "31a16310a4fc647ac148b0150ad3a84764c7fac78cd7a5f42e10135d04350c68",
+  "acceptedMarkdownHash": "255d766bb87135ff2c6947bffd5f5cbb0ca5c3332100555f8e6df148b00dcf49",
+  "model": "claude-sonnet-5",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 8505,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 8505,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 3435,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global"
+  },
+  "checked": [
+    {
+      "sourceId": "aiira-twins",
+      "status": "read-and-checked",
+      "quoteExact": true
+    },
+    {
+      "sourceId": "deepforest",
+      "status": "read-and-checked",
+      "quoteExact": true
+    },
+    {
+      "sourceId": "plantdoc",
+      "status": "read-and-checked",
+      "quoteExact": true
+    },
+    {
+      "sourceId": "cropharvest",
+      "status": "read-and-checked",
+      "quoteExact": true
+    },
+    {
+      "sourceId": "caas-greenhouse",
+      "status": "read-and-checked",
+      "quoteExact": true
+    }
+  ],
+  "corrections": [
+    "AIIRA删除团队组建阶段、未发布任何工具及漫长验证的无依据判断",
+    "DeepForest限定预训练模型边界，避免排除所有农田视觉任务",
+    "中棉所案例不推断具体部署地点或保证增产，明确缺少量化效果/价格",
+    "FAQ区分DeepForest预训练模型与CropHarvest基线，不声称实时服务"
+  ],
+  "sourcePhotos": "未获合适许可，不配原图",
+  "decision": "accepted"
+}

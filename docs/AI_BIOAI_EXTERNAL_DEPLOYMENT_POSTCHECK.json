@@ -1,0 +1,19 @@
+[
+  {
+    "source": "wrangler",
+    "id": "5f52af25-94c7-4d49-a3c4-77bb542481ae",
+    "created_on": "2026-10-05T05:47:16.602636Z",
+    "annotations": {
+      "workers/message": "",
+      "workers/triggered_by": "deployment"
+    }
+  },
+  {
+    "source": "wrangler",
+    "id": "8f00b897-87d2-4e32-aad1-3bcee50f74b3",
+    "created_on": "2026-10-02T07:16:28.626201Z",
+    "annotations": {
+      "workers/triggered_by": "deployment"
+    }
+  }
+]

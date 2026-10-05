@@ -1,0 +1,37 @@
+[
+  {
+    "status": 200,
+    "path": "/",
+    "length": 34997
+  },
+  {
+    "status": 200,
+    "path": "/daily/2026-10-05/",
+    "length": 35962
+  },
+  {
+    "status": 200,
+    "path": "/index.json",
+    "length": 10685
+  },
+  {
+    "status": 200,
+    "path": "/index.xml",
+    "length": 17274
+  },
+  {
+    "status": 200,
+    "path": "/sitemap.xml",
+    "length": 2768
+  },
+  {
+    "status": 200,
+    "path": "/robots.txt",
+    "length": 67
+  },
+  {
+    "status": 200,
+    "path": "/downloads/ai-agriculture-sources.opml",
+    "length": 541
+  }
+]

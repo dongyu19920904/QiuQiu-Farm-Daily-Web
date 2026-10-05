@@ -1,15 +1,9 @@
-## 2026-10-05：AI农业改版（本轮仅方案）
-用户反馈当前日报不实用，要求AI农业为主体、原日报功能完整迁移、游戏降为不显眼辅助页。本轮已保存修改方案：D:/GitHub/QiuQiu-Farm-Daily-Web/docs/AI_AGRICULTURE_REVISION_PLAN.md。未改代码、定时、Secrets、DNS或线上，未生成模型稿、推送或部署。
-下一项改为方案阶段A/B/C：核实农业AI来源/Folo清单，恢复原阅读骨架，完成真实AI农业整期稿和游戏迁移预览，再推进农业时间线/雷达/应用机会。原记录的技术交付不代表本次内容实用性验收通过。
-# 续做交接
-已发布 https://farm.aibioo.cn/ ，2026-10-04真实首期已校对。不要重新创建项目、批量迁移 Secrets 或复用旧工作树。前端 D:/GitHub/QiuQiu-Farm-Daily-Web，生成器 D:/GitHub/QiuQiu-Farm-Daily-Generator，main 分支、SSH origin。前端 docs/IMPLEMENTATION_PLAN.md 为原方案，docs/DELIVERY.md 与各 JSON 回执为交付证据。
-
-旧仓库 D:/GitHub/Hextra-AI-Insight-Daily 和 CloudFlare-AI-Insight-Daily 只读，禁止 reset/rebase/push；旧 AI 与 BioAI Worker、Cron、KV、Secrets、DNS 均不写。仅新 Pages qiuqiu-farm-daily 和 farm.aibioo.cn。aibioo.cn DNS 在腾讯云，不迁移 NS，不动 news。
-
-daily.yml 北京时间08:37/09:49，合格稿跳过；素材或模型失败停发并保留线上。补跑传 date；恢复构建用 force_deploy=true、validate_model=false。发布前跑隔离/内容校验、Hugo、实际页面。模型预览 validate_model=true 会付费且不替换已有稿，已有成功回执后不要无故重复。
-
-加密模型凭据在 D:/CodexCache/credentials/qiuqiu-farm/model-key.xml，由生成器 scripts/Invoke-Local.ps1 载入，不输出或提交密钥。测试/构建用 C:/Users/dongy/.codex/skills/project-cache-hygiene/scripts/Invoke-WithProjectCache.ps1，进程缓存 D:/CodexCache，不改全局环境、不删共享依赖或未知缓存。
-
-未完成账户套餐/余额核实、未来定时首次触发、多期搜索；家人理念待补充。审稿由助手逐条读源完成，无真人专家签核。浏览器控制曾超时，实际网站使用独立 Chromium151 做桌面1280和390手机验收，不读取用户日常浏览器登录态。
-
-5个额外任务临时目录清理被执行工具安全策略拒绝，禁止把此拒绝当作许可换命令或表面重试。前端 docs/CACHE_CLEANUP_RECEIPT.json 列出准确路径。共享依赖与加密凭据继续保留。
+# 秋秋AI农业改版交接（2026-10-05）
+先读TASK_STATE和docs/AI_REVISION_DELIVERY.md、AI_SOURCE_SELECTION.md。方案AI_AGRICULTURE_REVISION_PLAN.md为已执行方案，结尾“仅方案”是早期历史范围，当前已经授权实施并正式上线。
+前端 D:/GitHub/QiuQiu-Farm-Daily-Web（public）；生成器 D:/GitHub/QiuQiu-Farm-Daily-Generator（private），均独立SSH origin和main。不要重建、复制旧目录、旧文章或旧Secrets；旧Hextra-AI-Insight-Daily及CloudFlare-AI-Insight-Daily永久只读。
+站点首页是最新全文，游戏/farm/仅页脚、原key qiuqiu-farm-v1保留。公开data不含完整原文证据；私有生成器evidence保存来源/模型用量/逐条复核。新稿schemaVersion2/topic ai-agriculture，已有合格稿且线上对应则SKIP；缺线上自动补建，不重复模型。来源不足/模型/构建失败均保留线上。
+动作菜单：补跑date指定历史合法日期；强制恢复force_deploy=true、validate_model=false。真实付费draft/validate_model=true仅必要时运行，已有本次成功整期和回执，不无故重复。
+新工作流08:37/09:49北京时间但GitHub可延迟；最小回归node --test、Hugo0.166、check-site，浏览器脚本本次验收基于10月5日两期/五信号快照，以后新增稿先更新测试期望再测。跨月fixture仅TEMP，绝不部署。
+Windows Node/npm/Hugo/browser用project-cache-hygiene wrapper，缓存仅进程D:/CodexCache；DPAPI模型key在credentials/qiuqiu-farm/model-key.xml，只由生成器Invoke-Local.ps1载入，不输出/提交。5旧临时目录清理有策略拒绝，禁止换命令或工具绕过；准确列表见docs/CACHE_CLEANUP_RECEIPT.json。
+下一项：用户完成Folo账户登录后，仅添加两条核实OPML订阅到AI农业分组并验证，不读取其他订阅；无需让用户自己搜索。公开源已直接接入；如无账户登录继续收集核实来源和观察新schedule，不伪造稳定日更。费用/余额、家人理念和真人专家签核尚未提供。
+本任务旧项目无写入；旧BioAI部署时间发生独立变化，仅记录、不恢复或回滚旧Worker。只回滚新Pages deployment159d4b0b或新仓库revert，绝不reset/rebase旧目录、动旧Cron/DNS。

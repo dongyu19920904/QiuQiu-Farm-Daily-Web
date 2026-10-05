@@ -1,0 +1,123 @@
+{
+  "readOnly": true,
+  "files": [
+    {
+      "repo": "D:\\GitHub\\Hextra-AI-Insight-Daily",
+      "unchanged": true,
+      "file": "layouts/partials/custom/aivora-promo.html"
+    },
+    {
+      "repo": "D:\\GitHub\\Hextra-AI-Insight-Daily",
+      "unchanged": true,
+      "file": "\"\\351\\241\\271\\347\\233\\256\\345\\217\\244\\350\\257\\227.md\""
+    },
+    {
+      "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+      "unchanged": true,
+      "file": ".github/workflows/ensure-daily-journal.yml"
+    },
+    {
+      "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+      "unchanged": true,
+      "file": "src/accountOpportunityPlaybook.js"
+    },
+    {
+      "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+      "unchanged": true,
+      "file": "src/ad.js"
+    },
+    {
+      "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+      "unchanged": true,
+      "file": "src/contentUtils.js"
+    },
+    {
+      "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+      "unchanged": true,
+      "file": "src/opportunityPlaybook.js"
+    },
+    {
+      "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+      "unchanged": true,
+      "file": "src/opportunityScoring.js"
+    },
+    {
+      "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+      "unchanged": true,
+      "file": "src/prompt/aiOpportunityPrompt.js"
+    },
+    {
+      "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+      "unchanged": true,
+      "file": "src/prompt/summarizationPromptStepZero.js"
+    },
+    {
+      "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+      "unchanged": true,
+      "file": "src/publishValidation.js"
+    },
+    {
+      "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+      "unchanged": true,
+      "file": "tests/aiOpportunityPrompt.test.mjs"
+    },
+    {
+      "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+      "unchanged": true,
+      "file": "tests/opportunityScoring.test.mjs"
+    },
+    {
+      "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+      "unchanged": true,
+      "file": "tests/publishValidation.test.mjs"
+    },
+    {
+      "repo": "D:\\GitHub\\CloudFlare-AI-Insight-Daily",
+      "unchanged": true,
+      "file": "wrangler.toml"
+    }
+  ],
+  "repos": [
+    {
+      "dirty": [
+        " M layouts/partials/custom/aivora-promo.html",
+        " D \"\\351\\241\\271\\347\\233\\256\\345\\217\\244\\350\\257\\227.md\"",
+        "?? \"ai\\346\\227\\245\\346\\212\\245\\345\\216\\237\\351\\241\\271\\347\\233\\256\\344\\275\\234\\350\\200\\205\\347\\232\\204\\345\\206\\205\\345\\256\\271/\""
+      ],
+      "aheadBehind": "0\t1600",
+      "tracking": "origin/main",
+      "remote": "git@github.com:dongyu19920904/Hextra-AI-Insight-Daily.git",
+      "path": "D:/GitHub/Hextra-AI-Insight-Daily",
+      "head": "a4fa154d7aa7816ef1e890484e1d6bf35935b594",
+      "branch": "main",
+      "remoteMainNow": "e21e52fd4668e2b8fe1294416340f61b63efeebe",
+      "aheadBehindBasis": "本机已有tracking；没有fetch/reset/rebase旧工作树，不把缓存tracking称作实时远端"
+    },
+    {
+      "dirty": [
+        " M .github/workflows/ensure-daily-journal.yml",
+        " M src/accountOpportunityPlaybook.js",
+        " M src/ad.js",
+        " M src/contentUtils.js",
+        " M src/opportunityPlaybook.js",
+        " M src/opportunityScoring.js",
+        " M src/prompt/aiOpportunityPrompt.js",
+        " M src/prompt/summarizationPromptStepZero.js",
+        " M src/publishValidation.js",
+        " M tests/aiOpportunityPrompt.test.mjs",
+        " M tests/opportunityScoring.test.mjs",
+        " M tests/publishValidation.test.mjs",
+        " M wrangler.toml"
+      ],
+      "aheadBehind": "1\t318",
+      "tracking": "origin/main",
+      "remote": "git@github.com:dongyu19920904/CloudFlare-AI-Insight-Daily.git",
+      "path": "D:/GitHub/CloudFlare-AI-Insight-Daily",
+      "head": "b405186880f2e9f6b1aa1a71284c4c3c0c542007",
+      "branch": "main",
+      "remoteMainNow": "1a2eb2d71a87f67ed428bea3af258dcf8d9697d6",
+      "aheadBehindBasis": "本机已有tracking；没有fetch/reset/rebase旧工作树，不把缓存tracking称作实时远端"
+    }
+  ],
+  "checkedAt": "2026-10-05T06:37:06.5384669Z"
+}
