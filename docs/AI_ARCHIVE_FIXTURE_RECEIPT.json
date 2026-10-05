@@ -1,14 +1,14 @@
 {
-  "checkedAt": "2026-10-05T06:16:52.751Z",
+  "checkedAt": "2026-10-05T06:25:14.240Z",
   "result": "passed",
   "realDates": [
-    "2026-10-04",
-    "2026-10-05"
+    "2026-10-05",
+    "2026-10-04"
   ],
   "testOnlyDates": [
     "2026-09-30",
     "2026-10-01"
   ],
-  "checks": "latest selection, cross-month archives, four-entry search index",
+  "checks": "latest selection, cross-month archives, complete search index",
   "fixturePublished": false
 }

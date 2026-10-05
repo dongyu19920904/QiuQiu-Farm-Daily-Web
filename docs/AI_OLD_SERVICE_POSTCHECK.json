@@ -1,0 +1,83 @@
+{
+  "dns": [
+    {
+      "records": [
+        {
+          "Name": "farm.aibioo.cn",
+          "Type": 5,
+          "NameHost": "qiuqiu-farm-daily.pages.dev",
+          "IPAddress": null
+        }
+      ],
+      "domain": "farm.aibioo.cn"
+    },
+    {
+      "records": [
+        {
+          "Name": "news.aibioo.cn",
+          "Type": 5,
+          "NameHost": "dongyu19920904.github.io",
+          "IPAddress": null
+        }
+      ],
+      "domain": "news.aibioo.cn"
+    },
+    {
+      "records": [
+        {
+          "Name": "aibioo.cn",
+          "Type": 6,
+          "NameHost": null,
+          "IPAddress": null
+        }
+      ],
+      "domain": "aibioo.cn"
+    }
+  ],
+  "oldWorkers": [
+    {
+      "schedules": {
+        "schedules": [
+          {
+            "cron": "0,12,20,50 1 * * *",
+            "created_on": "2026-10-03T02:48:43.44472Z",
+            "modified_on": "2026-10-03T04:52:35.851776Z"
+          },
+          {
+            "cron": "50 0 * * *",
+            "created_on": "2026-06-10T08:33:04.380054Z",
+            "modified_on": "2026-10-03T04:52:35.851776Z"
+          }
+        ]
+      },
+      "worker": "cloudflare-ai-lnsight-daily",
+      "modified_on": "2026-10-03T04:52:35.109507Z"
+    },
+    {
+      "schedules": {
+        "schedules": [
+          {
+            "cron": "20 11 * * *",
+            "created_on": "2026-05-16T11:10:47.414797Z",
+            "modified_on": "2026-10-02T07:16:31.788772Z"
+          },
+          {
+            "cron": "30 11 * * *",
+            "created_on": "2026-04-14T04:08:31.100756Z",
+            "modified_on": "2026-10-02T07:16:31.788772Z"
+          },
+          {
+            "cron": "30 12 * * *",
+            "created_on": "2026-06-14T04:51:28.834467Z",
+            "modified_on": "2026-10-02T07:16:31.788772Z"
+          }
+        ]
+      },
+      "worker": "cloudflare-bioai-daily",
+      "modified_on": "2026-10-05T05:41:22.833407Z"
+    }
+  ],
+  "readOnly": true,
+  "checkedAt": "2026-10-05T06:34:57.2247764Z",
+  "writes": "none"
+}

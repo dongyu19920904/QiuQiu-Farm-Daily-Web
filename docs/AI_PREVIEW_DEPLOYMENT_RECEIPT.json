@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-05T06:36:12.9994733Z",
+  "name": "qiuqiu-farm-daily",
+  "productionBranch": "main",
+  "domains": [
+    "qiuqiu-farm-daily.pages.dev",
+    "farm.aibioo.cn"
+  ],
+  "preview": {
+    "commit": "c83d1c92e322bcb2dcb2eaf46f712bdc67679c56",
+    "status": "success",
+    "url": "https://fead887e.qiuqiu-farm-daily.pages.dev",
+    "id": "fead887e-e8d4-4bf4-b0ee-e3d55cbbaf17"
+  },
+  "rollbackDeployment": "159d4b0b-b2ee-4ab9-8e31-d429107363a3",
+  "rollbackURL": "https://159d4b0b.qiuqiu-farm-daily.pages.dev",
+  "usesFunctions": false
+}

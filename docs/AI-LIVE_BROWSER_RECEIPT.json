@@ -1,0 +1,25 @@
+{
+  "url": "https://fead887e.qiuqiu-farm-daily.pages.dev",
+  "testedAt": "2026-10-05T06:34:51.996Z",
+  "browser": "151.0.7922.34",
+  "checks": [
+    {
+      "label": "desktop",
+      "width": 1280,
+      "scroll": 1280,
+      "font": "17px",
+      "images": true,
+      "checks": "full daily/theme/month/search/previous/radar/timeline/tools/knowledge/opportunities/game passed"
+    },
+    {
+      "label": "mobile",
+      "width": 390,
+      "scroll": 390,
+      "font": "17px",
+      "images": true,
+      "checks": "full daily/theme/month/search/previous/radar/timeline/tools/knowledge/opportunities/game passed"
+    }
+  ],
+  "storageUnavailable": "passed",
+  "pageErrors": []
+}
