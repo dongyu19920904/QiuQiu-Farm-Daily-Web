@@ -18,3 +18,4 @@ jobs:
           tar -xzf "$RUNNER_TEMP/hugo.tar.gz" -C "$RUNNER_TEMP" hugo
           "$RUNNER_TEMP/hugo" --minify
           node scripts/check-site.mjs
+          FARM_HUGO="$RUNNER_TEMP/hugo" node scripts/check-archive-fixture.mjs

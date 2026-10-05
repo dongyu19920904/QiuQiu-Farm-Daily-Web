@@ -25,6 +25,22 @@ document.addEventListener("DOMContentLoaded", function () {
   const SEARCH_SECTION_LIMIT = 5;
   const EXACT_MATCH_LIMIT = 200;
   const DISPLAY_RESULT_LIMIT = 200;
+  let indexPromise, indexReady = false;
+  function ensureIndex() {
+    if (indexReady || indexPromise) return;
+    indexPromise = preloadIndex().then(() => {
+      indexReady = true;
+      const { inputElement } = getActiveSearchElement() || {};
+      if (inputElement?.value) search({ target: inputElement });
+    }).catch(() => {
+      indexPromise = undefined;
+      const { resultsElement } = getActiveSearchElement() || {};
+      if (resultsElement) {
+        resultsElement.textContent = '搜索索引暂时不可用，请打开全文搜索页重试。';
+        resultsElement.classList.remove('hx:hidden');
+      }
+    });
+  }
 
   const inputElements = document.querySelectorAll('.hextra-search-input');
   for (const el of inputElements) {
@@ -32,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     el.addEventListener('keyup', search);
     el.addEventListener('keydown', handleKeyDown);
     el.addEventListener('input', handleInputChange);
+    el.addEventListener('input', search);
   }
 
   const shortcutElements = document.querySelectorAll('.hextra-search-wrapper kbd');
@@ -187,10 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initializes the search.
   function init(e) {
-    e.target.removeEventListener('focus', init);
-    if (!(window.pageIndex && window.sectionIndex)) {
-      preloadIndex();
-    }
+    ensureIndex();
   }
 
   /**
@@ -318,6 +332,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const { resultsElement } = getActiveSearchElement() || {};
+    if (!resultsElement) return;
+    if (!indexReady) { ensureIndex(); return; }
     while (resultsElement.firstChild) {
       resultsElement.removeChild(resultsElement.firstChild);
     }
