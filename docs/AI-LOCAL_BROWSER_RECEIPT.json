@@ -1,0 +1,25 @@
+{
+  "url": "http://127.0.0.1:58077",
+  "testedAt": "2026-10-05T06:13:39.518Z",
+  "browser": "151.0.7922.34",
+  "checks": [
+    {
+      "label": "desktop",
+      "width": 1280,
+      "scroll": 1280,
+      "font": "17px",
+      "images": true,
+      "checks": "full daily/theme/month/search/previous/radar/timeline/tools/knowledge/opportunities/game passed"
+    },
+    {
+      "label": "mobile",
+      "width": 390,
+      "scroll": 390,
+      "font": "17px",
+      "images": true,
+      "checks": "full daily/theme/month/search/previous/radar/timeline/tools/knowledge/opportunities/game passed"
+    }
+  ],
+  "storageUnavailable": "passed",
+  "pageErrors": []
+}

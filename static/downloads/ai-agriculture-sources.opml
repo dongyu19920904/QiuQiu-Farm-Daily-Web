@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0"><head><title>秋秋 AI 农业：已验证订阅</title></head><body><outline text="AI农业" title="AI农业">
+<outline type="rss" text="AgriScienceFM：农业基础模型" title="AgriScienceFM" xmlUrl="https://www.agriscience.fm/feed/" htmlUrl="https://agriscience.fm.wur.nl/"/>
+<outline type="rss" text="USDA ARS Research News（更新较慢，需筛AI）" title="USDA ARS Research News" xmlUrl="https://www.ars.usda.gov/rss/?productName=Research%20News" htmlUrl="https://www.ars.usda.gov/news-events/rss-feeds/"/>
+</outline></body></opml>

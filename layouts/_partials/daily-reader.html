@@ -1,0 +1,10 @@
+<div class="reading-layout hx:mx-auto hextra-max-page-width">{{ partial "reading-sidebar.html" . }}
+<main id="main" class="reading-body"><article class="daily-reader"><header class="reader-heading"><p class="reader-kicker">秋秋 AI 农业日报</p><h1>{{ if eq .Params.schema_version 2 }}<span>秋秋 AI 农业日报</span> <span class="edition-heading-date">· {{ .Date.Format "2006-01-02" }}</span>{{ else }}{{ .Title }}{{ end }}</h1><p class="edition-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年1月2日" }}</time> · 阅读约{{ .ReadingTime }}分钟 · <a href="/daily/">往期日报</a></p>
+{{ with .Params.published_at }}<p class="updated-date">发布于 {{ ((time.AsTime .).Add (time.ParseDuration "8h")).Format "2006-01-02 15:04" }} 北京时间</p>{{ end }}
+{{ if ne .Params.schema_version 2 }}<p class="edition-notice">早期种植版 · 保留原发布日期和来源，新版将聚焦AI农业。</p>{{ end }}
+{{ with .Params.tags }}<div class="topic-links">{{ range . }}<a href="{{ printf "/tags/%s/" (. | urlize) }}">{{ . }}</a>{{ end }}</div>{{ end }}</header>
+<details class="mobile-toc"><summary>本期目录</summary>{{ .TableOfContents }}</details><div class="content prose-reading">{{ .Content }}</div>
+<nav class="edition-pager" aria-label="上下期">{{ with .NextInSection }}<a href="{{ .RelPermalink }}">← 较新一期 · {{ .Date.Format "01.02" }}</a>{{ end }}{{ with .PrevInSection }}<a href="{{ .RelPermalink }}">较早一期 · {{ .Date.Format "01.02" }} →</a>{{ end }}</nav>
+<a class="back-top" href="#main">返回页首 ↑</a></article></main>{{ partial "toc.html" . }}</div>
+
+

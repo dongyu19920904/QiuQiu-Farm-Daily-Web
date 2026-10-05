@@ -1,0 +1,3 @@
+{{ $signals := slice }}{{ range $key,$e := site.Data.editions }}{{ if eq (int ($e.schemaVersion | default 0)) 2 }}{{ range $e.items }}{{ $item := . }}{{ range .source }}{{ $signals = $signals | append (dict "id" (printf "%s-%s" $e.date .id) "sourceId" .id "edition" $e.date "title" $item.title "body" $item.body "role" $item.aiRole "limitations" $item.limitations "topic" .topic "kind" .kind "stage" .stage "date" .date "source" .name "url" .url "checkedAt" .checkedAt "license" .license "institution" .institution) }}{{ end }}{{ end }}{{ end }}{{ end }}{{ return sort $signals "edition" "desc" }}
+
+

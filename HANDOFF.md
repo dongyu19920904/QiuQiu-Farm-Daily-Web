@@ -1,3 +1,6 @@
+## 2026-10-05：AI农业改版（本轮仅方案）
+用户反馈当前日报不实用，要求AI农业为主体、原日报功能完整迁移、游戏降为不显眼辅助页。本轮已保存修改方案：D:/GitHub/QiuQiu-Farm-Daily-Web/docs/AI_AGRICULTURE_REVISION_PLAN.md。未改代码、定时、Secrets、DNS或线上，未生成模型稿、推送或部署。
+下一项改为方案阶段A/B/C：核实农业AI来源/Folo清单，恢复原阅读骨架，完成真实AI农业整期稿和游戏迁移预览，再推进农业时间线/雷达/应用机会。原记录的技术交付不代表本次内容实用性验收通过。
 # 续做交接
 已发布 https://farm.aibioo.cn/ ，2026-10-04真实首期已校对。不要重新创建项目、批量迁移 Secrets 或复用旧工作树。前端 D:/GitHub/QiuQiu-Farm-Daily-Web，生成器 D:/GitHub/QiuQiu-Farm-Daily-Generator，main 分支、SSH origin。前端 docs/IMPLEMENTATION_PLAN.md 为原方案，docs/DELIVERY.md 与各 JSON 回执为交付证据。
 
