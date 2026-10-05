@@ -1,0 +1,20 @@
+[
+  {
+    "status": 200,
+    "title": "爱窝啦 AI 日报",
+    "url": "https://news.aivora.cn/",
+    "checkedAt": "2026-10-05T06:57:45.8512681Z",
+    "etag": [
+      "W/\"6ac3326f-1819d\""
+    ]
+  },
+  {
+    "status": 200,
+    "title": "AI生命延续学日报",
+    "url": "https://news.aibioo.cn/",
+    "checkedAt": "2026-10-05T06:57:48.1695693Z",
+    "etag": [
+      "W/\"6abf26df-125617\""
+    ]
+  }
+]

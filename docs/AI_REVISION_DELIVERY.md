@@ -38,11 +38,12 @@ Actions北京时间08:37生成、09:49补跑；workflow_dispatch、并发锁、2
 
 仅新两个仓库SSH推送、新Pages项目qiuqiu-farm-daily部署；未对旧目录执行reset/rebase/push或写旧部署。15个旧dirty基线文件哈希相同；旧AI/BioAI Cron相同。旧BioAI Worker代码modified_on在本任务期间出现外部更新（2026-10-05T05:41:22.833407Z），本任务只有GET读取，因此不能声称旧项目全局没有任何其他更新；详见AI_OLD_SERVICE_POSTCHECK.json。
 
-快速回滚仅在新Pages项目选择原production部署159d4b0b-b2ee-4ab9-8e31-d429107363a3（早期种植版）。代码回退用新仓库revert或从ecb9683前端/3e6b4b7生成器独立检出构建；不reset旧目录、不改变旧Cron/DNS。若暂时停发，只暂停新生成器工作流，保留新站现有产物。
+回滚前暂停新生成器工作流，避免下次发布覆盖回滚。快速回滚仅在新Pages项目选择原production部署159d4b0b-b2ee-4ab9-8e31-d429107363a3（早期种植版）。代码回退用新仓库revert或从ecb9683前端/3e6b4b7生成器独立检出构建；不reset旧目录、不改变旧Cron/DNS。若暂时停发，只暂停新生成器工作流，保留新站现有产物。
 
 ## 确实未完成
 
 Folo账户保存；模型单价/余额和Cloudflare/GitHub账户实际套餐/剩余额度；新版未来定时触发与长期来源供给；真人农技审稿（若需要）；家人具体编辑理念仍待补充。5个历史任务临时目录结束清理曾被安全策略拒绝，准确路径见CACHE_CLEANUP_RECEIPT.json，未换方式重试。每次wrapper自有进程临时目录按finally清理，共享缓存与凭据保留。
 
 正式生产部署：0277eeb0-e114-4405-a031-f2cb13b652ec，构建前端7d7518d47ce04c3847aceba50b883d33ec9b653a，usesFunctions=false。成功部署Actions [37273779956](https://github.com/dongyu19920904/QiuQiu-Farm-Daily-Generator/actions/runs/37273779956)；合格跳过Actions [37274385154](https://github.com/dongyu19920904/QiuQiu-Farm-Daily-Generator/actions/runs/37274385154)。正式域名1280/390浏览器2026-10-05T06:43:20.572Z通过，无页面异常/横向溢出。
+
 
