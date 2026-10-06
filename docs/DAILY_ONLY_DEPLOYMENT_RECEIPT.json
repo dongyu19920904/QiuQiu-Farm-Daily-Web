@@ -1,0 +1,14 @@
+{
+  "project": "qiuqiu-farm-daily",
+  "deploymentId": "6d4986cc-b8ac-4b26-87c7-9bb9dbfa7ebd",
+  "deploymentUrl": "https://6d4986cc.qiuqiu-farm-daily.pages.dev",
+  "status": "success",
+  "createdAt": "2026-10-06T23:53:37.746688Z",
+  "commitHash": "817283954891689610bbe3a5162c1d2b221c2f2f",
+  "domains": [
+    "qiuqiu-farm-daily.pages.dev",
+    "farm.aibioo.cn"
+  ],
+  "workflowRunId": 37548981028,
+  "checkedAt": "2026-10-06T23:54:35.3148924Z"
+}
