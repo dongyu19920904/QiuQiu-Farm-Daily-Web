@@ -4,7 +4,7 @@
 
 参照原前端baab4f4ca32ddfdec76234218d0063aacdcbaef4 / 后端1a2eb2d71a87f67ed428bea3af258dcf8d9697d6。仅允许写QiuQiu-Farm-Daily-Web、QiuQiu-Farm-Daily-Generator；Pages仅qiuqiu-farm-daily。不能部署upstream Worker或启用旧业务模块。
 
-生产https://farm.aibioo.cn/，当天/2026-10/2026-10-06/。部署11947651-a411-4800-ae9c-2692d0428eb1，对应前端958a48f；Actions37481169580。浏览器截图已更新为生产域名。
+生产https://farm.aibioo.cn/，当天/2026-10/2026-10-06/。首发部署11947651-a411-4800-ae9c-2692d0428eb1，对应前端958a48f；Actions37481169580。浏览器截图已更新为生产域名。
 
 生成器入口src/faithful/cli.mjs：auto采集/写作/独立审稿/接收；generate仅出稿；verify验证接收稿SHA；audit-existing仅复核接收稿绝不改稿。首期是实际模型试稿后完整人工编辑审核，不能接受run/faithful未经审核草稿。独立审核每批3条、保留整篇检查日期/重复；引句仅规范弯引号及空白后与原文连续匹配，不接受改写/拼接/虚构，任一批失败不发布。
 
@@ -15,3 +15,5 @@
 凭据仅DPAPI及独立农业Secrets，不能输出值。setup/adapt/migrate首次脚本不可重复执行。Folo账户作者订阅受浏览器阻塞；公开RSS/OPML正常。X/小红书先找真实作者，再在Folo搜索已有源，核对身份/近期日期/正文后接入。实际套餐及API余额未知，不购买服务。
 
 2026-10-06T15:22:34Z补记：独立真实模型5批复核全部15个来源小节通过，原文段ID及全覆盖校验通过，已发表文章未改。35项生成器与13项游戏/雷达测试通过，共48项。JSON语法恢复不会改变拒绝状态或接收截断结果；未完成项仍以首个未来日期自动运行、Folo账户搜索及计费权限为准。
+
+当前生产回执：8afeb3fb-edf6-4994-bd47-6f02585d3061，构建d85750a5e67d9d69afc359b3d9bcafe68f1f09eb（产品代码与首发一致，新增交付文档）。最终Actions37488171970在生成器d733355c9c496df64c01ef04e9036459079feff9通过35+13项测试，SKIP/VERIFY/LIVE均通过，构建/提交/部署正确跳过，未再次调用AI或部署。线上校验凭据路径已按脚本自身位置解析，不依赖工作目录。
