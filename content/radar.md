@@ -1,4 +1,8 @@
 ---
+_build:
+  render: never
+  list: never
+  publishResources: false
 title: AI农业资讯雷达
 type: radar
 ---

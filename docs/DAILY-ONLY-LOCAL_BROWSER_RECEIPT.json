@@ -1,0 +1,32 @@
+{
+  "url": "http://127.0.0.1:50952",
+  "testedAt": "2026-10-06T23:42:29.013Z",
+  "browser": "151.0.7922.34",
+  "checks": [
+    {
+      "label": "desktop",
+      "width": 1280,
+      "scroll": 1280,
+      "font": "17px",
+      "images": true,
+      "theme": "light/dark persisted",
+      "search": "latest and history full text",
+      "reading": "home/daily/archive/static",
+      "media": "four attributed matching figures; no broken images",
+      "removedModules": "404"
+    },
+    {
+      "label": "mobile",
+      "width": 390,
+      "scroll": 390,
+      "font": "17px",
+      "images": true,
+      "theme": "light/dark persisted",
+      "search": "latest and history full text",
+      "reading": "home/daily/archive/static",
+      "media": "four attributed matching figures; no broken images",
+      "removedModules": "404"
+    }
+  ],
+  "pageErrors": []
+}

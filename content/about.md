@@ -1,4 +1,8 @@
 ---
+_build:
+  render: never
+  list: never
+  publishResources: false
 title: 关于秋秋农场日报
 description: 农业AI、种菜技巧与田园实践，附真实来源和适用条件。
 ---

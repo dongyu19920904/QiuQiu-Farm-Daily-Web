@@ -1,4 +1,8 @@
 ---
+_build:
+  render: never
+  list: never
+  publishResources: false
 title: PlantDoc：病害图像训练资料
 type: tool
 source_id: plantdoc

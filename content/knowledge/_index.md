@@ -1,4 +1,8 @@
 ---
+_build:
+  render: never
+  list: never
+  publishResources: false
 title: AI农业知识
 description: 把AI农业的模型、数据和应用边界讲清楚。
 ---

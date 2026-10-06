@@ -1,3 +1,9 @@
+2026-10-07 当前任务：只公开主日报，保留搜索/往期/日夜。辅助模块及标签已撤出构建、索引和入口；4 幅逐项匹配配图已加入 10 月 6 日合格稿，事实正文与原始新闻链接不变，文章 SHA 84ebeedcbd73a56ba78c0742b61199e716d60c880e870d512de1dc68964b029e。生成器后续按授权媒体库匹配，图注标示资料照片/原创示意。
+
+新分支 codex/daily-only-images；原方案和旧回执以下仅作为历史记录。下一步：完成精简后的最终构建/浏览器检查，SSH 推送新农业两仓库并通过既有 Pages 发布，验证真实域名。回滚基线 8afeb3fb-edf6-4994-bd47-6f02585d3061。具体方案：前端 docs/DAILY_ONLY_MEDIA_PLAN.md。
+
+---
+
 # 当前任务状态
 
 2026-10-06：忠实重建版本已上线 https://farm.aibioo.cn/ 。执行方案 docs/AI_DAILY_FAITHFUL_REBUILD_ANALYSIS.md；旧game-first / AI-only v2方案仅作历史记录。

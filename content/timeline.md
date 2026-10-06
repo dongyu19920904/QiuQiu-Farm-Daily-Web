@@ -1,4 +1,8 @@
 ---
+_build:
+  render: never
+  list: never
+  publishResources: false
 title: AI农业事件时间线
 type: timeline
 ---

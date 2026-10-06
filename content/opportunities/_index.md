@@ -1,4 +1,8 @@
 ---
+_build:
+  render: never
+  list: never
+  publishResources: false
 title: AI农业应用机会
 description: 从真实工具发现可验证的小项目，而非收益承诺。
 ---

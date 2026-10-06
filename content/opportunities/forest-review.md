@@ -1,4 +1,8 @@
 ---
+_build:
+  render: never
+  list: never
+  publishResources: false
 title: 用树冠检测辅助人工盘点
 date: 2026-10-05
 tags: [视觉识别]

@@ -1,0 +1,7 @@
+{{- $id := .Get 0 -}}
+{{- $media := index site.Data.editorial_media $id -}}
+{{- if not $media -}}{{ errorf "Unknown editorial media %q in %s" $id .Page.File.Path }}{{- end -}}
+<figure class="ai-daily-figure" data-editorial-media="{{ $id }}">
+  <a href="{{ $media.path | relURL }}" target="_blank" rel="noopener noreferrer" aria-label="查看大图：{{ $media.alt }}"><img src="{{ $media.path | relURL }}" alt="{{ $media.alt }}" width="{{ $media.width }}" height="{{ $media.height }}" loading="lazy" decoding="async"></a>
+  <figcaption>{{ $media.caption }}<br><span class="daily-image-credit">图源：<a href="{{ $media.sourceUrl }}" target="_blank" rel="noopener noreferrer">{{ $media.credit }}</a> · <a href="{{ $media.licenseUrl }}" target="_blank" rel="noopener noreferrer">{{ $media.license }}</a>{{ with $media.changes }} · {{ . }}{{ end }}</span></figcaption>
+</figure>

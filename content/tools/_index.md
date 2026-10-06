@@ -1,4 +1,8 @@
 ---
+_build:
+  render: never
+  list: never
+  publishResources: false
 title: 工具与数据
 description: 能做什么、需要什么输入、许可和使用边界。
 ---

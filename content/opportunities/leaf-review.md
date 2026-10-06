@@ -1,4 +1,8 @@
 ---
+_build:
+  render: never
+  list: never
+  publishResources: false
 title: 先做叶片图像整理助手，再谈自动诊断
 date: 2026-10-05
 tags: [病害数据]

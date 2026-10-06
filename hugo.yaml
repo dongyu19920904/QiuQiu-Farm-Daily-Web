@@ -5,6 +5,7 @@ enableRobotsTXT: true
 enableEmoji: true
 hasCJKLanguage: true
 theme: hextra
+disableKinds: [taxonomy, term]
 defaultContentLanguage: zh
 outputs:
   home: [html, rss, json]
@@ -18,34 +19,10 @@ markup:
     noClasses: false
 menu:
   main:
-    - identifier: ai-radar
-      name: 农业雷达
-      pageRef: /radar
-      weight: 10
-    - identifier: ai-timeline
-      name: 农业时间线
-      pageRef: /timeline
-      weight: 20
     - identifier: documentation
       name: 农场日报
       pageRef: /
       weight: 30
-    - identifier: knowledge
-      name: 种植知识
-      pageRef: /knowledge
-      weight: 40
-    - identifier: tools
-      name: 工具
-      pageRef: /tools
-      weight: 50
-    - identifier: sources
-      name: 信息源
-      pageRef: /sources
-      weight: 60
-    - identifier: ai-opportunity
-      name: 应用机会
-      pageRef: /opportunities
-      weight: 70
     - identifier: search
       name: 搜索
       weight: 100

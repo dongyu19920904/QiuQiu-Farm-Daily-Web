@@ -1,4 +1,8 @@
 ---
+_build:
+  render: never
+  list: never
+  publishResources: false
 title: DeepForest：航拍树冠识别
 type: tool
 source_id: deepforest

@@ -1,4 +1,8 @@
 ---
+_build:
+  render: never
+  list: never
+  publishResources: false
 title: CropHarvest：遥感农情数据与基线
 type: tool
 source_id: cropharvest
