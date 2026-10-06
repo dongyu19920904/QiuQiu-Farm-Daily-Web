@@ -1,1 +1,63 @@
-{{ define "main" }}{{ if eq .Section "daily" }}{{ partial "daily-reader.html" . }}{{ else }}<div class="reading-layout hx:mx-auto hextra-max-page-width">{{ partial "reading-sidebar.html" . }}<main id="main" class="reading-body"><nav class="breadcrumb"><a href="/">首页</a> / {{ .Title }}</nav><h1>{{ .Title }}</h1><div class="content prose-reading">{{ .Content }}</div></main>{{ partial "toc.html" . }}</div>{{ end }}{{ end }}
+﻿{{ define "main" }}
+  <div class='hx:mx-auto hx:flex hextra-max-page-width'>
+    {{ partial "sidebar.html" (dict "context" . "disableSidebar" true "displayPlaceholder" true) }}
+    {{ partial "toc.html" . }}
+    <article class="hx:w-full hx:break-words hx:flex hx:min-h-[calc(100vh-var(--navbar-height))] hx:min-w-0 hx:justify-center hx:pb-8 hx:pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+      <main class="hx:w-full hx:min-w-0 hx:max-w-6xl hx:px-6 hx:pt-4 hx:md:px-12">
+        {{ partial "breadcrumb.html" (dict "page" . "enable" false) }}
+        <br class="hx:mt-1.5 hx:text-sm" />
+        {{ if .Title }}<h1 class="hx:text-center hx:mt-2 hx:text-4xl hx:font-bold hx:tracking-tight hx:text-slate-900 hx:dark:text-slate-100">{{ .Title }}</h1>{{ end }}
+        <div class="hx:mb-16"></div>
+        {{ if and .File (findRE "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" .File.BaseFileName) (findRE "^[0-9]{4}-[0-9]{2}/$" (replace .File.Dir "\\" "/")) }}
+          {{ partial "custom/ai-opportunity-entry.html" . }}
+        {{ end }}
+        <div class="content">
+          {{ .Content }}
+        </div>
+
+        <div class="hx:mt-8 hx:flex hx:flex-col hx:gap-3 hx:sm:flex-row hx:sm:justify-between">
+          {{ with .PrevInSection }}
+            <a class="hx:rounded-xl hx:border hx:border-gray-200/70 hx:bg-white/60 hx:px-4 hx:py-3 hx:text-sm hx:transition hover:hx:border-primary-300 hover:hx:shadow-sm hx:dark:border-neutral-800 hx:dark:bg-neutral-900/60" href="{{ .RelPermalink }}">
+              <div class="hx:text-xs hx:text-gray-500">上一期</div>
+              <div class="hx:mt-1 hx:font-semibold">{{ .Title }}</div>
+            </a>
+          {{ end }}
+          {{ with .NextInSection }}
+            <a class="hx:rounded-xl hx:border hx:border-gray-200/70 hx:bg-white/60 hx:px-4 hx:py-3 hx:text-sm hx:transition hover:hx:border-primary-300 hover:hx:shadow-sm hx:dark:border-neutral-800 hx:dark:bg-neutral-900/60 hx:sm:text-right" href="{{ .RelPermalink }}">
+              <div class="hx:text-xs hx:text-gray-500">下一期</div>
+              <div class="hx:mt-1 hx:font-semibold">{{ .Title }}</div>
+            </a>
+          {{ end }}
+        </div>
+
+        {{ $related := where (where site.RegularPages "Section" .Section) "RelPermalink" "ne" .RelPermalink }}
+        {{ $related = first 3 $related }}
+        {{ if gt (len $related) 0 }}
+          <div class="hx:mt-8 hx:rounded-xl hx:border hx:border-gray-200/70 hx:bg-white/60 hx:p-4 hx:dark:border-neutral-800 hx:dark:bg-neutral-900/40">
+            <div class="hx:flex hx:items-center hx:justify-between hx:gap-2">
+              <h2 class="hx:text-base hx:font-semibold">推荐阅读</h2>
+              <a class="hx:text-sm hx:text-gray-600 hover:hx:text-primary-600" href="{{ "/" | relLangURL }}">更多日报 →</a>
+            </div>
+            <ul class="hx:mt-3 hx:grid hx:gap-3 hx:md:grid-cols-3">
+              {{ range $related }}
+                <li class="hx:rounded-lg hx:border hx:border-gray-200/70 hx:bg-white hx:p-3 hx:transition hover:hx:border-primary-300 hover:hx:shadow-sm hx:dark:border-neutral-800 hx:dark:bg-neutral-900/60">
+                  <a class="hx:block" href="{{ .RelPermalink }}">
+                    <div class="hx:text-xs hx:text-gray-500">{{ .Date.Format "2006/01/02" }}</div>
+                    <div class="hx:mt-1 hx:text-sm hx:font-semibold">{{ .Title }}</div>
+                  </a>
+                </li>
+              {{ end }}
+            </ul>
+          </div>
+        {{ end }}
+        
+        {{/* Aivora promo module */}}
+        {{ partial "custom/aivora-promo.html" . }}
+
+        <div class="hx:mt-16"></div>
+        {{ partial "components/comments.html" . }}
+      </main>
+    </article>
+  </div>
+{{ end }}
+

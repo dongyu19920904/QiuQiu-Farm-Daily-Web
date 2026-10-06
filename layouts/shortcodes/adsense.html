@@ -1,0 +1,38 @@
+{{- /* 只在生产环境中渲染广告 */ -}}
+{{- if hugo.IsProduction -}}
+
+    {{- /* 获取传入的第一个参数，例如 "in-article" */ -}}
+    {{- $adType := .Get 0 -}}
+
+    {{- /* 在这里硬编码你的发布商ID */ -}}
+    {{- $client := "ca-pub-8136412975724403" -}} {{/* <--- 替换成你的发布商ID */}}
+
+    {{- /* 声明一个变量来存储广告位ID */ -}}
+    {{- $slot := "" -}}
+
+    {{- /* 根据传入的参数，选择对应的广告位ID */ -}}
+    {{- if eq $adType "in-article" -}}
+        {{- $slot = "8277576073" -}} {{/* <--- 替换成你的文章内广告位ID */}}
+    {{- else if eq $adType "sidebar-square" -}}
+        {{- $slot = "8961453426" -}} {{/* <--- 替换成你的方形广告位ID */}}
+    {{- else if eq $adType "another-type" -}}
+        {{- $slot = "3948799898" -}} {{/* <--- 你可以继续添加更多类型 */}}
+    {{- end -}}
+
+
+    {{- /* 如果找到了对应的广告位ID，则渲染广告代码 */ -}}
+    {{- if $slot -}}
+    <div class="ad-container" style="margin: 2rem 0; text-align: center;">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="{{ $client }}"
+             data-ad-slot="{{ $slot }}"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    {{- end -}}
+
+{{- end -}}

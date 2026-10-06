@@ -1,0 +1,12 @@
+<!-- layouts/_default/_markup/render-link.html -->
+{{- $isExternal := and (strings.HasPrefix .Destination "http") (not (strings.HasPrefix .Destination site.BaseURL)) -}}
+{{- $isAivoraMain := or
+  (eq .Destination "https://www.aivora.cn")
+  (strings.HasPrefix .Destination "https://www.aivora.cn/")
+-}}
+<a href="{{ .Destination | safeURL }}" title="{{ .Text | safeHTML }}"
+   {{ if $isExternal }}
+     target="_blank" rel="{{ if not $isAivoraMain }}nofollow {{ end }}noopener noreferrer"
+   {{ end }}
+>
+{{ .Text | safeHTML }}</a>

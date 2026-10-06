@@ -14,8 +14,7 @@ jobs:
       - run: node --test tests/*.test.mjs
       - name: Install pinned Hugo from official release
         run: |
-          curl -fsSL --retry 2 -o "$RUNNER_TEMP/hugo.tar.gz" https://github.com/gohugoio/hugo/releases/download/v0.166.0/hugo_0.166.0_linux-amd64.tar.gz
+          curl -fsSL --retry 2 -o "$RUNNER_TEMP/hugo.tar.gz" https://github.com/gohugoio/hugo/releases/download/v0.147.9/hugo_0.147.9_linux-amd64.tar.gz
           tar -xzf "$RUNNER_TEMP/hugo.tar.gz" -C "$RUNNER_TEMP" hugo
           "$RUNNER_TEMP/hugo" --minify
-          node scripts/check-site.mjs
-          FARM_HUGO="$RUNNER_TEMP/hugo" node scripts/check-archive-fixture.mjs
+          node scripts/check-faithful-site.mjs

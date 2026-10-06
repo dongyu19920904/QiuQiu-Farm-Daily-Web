@@ -1,0 +1,37 @@
+{{- $radarURL := "https://radar.aivora.cn/" -}}
+
+<aside
+  class="ai-radar-strip"
+  data-ai-radar
+  data-feed-url="{{ printf "%sdata/briefing-lite.json" $radarURL }}"
+  aria-label="AI 雷达最新快讯"
+  hidden
+>
+  <header class="ai-radar-strip__header">
+    <div>
+      <div class="ai-radar-strip__eyebrow">LIVE SIGNALS</div>
+      <h2 class="ai-radar-strip__title">爱窝啦 ai雷达刚刚捕获</h2>
+    </div>
+    <nav class="ai-radar-strip__actions" aria-label="AI 雷达相关入口">
+      <a href="{{ "/archive/" | relLangURL }}">
+        {{ partial "utils/icon.html" (dict "name" "archive" "attributes" "width=16 height=16") }}
+        <span>往期日报</span>
+      </a>
+      <a href="{{ $radarURL }}" target="_blank" rel="noopener noreferrer">
+        <span>查看全部</span>
+        {{ partial "utils/icon.html" (dict "name" "external-link" "attributes" "width=16 height=16") }}
+      </a>
+    </nav>
+  </header>
+  <ol class="ai-radar-strip__list" data-ai-radar-list></ol>
+  <p class="ai-radar-strip__meta">
+    爱窝啦 ai雷达独立更新
+    <span aria-hidden="true">·</span>
+    <time data-ai-radar-updated></time>
+  </p>
+</aside>
+
+{{- with resources.Get "js/ai-radar-entry.js" -}}
+  {{- $script := . | minify | fingerprint -}}
+  <script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- end -}}

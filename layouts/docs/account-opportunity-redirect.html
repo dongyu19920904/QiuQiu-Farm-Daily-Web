@@ -1,0 +1,17 @@
+{{ define "main" }}
+  {{- $target := "https://supply.aivora.cn/opportunities/archive" -}}
+  {{- with .File -}}
+    {{- if gt (len (findRE "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" .BaseFileName)) 0 -}}
+      {{- $target = printf "https://supply.aivora.cn/opportunities/%s" .BaseFileName -}}
+    {{- end -}}
+  {{- end -}}
+  <main class="hx:mx-auto hx:flex hx:min-h-[70vh] hx:max-w-3xl hx:items-center hx:px-6 hx:py-16">
+    <section class="hx:w-full hx:rounded-2xl hx:border hx:border-gray-200 hx:bg-white hx:p-8 hx:text-center hx:shadow-sm hx:dark:border-neutral-800 hx:dark:bg-neutral-900">
+      <p class="hx:text-sm hx:font-semibold hx:text-yellow-600">栏目迁移</p>
+      <h1 class="hx:mt-3 hx:text-2xl hx:font-bold">AI 账号商家经营日报已迁移</h1>
+      <p class="hx:mt-4 hx:text-gray-600 hx:dark:text-gray-300">日报已与实时货源、库存、报价异动和利润工具合并到爱窝啦·货源雷达。</p>
+      <a class="hx:mt-6 hx:inline-flex hx:rounded-lg hx:bg-blue-600 hx:px-5 hx:py-3 hx:font-semibold hx:text-white" href="{{ $target }}">打开对应经营日报</a>
+    </section>
+  </main>
+  <script>window.location.replace({{ $target | jsonify | safeJS }});</script>
+{{ end }}

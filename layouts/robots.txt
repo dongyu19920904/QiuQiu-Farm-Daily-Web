@@ -1,3 +1,17 @@
 User-agent: *
 Allow: /
-Sitemap: {{ .Site.BaseURL }}sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# 站点地图
+Sitemap: https://news.aivora.cn/sitemap.xml

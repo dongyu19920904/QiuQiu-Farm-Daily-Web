@@ -1,0 +1,42 @@
+{{- $readingMinutes := .ReadingTime -}}
+{{- if lt $readingMinutes 1 -}}
+  {{- $readingMinutes = 1 -}}
+{{- end -}}
+{{- $displayDate := replaceRE `^.*?([0-9]{4})[/-]([0-9]{1,2})[/-]([0-9]{1,2}).*$` `$1 / $2 / $3` .Title -}}
+{{- $archiveLink := "/opportunity/" | relLangURL -}}
+{{- with .Parent -}}
+  {{- $archiveLink = .RelPermalink -}}
+{{- end -}}
+
+<header class="ai-daily-masthead ai-opportunity-masthead">
+  <div class="ai-daily-masthead__kicker">
+    <span class="ai-daily-masthead__kicker-icon" aria-hidden="true">
+      {{ partial "utils/icon.html" (dict "name" "light-bulb" "attributes" "width=18 height=18") }}
+    </span>
+    <span>AI 商机中心</span>
+    <span class="ai-daily-masthead__signal" aria-hidden="true"></span>
+  </div>
+
+  <h1>
+    <span class="ai-daily-masthead__title" data-text="爱窝啦 AI 商机">爱窝啦 AI 商机</span>
+  </h1>
+
+  <p class="ai-daily-masthead__deck">
+    <span aria-hidden="true">&gt;&gt;</span>
+    从真实 AI 信号里筛选低成本机会，先验证谁会付钱，再决定做不做
+  </p>
+
+  <div class="ai-daily-masthead__footer">
+    <time class="ai-daily-masthead__date">{{ $displayDate }}</time>
+    <div class="ai-daily-masthead__meta">
+      <span>
+        {{ partial "utils/icon.html" (dict "name" "clock" "attributes" "width=16 height=16") }}
+        阅读约 {{ $readingMinutes }} 分钟
+      </span>
+      <a href="{{ $archiveLink }}">
+        {{ partial "utils/icon.html" (dict "name" "archive" "attributes" "width=16 height=16") }}
+        <span>本月商机</span>
+      </a>
+    </div>
+  </div>
+</header>

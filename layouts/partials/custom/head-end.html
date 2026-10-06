@@ -1,0 +1,186 @@
+<link rel="preload" href="/fonts/daily/rajdhani-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="referrer" content="strict-origin-when-cross-origin">
+{{/* --- Publisher Block --- */}}
+{{- $publisher := "" -}}
+{{- with .Site.Params.publisher -}}
+  {{- $p := . -}}
+  {{- $type := .type | default "Organization" -}}
+  {{- $name := .name | default $.Site.Title -}}
+
+  {{- $publisherData := dict "@type" $type "name" $name -}}
+  {{- if eq $type "Organization" -}}
+    {{- with .logo -}}
+      {{- $logoData := dict "@type" "ImageObject" "url" ( . | absURL ) -}}
+      {{- $publisherData = merge $publisherData (dict "logo" $logoData) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- with .url -}}
+    {{- $publisherData = merge $publisherData (dict "url" ( . | absURL )) -}}
+  {{- end -}}
+  {{- with .sameAs -}}
+    {{- $publisherData = merge $publisherData (dict "sameAs" .) -}}
+  {{- end -}}
+  {{- $publisher = $publisherData -}}
+{{- end -}}
+
+
+{{/* --- Author Block --- */}}
+{{- $author := "" -}}
+{{/* 1. Check for single author in page Front Matter */}}
+{{- $author_id := .Params.author -}}
+{{- if and $author_id (index .Site.Data.authors $author_id) -}}
+  {{- $authorData := index .Site.Data.authors $author_id -}}
+  {{- $author = dict "@type" "Person" "name" $authorData.name -}}
+  {{- with $authorData.website -}}
+    {{- $author = merge $author (dict "url" ( . | absURL )) -}}
+  {{- end -}}
+{{/* 2. Fallback to global author in hugo.yaml `params` */}}
+{{- else if .Site.Params.author -}}
+  {{- $author = dict "@type" "Organization" "name" .Site.Params.author.name -}}
+  {{- with .Site.Params.author.website -}}
+    {{- $author = merge $author (dict "url" ( . | absURL )) -}}
+  {{- end -}}
+{{/* 3. Fallback to global author in hugo.yaml `author` */}}
+{{- else if .Site.Author.name -}}
+  {{- $author = dict "@type" "Person" "name" .Site.Author.name -}}
+  {{- with .Site.Author.website -}}
+    {{- $author = merge $author (dict "url" ( . | absURL )) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if .IsHome -}}
+  {{/* --- WebSite Schema --- */}}
+  {{- $schema := dict "@context" "https://schema.org" "@type" "WebSite" -}}
+  {{- $schema = merge $schema (dict "url" .Site.BaseURL "name" .Site.Title) -}}
+  {{- with .Site.Params.description -}}
+    {{- $schema = merge $schema (dict "description" .) -}}
+  {{- end -}}
+  {{- with $publisher -}}
+    {{- $schema = merge $schema (dict "publisher" .) -}}
+  {{- end -}}
+<script type="application/ld+json">
+{{ $schema }}
+</script>
+
+{{- else if and .IsPage (ne .Section "account-opportunity") -}}
+  {{/* --- Article/TechArticle Schema --- */}}
+  {{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
+  {{- $isDaily := false -}}
+  {{- $isOpportunityArticle := false -}}
+  {{- $isAccountOpportunityArticle := false -}}
+  {{- with .File -}}
+    {{- $directory := replace .Dir "\\" "/" -}}
+    {{- $isDaily = and
+      (gt (len (findRE "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" .BaseFileName)) 0)
+      (gt (len (findRE "^[0-9]{4}-[0-9]{2}/$" $directory)) 0)
+    -}}
+    {{- $isOpportunityArticle = and
+      (eq $.Section "opportunity")
+      (gt (len (findRE "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" .BaseFileName)) 0)
+    -}}
+    {{- $isAccountOpportunityArticle = and
+      (eq $.Section "account-opportunity")
+      (gt (len (findRE "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" .BaseFileName)) 0)
+    -}}
+  {{- end -}}
+  {{- $articleType := cond (or $isDaily $isOpportunityArticle $isAccountOpportunityArticle) "BlogPosting" "TechArticle" -}}
+  {{- $schema := dict "@context" "https://schema.org" "@type" $articleType -}}
+  {{- $schema = merge $schema (dict
+      "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+      "headline" .Title
+      "url" .Permalink
+      "wordCount" .WordCount
+      "inLanguage" (.Site.Language.LanguageCode | default .Lang)
+      "isAccessibleForFree" true
+    ) -}}
+
+  {{- $docDesc := .Description | default "" -}}
+  {{- $siteParamDesc := .Site.Params.description | default "" -}}
+  {{- $description := or $docDesc $siteParamDesc -}}
+  {{- with $description -}}
+    {{- $schema = merge $schema (dict "description" . "abstract" .) -}}
+  {{- end -}}
+
+  {{- $image := "" -}}
+  {{- if .Params.image.url -}}
+    {{- $image = .Params.image -}}
+  {{- else if .Site.Params.image.url -}}
+    {{- $image = .Site.Params.image -}}
+  {{- end -}}
+  {{- with $image -}}
+    {{- if ge .width 696 -}}
+      {{- $imageData := dict "@type" "ImageObject" "url" ( .url | absURL ) "width" .width "height" .height -}}
+      {{- $schema = merge $schema (dict "image" $imageData) -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- with .Type -}}
+    {{- $schema = merge $schema (dict "genre" .) -}}
+  {{- end -}}
+  {{- with .Params.tags -}}
+    {{- $schema = merge $schema (dict "keywords" (delimit . ", ")) -}}
+  {{- end -}}
+
+  {{- $published := .PublishDate | default .Date -}}
+  {{- if not $published.IsZero -}}
+    {{- $schema = merge $schema (dict "datePublished" ($published.Format $iso8601)) -}}
+  {{- end -}}
+  {{- with .Lastmod -}}
+    {{- if not .IsZero -}}
+      {{- $schema = merge $schema (dict "dateModified" (.Format $iso8601)) -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- with .Site.Copyright -}}
+    {{- $schema = merge $schema (dict "license" .) -}}
+  {{- end -}}
+
+  {{- with $publisher -}}
+    {{- $schema = merge $schema (dict "publisher" .) -}}
+  {{- end -}}
+  {{- with $author -}}
+    {{- $schema = merge $schema (dict "author" .) -}}
+  {{- end -}}
+
+<script type="application/ld+json">
+{{ $schema }}
+</script>
+
+  {{/* --- Breadcrumb Schema --- */}}
+  {{- $breadcrumbItems := slice -}}
+  {{- $position := 1 -}}
+  {{- $breadcrumbItems = $breadcrumbItems | append (dict
+    "@type" "ListItem"
+    "position" $position
+    "name" .Site.Title
+    "item" .Site.BaseURL
+  ) -}}
+  {{- range .Ancestors.Reverse -}}
+    {{- if not .IsHome -}}
+      {{- $position = add $position 1 -}}
+      {{- $breadcrumbItems = $breadcrumbItems | append (dict
+        "@type" "ListItem"
+        "position" $position
+        "name" (.LinkTitle | default .Title)
+        "item" .Permalink
+      ) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $position = add $position 1 -}}
+  {{- $breadcrumbItems = $breadcrumbItems | append (dict
+    "@type" "ListItem"
+    "position" $position
+    "name" (.LinkTitle | default .Title)
+    "item" .Permalink
+  ) -}}
+  {{- $breadcrumbSchema := dict
+    "@context" "https://schema.org"
+    "@type" "BreadcrumbList"
+    "itemListElement" $breadcrumbItems
+  -}}
+<script type="application/ld+json">
+{{ $breadcrumbSchema }}
+</script>
+
+{{- end }}
+{{ "<!-- LEAVING partial seo-schema.html -->" | safeHTML }}

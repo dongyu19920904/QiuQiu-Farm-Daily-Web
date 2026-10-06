@@ -1,6 +1,10 @@
 ---
-title: 秋秋 AI 农业日报
-layout: ai-home
-description: 每日精选AI农业研究、工具、数据与应用，讲清AI的作用、使用门槛和真实局限。
+title: "秋秋农场日报 2026/10/06：AI 筛选抗病线索，阳台种菜先选对盆"
+linkTitle: 农场日报
+date: 2026-10-06T08:37:00+08:00
+breadcrumbs: false
+cascade:
+  type: docs
 ---
 
+{{< latest-daily >}}

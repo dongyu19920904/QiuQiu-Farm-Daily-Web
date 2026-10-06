@@ -1,0 +1,44 @@
+{{- $readingMinutes := .ReadingTime -}}
+{{- if lt $readingMinutes 1 -}}
+  {{- $readingMinutes = 1 -}}
+{{- end -}}
+{{- $displayDate := replaceRE `^.*?([0-9]{4})[/-]([0-9]{1,2})[/-]([0-9]{1,2}).*$` `$1 / $2 / $3` .Title -}}
+
+<header class="ai-daily-masthead">
+  <div class="ai-daily-masthead__kicker">
+    <span class="ai-daily-masthead__kicker-icon" aria-hidden="true">
+      {{ partial "utils/icon.html" (dict "name" "newspaper" "attributes" "width=18 height=18") }}
+    </span>
+    <span>农场日报中心</span>
+    <span class="ai-daily-masthead__signal" aria-hidden="true"></span>
+  </div>
+
+  <h1>
+    <span class="ai-daily-masthead__title" data-text="{{ .Site.Title }}">{{ .Site.Title }}</span>
+  </h1>
+
+  <p class="ai-daily-masthead__deck">
+    <span aria-hidden="true">&gt;&gt;</span>
+    农业 AI、种菜技巧、田园实践与好用的新工具
+  </p>
+
+  <div class="ai-daily-masthead__footer">
+    <time class="ai-daily-masthead__date">{{ .Date.Format "2006 / 01 / 02" }}</time>
+    <div class="ai-daily-masthead__meta">
+      <span>
+        {{ partial "utils/icon.html" (dict "name" "clock" "attributes" "width=16 height=16") }}
+        阅读约 {{ $readingMinutes }} 分钟
+      </span>
+      <a href="{{ "/archive/" | relLangURL }}">
+        {{ partial "utils/icon.html" (dict "name" "archive" "attributes" "width=16 height=16") }}
+        <span>往期日报</span>
+      </a>
+      <details class="mobile-explore">
+        <summary>更多</summary>
+        <nav aria-label="更多农业阅读入口">
+          {{ partial "custom/explore-links.html" . }}
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>

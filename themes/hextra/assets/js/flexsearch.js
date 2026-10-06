@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     el.addEventListener('keyup', search);
     el.addEventListener('keydown', handleKeyDown);
     el.addEventListener('input', handleInputChange);
+    el.addEventListener('input', search);
   }
 
   const shortcutElements = document.querySelectorAll('.hextra-search-wrapper kbd');
@@ -57,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
         resultsElement: inputs[0].querySelector('.hextra-search-results')
       };
     }
-    return undefined;
+    return {};
   }
 
   const INPUTS = ['input', 'select', 'button', 'textarea']
@@ -304,6 +305,9 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
     }
+    window.farmSearchReady = true;
+    const activeInput = getActiveSearchElement()?.inputElement;
+    if (activeInput?.value) search({ target: activeInput });
   }
 
   /**
@@ -311,6 +315,7 @@ document.addEventListener("DOMContentLoaded", function () {
    * @param {Event} e - The event object.
    */
   function search(e) {
+    if (!window.farmSearchReady) return;
     const query = e.target.value;
     if (!e.target.value) {
       hideSearchResults();

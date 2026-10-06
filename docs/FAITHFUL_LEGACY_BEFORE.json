@@ -1,0 +1,370 @@
+{
+  "cloudflare-bioai-daily": {
+    "schedules": {
+      "schedules": [
+        {
+          "cron": "20 11 * * *",
+          "created_on": "2026-05-16T11:10:47.414797Z",
+          "modified_on": "2026-10-02T07:16:31.788772Z"
+        },
+        {
+          "cron": "30 11 * * *",
+          "created_on": "2026-04-14T04:08:31.100756Z",
+          "modified_on": "2026-10-02T07:16:31.788772Z"
+        },
+        {
+          "cron": "30 12 * * *",
+          "created_on": "2026-06-14T04:51:28.834467Z",
+          "modified_on": "2026-10-02T07:16:31.788772Z"
+        }
+      ]
+    },
+    "deployments": {
+      "deployments": [
+        {
+          "id": "6ab494dc-2a23-4a84-88a9-c999de1174ff",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "sabrinamisan090@gmail.com",
+          "annotations": {
+            "workers/message": "Source-backed personal-blog media; verified isolated tests; preserve main jobs",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "09c50052-4571-4130-a698-d20f37c461bb",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-05T14:05:50.500524Z"
+        },
+        {
+          "id": "9c25c977-1f5f-4b60-8a12-c4a0af4d4d08",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "sabrinamisan090@gmail.com",
+          "annotations": {
+            "workers/message": "Verified reader-first blog knowledge rebuild; preserve BioAI jobs",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "c1f1cc33-2bb0-46ac-a4be-3341b6aca35e",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-05T11:50:44.99724Z"
+        },
+        {
+          "id": "5f52af25-94c7-4d49-a3c4-77bb542481ae",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "sabrinamisan090@gmail.com",
+          "annotations": {
+            "workers/message": "",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "14d77638-2c35-435a-865d-a4b7251dd8ca",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-05T05:47:16.602636Z"
+        },
+        {
+          "id": "8f00b897-87d2-4e32-aad1-3bcee50f74b3",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "sabrinamisan090@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "253bea87-74f9-4792-a74b-066443473adf",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-02T07:16:28.626201Z"
+        },
+        {
+          "id": "a1ff54b6-bbb1-4312-b649-8d355105cea3",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "sabrinamisan090@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "687fc5c5-2602-4578-a69e-40f660d4f9b5",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-09-27T18:34:57.893158Z"
+        },
+        {
+          "id": "5487cb87-82fa-4f79-a9c8-c3ec17b25dcc",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "sabrinamisan090@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "e44c7270-108f-4447-a425-9a44414f8768",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-09-27T01:49:31.866236Z"
+        },
+        {
+          "id": "9fb7bc0f-efed-4408-a5bd-dcb7d52efc83",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "sabrinamisan090@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "8d9f89f1-c40a-4426-87d0-bbb67b2e1784",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-09-26T11:06:06.176528Z"
+        },
+        {
+          "id": "16575ee2-5e48-417a-aef3-becda586d475",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "sabrinamisan090@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "98696548-09d5-4cee-8f3b-c5c4c419e25f",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-09-26T09:31:59.968378Z"
+        },
+        {
+          "id": "e37e2272-ca28-46dd-b2b7-bff7a20ed280",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "sabrinamisan090@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "50c2d852-a7cd-4077-9fa4-e0e537f83de4",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-09-26T08:46:28.535447Z"
+        },
+        {
+          "id": "e03105ff-762f-481a-a2e6-54195dbc73c8",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "sabrinamisan090@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "4cd1679a-0b6d-46b4-a950-9159d0f43d29",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-09-26T08:31:17.636961Z"
+        }
+      ]
+    }
+  },
+  "cloudflare-ai-lnsight-daily": {
+    "schedules": {
+      "schedules": [
+        {
+          "cron": "0,12,20,50 1 * * *",
+          "created_on": "2026-10-03T02:48:43.44472Z",
+          "modified_on": "2026-10-03T04:52:35.851776Z"
+        },
+        {
+          "cron": "50 0 * * *",
+          "created_on": "2026-06-10T08:33:04.380054Z",
+          "modified_on": "2026-10-03T04:52:35.851776Z"
+        }
+      ]
+    },
+    "deployments": {
+      "deployments": [
+        {
+          "id": "bafa3fb1-40ab-40f9-b34f-7476cac0ad54",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "sabrinamisan090@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "4cf2d03d-b5ce-45c9-a06c-c4c021457b9e",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-03T04:52:32.499625Z"
+        },
+        {
+          "id": "b7a7e3ed-84ae-4176-b031-3611b0ecf597",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "sabrinamisan090@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "451cff1c-01ee-4401-bb8c-89b7aa138735",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-03T04:52:00.908967Z"
+        },
+        {
+          "id": "a4841e5d-e262-4f70-b021-893c2fff0a17",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "sabrinamisan090@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "cfcd277c-985f-49a4-bca4-e4bfdaa399cf",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-03T03:40:26.970051Z"
+        },
+        {
+          "id": "155d3993-f2f3-4497-8d19-6cb9f6716553",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "sabrinamisan090@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "cecbf873-b184-49ff-9878-f0e06c721ff2",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-03T03:32:21.865041Z"
+        },
+        {
+          "id": "f98362bc-ea05-47dc-b15c-5811bf365a91",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "sabrinamisan090@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "c175c581-2ac7-4c45-add9-91084e58b31c",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-03T03:32:21.018804Z"
+        },
+        {
+          "id": "34f5337d-11ff-4e57-9c78-887cbd8c64fc",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "sabrinamisan090@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "96fa3a71-bfad-4c9b-b5f4-a4b7076c7a14",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-03T02:48:46.612342Z"
+        },
+        {
+          "id": "2c6bf363-1ecd-457c-ac41-46469fb874bf",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "sabrinamisan090@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "6831382b-2d2f-461a-b0b1-be7d068580df",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-03T02:48:39.618277Z"
+        },
+        {
+          "id": "56472976-693a-462c-bfdb-6e849fd294bd",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "sabrinamisan090@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "4d58730b-007c-4da1-a5a4-96a5309c5df2",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-02T05:53:28.056806Z"
+        },
+        {
+          "id": "22847714-99c7-45e7-89eb-7d360261a08c",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "sabrinamisan090@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "537c175b-6513-4379-9d79-317ee482b758",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-02T05:01:50.870069Z"
+        },
+        {
+          "id": "e7497497-cd1c-444e-a6ae-872617ef22b3",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "sabrinamisan090@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "f85444f8-0b27-4001-bffe-add93b2e5a9e",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-02T05:01:45.798591Z"
+        }
+      ]
+    }
+  }
+}

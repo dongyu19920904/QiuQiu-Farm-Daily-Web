@@ -1,0 +1,19 @@
+{{- $target := partialCached "custom/latest-opportunity-url.html" . .Site.Language.Lang -}}
+{{- $absoluteTarget := $target | absURL -}}
+<!doctype html>
+<html lang="{{ .Site.Language.Lang }}" dir="{{ .Site.Language.LanguageDirection | default `ltr` }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, follow">
+    <meta http-equiv="refresh" content="0; url={{ $target }}">
+    <link rel="canonical" href="{{ $absoluteTarget }}">
+    <title>正在打开最新 AI 商机</title>
+    <script>window.location.replace({{ $target | jsonify | safeJS }});</script>
+  </head>
+  <body>
+    <main>
+      <p><a href="{{ $target }}">打开最新一期 AI 商机</a></p>
+    </main>
+  </body>
+</html>

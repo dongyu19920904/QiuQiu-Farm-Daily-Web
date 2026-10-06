@@ -1,2 +1,20 @@
-{{ $bundle := resources.Get "js/vendor/flexsearch.bundle.min.js" | fingerprint }}<script defer src="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}"></script>
-{{ $search := resources.Get "js/flexsearch.js" | resources.ExecuteAsTemplate "zh.search.js" . | minify | fingerprint }}<script defer src="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}"></script>
+{{/* Search */}}
+{{- if (site.Params.search.enable | default true) -}}
+  {{- $searchType := site.Params.search.type | default "flexsearch" -}}
+  {{- if eq $searchType "flexsearch" -}}
+    {{- $jsSearchScript := printf "%s.search.js" .Language.Lang -}}
+    {{- $jsSearch := resources.Get "js/flexsearch.js" | resources.ExecuteAsTemplate $jsSearchScript . -}}
+    {{- if hugo.IsProduction -}}
+      {{- $jsSearch = $jsSearch | minify | fingerprint -}}
+    {{- end -}}
+    {{- with resources.Get "js/vendor/flexsearch.bundle.min.js" -}}
+      {{- $flexSearchJs := . | fingerprint -}}
+      <script defer src="{{ $flexSearchJs.RelPermalink }}" integrity="{{ $flexSearchJs.Data.Integrity }}" crossorigin="anonymous"></script>
+    {{- else -}}
+      {{- errorf "Could not find vendored FlexSearch bundle at assets/js/vendor/flexsearch.bundle.min.js" -}}
+    {{- end -}}
+    <script defer src="{{ $jsSearch.RelPermalink }}" integrity="{{ $jsSearch.Data.Integrity }}"></script>
+  {{- else -}}
+    {{- warnf `search type "%s" is not supported` $searchType -}}
+  {{- end -}}
+{{- end -}}

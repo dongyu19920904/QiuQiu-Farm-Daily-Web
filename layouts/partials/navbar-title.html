@@ -1,0 +1,7 @@
+{{- $logoLink := .Site.Home.RelPermalink -}}
+
+<a class="hx:flex hx:items-center hx:hover:opacity-75 hx:ltr:mr-auto hx:rtl:ml-auto" href="{{ $logoLink }}">
+  <span class="hx:mr-2 hx:font-extrabold hx:inline hx:select-none hx:whitespace-nowrap" title="{{ .Site.Title }}" style="font-size: 1.1rem;">
+    {{ site.Title }}
+  </span>
+</a>

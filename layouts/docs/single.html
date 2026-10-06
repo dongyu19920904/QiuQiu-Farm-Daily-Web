@@ -1,0 +1,50 @@
+{{ define "main" }}
+  {{- $isDaily := false -}}
+  {{- $isOpportunity := false -}}
+  {{- $isAccountOpportunity := false -}}
+  {{- with .File -}}
+    {{- $directory := replace .Dir "\\" "/" -}}
+    {{- $isDaily = and
+      (gt (len (findRE "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" .BaseFileName)) 0)
+      (gt (len (findRE "^[0-9]{4}-[0-9]{2}/$" $directory)) 0)
+    -}}
+    {{- $isOpportunity = and
+      (eq $.Section "opportunity")
+      (gt (len (findRE "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" .BaseFileName)) 0)
+    -}}
+    {{- $isAccountOpportunity = and
+      (eq $.Section "account-opportunity")
+      (gt (len (findRE "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" .BaseFileName)) 0)
+    -}}
+  {{- end -}}
+
+  {{- $usesDailyReader := or $isDaily $isOpportunity $isAccountOpportunity -}}
+  {{- $pageContent := .Content -}}
+  {{- if or $isOpportunity $isAccountOpportunity -}}
+    {{- $pageContent = replaceRE `(?s)<h1(?:\s[^>]*)?>.*?</h1>` "" $pageContent -}}
+  {{- end -}}
+
+  <div class='hx:mx-auto hx:flex hextra-max-page-width{{ if $usesDailyReader }} ai-daily-layout{{ end }}{{ if $isOpportunity }} ai-opportunity-layout{{ end }}{{ if $isAccountOpportunity }} ai-account-opportunity-layout{{ end }}'>
+    {{ partial "sidebar.html" (dict "context" .) }}
+    {{ partial "toc.html" . }}
+    <article class="hx:w-full hx:break-words hx:flex hx:min-h-[calc(100vh-var(--navbar-height))] hx:min-w-0 hx:justify-center hx:pb-8 hx:pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+      <main class="hx:w-full hx:min-w-0 hx:max-w-6xl hx:px-6 hx:pt-4 hx:md:px-12{{ if $usesDailyReader }} ai-daily-shell{{ end }}{{ if $isOpportunity }} ai-opportunity-shell{{ end }}{{ if $isAccountOpportunity }} ai-account-opportunity-shell{{ end }}">
+        {{ partial "breadcrumb.html" (dict "page" . "enable" true) }}
+        {{ if $isDaily }}
+          {{ partial "custom/daily-masthead.html" . }}
+        {{ else if $isOpportunity }}
+          {{ partial "custom/opportunity-masthead.html" . }}
+        {{ else if $isAccountOpportunity }}
+          {{ partial "custom/account-opportunity-masthead.html" . }}
+        {{ end }}
+        <div class="content{{ if $usesDailyReader }} ai-daily-content{{ end }}{{ if $isOpportunity }} ai-opportunity-content{{ end }}{{ if $isAccountOpportunity }} ai-account-opportunity-content{{ end }}">
+          {{ if and .Title (not $usesDailyReader) }}<h1>{{ .Title }}</h1>{{ end }}
+          {{ $pageContent | safeHTML }}
+        </div>
+        {{ partial "components/last-updated.html" . }}
+        {{ partial "components/pager.html" . }}
+        {{ partial "components/comments.html" . }}
+      </main>
+    </article>
+  </div>
+{{ end }}

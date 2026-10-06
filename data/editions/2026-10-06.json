@@ -1,191 +1,277 @@
 {
-  "faq": [
-    {
-      "sourceIds": [
-        "wur-foundation",
-        "cgiar-ai-hub"
-      ],
-      "text": "通用大模型在网络文本上训练，农业基础模型需整合卫星影像、气象记录、田间测量、遗传数据等多模态专业数据。农业系统涉及作物品种、土壤类型、气候条件和管理方式的复杂交互，单一领域的模型难以应对真实场景。基础模型通过统一框架连接这些数据源，使AI能够理解生物生长、环境变化和人类决策之间的关系，为不同地区和作物提供可靠建议。这需要跨学科协作和长期数据积累，也是当前多个机构投入的方向。",
-      "title": "农业AI基础模型与通用大模型有何不同"
-    },
-    {
-      "sourceIds": [
-        "usda-dash"
-      ],
-      "text": "美国农业部DASH平台展示了从数据到部署的完整路径。首先用BenchBot自动化系统在受控环境快速采集标注影像，建立涵盖不同生长阶段和光照条件的训练集存入AgIR影像库。然后在这些数据上训练作物、杂草或病害识别模型，并通过SCINet高性能计算优化。最后将模型加载到ModCam模块化相机，安装在拖拉机喷杆或其他农机上实时识别田间目标。这种流程需要影像质量、模型泛化能力和硬件适配多环节配合，开源工具降低了研究者和种植者的使用门槛。",
-      "title": "田间视觉识别工具如何实际部署"
-    }
-  ],
-  "intro": "本期汇集近期农业AI领域的研究进展、机构项目与应用案例。内容涵盖中国农业科学院的植物表型重建方法和家畜智能项圈应用、欧洲与国际组织的农业基础模型构建计划、美国农业部的视觉数据平台，以及葡萄酒烟熏污染处理等多个方向。这些是已公开的研究报道与项目进展,不是今日新闻发布。",
-  "lesson": {
-    "sourceIds": [
-      "wur-foundation",
-      "cgiar-ai-hub",
-      "usda-dash"
-    ],
-    "text": "本期多个项目反映出农业AI正从单一场景工具向整合平台演进。瓦赫宁根大学牵头的AgriScienceFM和CGIAR AI中心都在尝试打破数据孤岛，前者计划构建整合生物、环境与管理活动的基础模型体系，后者将数十年科研成果转化为可部署的农业大语言模型和基因库AI工具。美国农业部DASH平台则通过标准化影像库、自动化采集设备和田间部署工具,建立从数据生产到模型训练再到实地应用的完整链条。这种整合不仅是技术层面的数据融合,更是为了让AI在不同作物、土壤、气候条件下都能提供可靠决策支持,最终服务于育种者、研究人员和农民的实际需求。",
-    "title": "农业AI从碎片走向整合"
-  },
+  "schemaVersion": 2,
+  "date": "2026-10-06",
+  "url": "/2026-10/2026-10-06/",
+  "articleSha256": "99b42336d657d2cc9993938ccc2d602279ab894083736788ddc7edfdf14650c4",
+  "topic": "agriculture-and-rural-life",
+  "format": "faithful-original-daily",
+  "generatedAt": "2026-10-06T14:22:04.353Z",
   "items": [
     {
-      "agricultureProblem": "农业知识锁在论文中难以在决策时获取",
-      "aiRole": "将科研数据转化为面向农民与决策者的应用工具",
-      "body": "CGIAR数字化转型加速器在阿布扎比建立AI中心，通过与各研究中心、AI专家和推广伙伴协作，将数十年农业研究成果转化为实用数字产品。中心采用产品导向流程，与科学家和终端用户代表共同设计，在短周期内将想法转化为可验证原型。目前正在开发农业大语言模型AgriLLM、基因库AI平台Genebank AI和水文AI工具Hydrology AI等产品。AgriLLM基于来自CGIAR及合作伙伴的问答对训练，计划支持多种当地语言为农民提供可靠的情境化建议。Genebank AI链接基因、性状和表型数据帮助育种者更快识别抗性种质，Hydrology AI结合实时全球数据集简化流域水文建模。",
-      "limitations": "模型准确性依赖训练数据覆盖范围，当地语言支持需逐步扩展",
-      "stage": "机构项目报道",
-      "title": "CGIAR AI中心将农业科研转化为AI产品",
-      "tryIt": "AgriLLM已发布，可关注CGIAR AI Hub网站获取访问方式",
-      "sourceId": "cgiar-ai-hub",
+      "title": "AI 帮植物找回抗病线索，效果仍要交给田间试验",
+      "body": "英国 Resurrect Bio 用 FloraFold 预测植物免疫受体与病原体蛋白的相互作用。10 月 5 日的公司访谈介绍了这条育种路线：先用 AI 缩小搜索范围，再做实验。相关基因编辑面向育种公司，效果最终要由田间试验确认。想了解农业 AI，可以先记住“筛选线索”的用途🌱。报道方的母公司 AgFunder 也是投资者，这不是独立效果评测。",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
       "source": [
         {
-          "id": "cgiar-ai-hub",
-          "name": "CGIAR AI Hub",
-          "url": "https://www.cgiar.org/news-events/news/cgiar-ai-hub-turning-agricultural-science-ai-products",
-          "date": "2026-05-18",
-          "kind": "research",
-          "topic": "农业大模型",
-          "stage": "机构项目报道",
-          "institution": "CGIAR",
-          "checkedAt": "2026-10-06T08:10:56.749Z"
-        }
-      ]
-    },
-    {
-      "agricultureProblem": "田间植物表型采集依赖专业设备与参数标定",
-      "aiRole": "从抖动视频推算深度与相机参数",
-      "body": "中国农业科学院信息所团队利用手持设备拍照时的自然抖动来重建植物三维形态。传统方法需要精确的相机参数和稳定拍摄，这套方法反其道而行，把抖动产生的微小视差作为深度线索，结合神经渲染框架从短视频中同步推算相机位置、镜头特性和场景深度。针对无意识抖动视差小容易放大误差的问题，研究团队通过特征点对应和亮度一致性约束提高稳定性。该方法无需预训练模型，可直接优化输入序列，为田间便携式表型采集提供了灵活实用的技术路径。",
-      "limitations": "依赖抖动质量，强光或运动模糊会影响重建精度",
-      "stage": "机构研究报道",
-      "title": "手持设备微抖动辅助植物三维表型重建",
-      "tryIt": "研究方法需专业设备与编程基础，建议关注团队后续开源工具",
-      "sourceId": "found-0863c79bf3b2",
-      "source": [
-        {
-          "id": "found-0863c79bf3b2",
-          "name": "中国农科院农业信息所",
-          "url": "https://aii.caas.cn/xwdt/zhdt/55d800823abd48a4b47d5d2aa219833f.htm",
-          "date": "2026-09-29",
+          "id": "aaae21f66d9b80ec",
+          "name": "AgFunderNews",
+          "url": "https://agfundernews.com/%f0%9f%8e%a5-resurrect-bio-reawakens-plants-natural-defenses-its-very-targeted-almost-like-personalized-medicine",
+          "date": "2026-10-05",
+          "checkedAt": "2026-10-06T13:45:45.430Z",
+          "topic": "农业AI",
           "kind": "news",
-          "topic": "农业AI研究",
-          "stage": "机构研究报道",
-          "institution": "CAAS",
-          "checkedAt": "2026-10-06T08:11:01.571Z"
+          "stage": "近期报道",
+          "region": "international"
         }
       ]
     },
     {
-      "agricultureProblem": "大规模养殖难以及时掌握个体生理状态",
-      "aiRole": "识别行为、监测发情与健康预警",
-      "body": "中国农业科学院信息所研发的家畜智能项圈集成移动通信、人工智能和大数据技术，可识别家畜行为、跟踪轨迹、监测发情并预警健康状态。该装备已在新疆、内蒙古、甘肃、宁夏、河北、山东等地应用，覆盖牛羊马驼等多种家畜，帮助养殖户掌握个体生理变化并指导生产决策。研究团队正围绕核心部件国产化需求持续优化硬件与算法模型，计划形成适配不同家畜和养殖场景的技术方案，推动家畜智能穿戴装备国产化进程。",
-      "limitations": "依赖网络覆盖与电池续航，复杂地形可能影响定位",
-      "stage": "机构研究报道",
-      "title": "家畜智能项圈在多地畜牧场景应用",
-      "tryIt": "属机构应用项目，个人养殖户可关注当地推广计划",
-      "sourceId": "found-2d50a4bb4d78",
+      "title": "阳台种菜先选盆，别只看它能装多少土",
+      "body": "这是 种植知识，不是今天新发布的新闻。英国 RHS 的容器种菜指南建议优先考虑深、宽约 45 厘米以上的容器，以减少频繁浇水追肥的负担。小盆也能种，但根系空间和水分更容易受限。今天可以量量现有花盆，再按作物选择大小📏。浇水要避免长期积水；播种时间则按本地气候和光照调整。",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
       "source": [
         {
-          "id": "found-2d50a4bb4d78",
-          "name": "中国农科院农业信息所",
-          "url": "https://aii.caas.cn/xwdt/zhdt/909783c2df604d56b204759e5898a454.htm",
-          "date": "2026-09-29",
+          "id": "e9c11501491f5c90",
+          "name": "RHS Advice Team",
+          "url": "https://www.rhs.org.uk/vegetables/containers",
+          "date": null,
+          "checkedAt": "2026-10-06T13:45:45.430Z",
+          "topic": "种菜与田园",
+          "kind": "knowledge",
+          "stage": "种植资料",
+          "region": "UK; adapt to local crop and climate"
+        }
+      ]
+    },
+    {
+      "title": "Soilytix 用基因组 AI 找候选，尚未证明能省下多少成本",
+      "body": "德国 Soilytix 推出 LOAM，目标是从大量微生物中筛出值得继续验证的候选。10 月 5 日的平台介绍提到，它分析了 15,640 个基因组，结合农艺与微生物数据缩小范围。公司计划在 2027 年开展发现试点🧬。这是面向作物保护研发的工具，不是家庭自制菌剂的依据。看这类进展时，要把“候选发现”和“田间有效”分开。",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "b2e4ad8e52fe0485",
+          "name": "AgNavigator",
+          "url": "https://www.agnavigator.com/Article/2026/10/05/generating-more-candidates-can-make-the-bottleneck-worse-soilytix-targets-biologicals-validation-problem-with-genomic-ai/",
+          "date": "2026-10-05",
+          "checkedAt": "2026-10-06T13:45:45.430Z",
+          "topic": "农业AI",
           "kind": "news",
-          "topic": "农业AI研究",
-          "stage": "机构研究报道",
-          "institution": "CAAS",
-          "checkedAt": "2026-10-06T08:11:02.692Z"
+          "stage": "近期报道",
+          "region": "international"
         }
       ]
     },
     {
-      "agricultureProblem": "野火烟雾导致葡萄酒烟熏污染造成经济损失",
-      "aiRole": "本案例主要为化学材料应用，未涉及AI技术",
-      "body": "美国农业研究局加州戴维斯实验室采用新型分子印迹聚合物技术，从受野火烟雾影响的葡萄酒中定向去除烟熏化合物。野火烟雾中的挥发酚被葡萄吸收后在常规发酵中释放，导致葡萄酒产生焦味，受损葡萄酒通常被降级或销毁。研究团队开发的分子印迹聚合物像抗体一样靶向并移除烟熏酚类化合物。该技术已获批在商业规模的葡萄酒处理中使用，试验证明可从实验性烟熏葡萄酒中定向去除烟熏酚。由于在葡萄园预防野火烟雾目前因时间和成本限制不可行,这项修复技术为酒厂挽回价值提供了关键工具,增加了种植者将受影响果实销售给酒厂生产高品质葡萄酒的可能性。",
-      "limitations": "去除效果取决于污染程度，无法完全恢复所有受损葡萄酒",
-      "stage": "机构应用报道",
-      "title": "分子印迹聚合物去除烟熏污染葡萄酒中的挥发酚",
-      "tryIt": "属商业化处理技术，酒厂可咨询相关供应商",
-      "sourceId": "found-d50599cf1d4a",
+      "title": "hexafarms 融资 480 万欧元，把温室数据接到同一个系统",
+      "body": "10 月 6 日，Hortidaily 报道 hexafarms 完成新一轮融资。公司将推进无线传感和自动病虫害侦查。其传感器每 5 分钟采集气候、灌溉、基质、排水及光照数据📡。系统面向商业温室，采用订阅方式。这条新闻适合关注智慧农业的读者：价值在于把观察串起来，不等于买了设备就能增产。",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
       "source": [
         {
-          "id": "found-d50599cf1d4a",
-          "name": "USDA ARS Scientific Discoveries",
-          "url": "https://scientificdiscoveries.ars.usda.gov/explore-our-discoveries/pacific-west/making-smoke-tainted-wine-more-appealing",
-          "date": null,
+          "id": "7f10fe00e3986c06",
+          "name": "Hortidaily",
+          "url": "https://www.hortidaily.com/article/9880425/raising-eur4-8-million-to-cut-the-guesswork-out-of-commercial-horticulture/",
+          "date": "2026-10-06",
+          "checkedAt": "2026-10-06T13:45:45.430Z",
+          "topic": "农业AI",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "international"
+        }
+      ]
+    },
+    {
+      "title": "椰糠也要看使用条件，Teral 推进按作物设计基质",
+      "body": "印度 Teral 在 10 月 6 日介绍了作物专用椰糠基质方案。公司考虑作物、容器、气候与灌溉方式，调整基质的持水性和通气性。这面向专业温室，但问题也值得阳台新手留意：同一种介质，在不同盆里未必表现一样。选购前先看用途和产品说明，别只看“椰糠”两个字。本文没有可照抄的通用配方。",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "da5bd10115ed32a2",
+          "name": "Hortidaily",
+          "url": "https://www.hortidaily.com/article/9880473/teral-expands-crop-specific-coco-substrate-solutions/",
+          "date": "2026-10-06",
+          "checkedAt": "2026-10-06T13:45:45.430Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "international"
+        }
+      ]
+    },
+    {
+      "title": "卖菜别只算手续费，日本农户把时间也记进账本",
+      "body": "10 月 6 日，SMART AGRI 比较直销、电商与直卖所。直销要接待，电商要拍照、打包和发货，直卖所也要补货和回收卖剩的菜。费用低，不一定留下更多收入。若以后想把自家收成卖出去，可以先记一次包装和配送用了几分钟📝。再算这一单扣掉材料、运费后的余额，先把劳动看见。",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "bd769e587cbdb774",
+          "name": "SMART AGRI",
+          "url": "https://smartagri-jp.com/management/15391",
+          "date": "2026-10-06",
+          "checkedAt": "2026-10-06T13:45:45.430Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "Japan"
+        }
+      ]
+    },
+    {
+      "title": "气雾栽培的新看点，是一整套生长策略",
+      "body": "10 月 6 日，Hortidaily 介绍英国 LettUs Grow 设施的实地观察。超声气雾让部分根系接触雾滴，后期根系还会进入浅水层。观察者强调，灌溉要随作物阶段和环境变化。节水、能耗及经济性仍需逐作物验证。它适合当作农业科技观察，不能直接变成阳台搭建教程🔬。今天更值得追问：设备之外，还需要哪些监测和维护？",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "16656bcd2a3bbb44",
+          "name": "Hortidaily",
+          "url": "https://www.hortidaily.com/article/9878831/from-aeroponic-technology-to-a-reliable-growing-strategy/",
+          "date": "2026-10-06",
+          "checkedAt": "2026-10-06T13:45:45.430Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "international"
+        }
+      ]
+    },
+    {
+      "title": "初霜前做准备，先弄清自家的番茄是什么类型",
+      "body": "美国 Garden Betty 10 月 1 日的初霜准备清单区分了 无限生长型与有限生长型番茄。作者在预期初霜前调整晚季生长，主要针对前者。经验来自俄勒冈中部，不是中国统一操作日期。若你家还有露天番茄，今天先确认品种、查看当地天气预报，再检查覆盖材料🍅。别因为月份相同，就提前把仍能生长的植株剪掉。",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "3854330ad682b1d1",
+          "name": "Garden Betty · Linda Ly",
+          "url": "https://gardenbetty.com/first-frost-warning/",
+          "date": "2026-10-01",
+          "checkedAt": "2026-10-06T13:45:45.430Z",
+          "topic": "种菜与田园",
           "kind": "case",
-          "topic": "农业AI应用",
-          "stage": "机构应用报道",
-          "institution": "USDA-ARS",
-          "checkedAt": "2026-10-06T08:11:12.915Z"
+          "stage": "个人实践与观点",
+          "region": "US"
         }
       ]
     },
     {
-      "agricultureProblem": "农民缺少实时、特定地点的作物胁迫与杂草病害洞察",
-      "aiRole": "提供开源影像数据集、模型与部署工具支持田间决策",
-      "body": "美国农业研究局数字农业系统中心DASH建立国家级数字平台，整合大规模农业计算机视觉训练数据集、机器学习模型和可部署传感技术。平台核心包括国家农业影像库AgIR、自动化相机系统BenchBot和田间模块化相机ModCam。AgIR存储带元数据的高分辨率作物与杂草影像，BenchBot快速采集并标注影像用于训练视觉模型，ModCam安装在喷杆等农机上利用训练好的模型实时识别和绘制田间植物。这些工具支持育种项目快速表型分析，也在甜菜尾孢叶斑病实时制图、覆盖作物精准氮管理和杂草综合管理系统开发等场景应用。所有数据和模型通过美国农业部SCINet高性能计算系统处理。",
-      "limitations": "田间光照与遮挡影响识别，模型需针对不同作物和地区调优",
-      "stage": "研究与应用平台",
-      "title": "美国农业部DASH平台整合视觉数据与模型",
-      "tryIt": "访问DASH网站了解开源数据集与工具使用方式",
-      "sourceId": "usda-dash",
+      "title": "秋天也能为春天做准备，但先核对当地越冬条件",
+      "body": "Garden Betty 9 月 29 日更新秋植与春季花园指南，原文首发于 2024 年。作者介绍了多年生植物、球根和耐寒菜的秋植思路：给根系留下建立时间，再等来年恢复生长。这依赖耐寒品种和当地冬季条件🌼。想慢慢拥有田园生活，可以先列出一个适合本地的小试种清单。不必一次买齐，更别把美国耐寒分区当成自家播种表。",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
       "source": [
         {
-          "id": "usda-dash",
-          "name": "USDA ARS",
-          "url": "https://scientificdiscoveries.ars.usda.gov/tellus/stories/articles/building-digital-infrastructure-unlock-precision-agriculture-us-farmers",
-          "date": null,
+          "id": "fbd4ff4dfa6403f5",
+          "name": "Garden Betty · Linda Ly",
+          "url": "https://gardenbetty.com/what-to-plant-in-fall/",
+          "date": "2026-09-29",
+          "checkedAt": "2026-10-06T13:45:45.430Z",
+          "topic": "种菜与田园",
           "kind": "case",
-          "topic": "农业视觉数据",
-          "stage": "研究与应用平台",
-          "institution": "USDA-ARS",
-          "checkedAt": "2026-10-06T08:10:57.453Z"
+          "stage": "个人实践与观点",
+          "region": "US"
         }
       ]
     },
     {
-      "agricultureProblem": "作物土壤气候等领域数据孤立难以形成完整决策图景",
-      "aiRole": "整合跨学科数据构建可泛化的农业决策基础",
-      "body": "瓦赫宁根大学牵头的AgriScienceFM项目计划开发整合多源数据的农业基础模型，以应对当前农业AI碎片化和单一场景局限问题。项目将构建三个相互关联的基础模型，分别针对生物材料、自然环境和人类管理活动。研究团队将整合卫星影像、气象数据、田间测量、畜牧场记录、作物数据和遗传材料等公开数据集，并在作物与水资源卫星监测、农田土壤建议、抗性品种加速育种、病虫害与动物健康精准管理等场景测试模型表现。项目还将开发基准测试体系，评估模型在不同地区和真实农业挑战中的可靠性。",
-      "limitations": "跨领域数据标准化难度大，模型泛化能力需长期验证",
-      "stage": "研究项目",
-      "title": "欧洲AgriScienceFM项目构建农业基础模型",
-      "tryIt": "属研究项目阶段，建议关注项目网站未来公开的数据集与工具",
-      "sourceId": "wur-foundation",
+      "title": "不翻土的南瓜对比，值得看，也值得追问试验条件",
+      "body": "英国 Charles Dowding 9 月 15 日的菜园试验记录比较了相同堆肥投入的两个试验床。各种 两株南瓜，翻土床收获 7.44 公斤，不翻土床为 13.1 公斤。这是他的个人菜园记录，不是所有土壤都能复制的增产率。小菜地读者可以学的是记录习惯：写下品种、投入和收获，再比较。先观察自家的土，而不是只记住一个高数字。",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
       "source": [
         {
-          "id": "wur-foundation",
-          "name": "Wageningen University & Research",
-          "url": "https://www.wur.nl/en/news/wur-leads-european-project-ai-better-understands-agricultural-systems",
-          "date": "2026-06-22",
-          "kind": "research",
-          "topic": "农业基础模型",
-          "stage": "研究项目",
-          "institution": "WUR",
-          "checkedAt": "2026-10-06T08:10:56.016Z"
+          "id": "05c10b97aaacf8f7",
+          "name": "Charles Dowding",
+          "url": "https://charlesdowding.co.uk/blogs/homeacres/september-no-dig-update",
+          "date": "2026-09-15",
+          "checkedAt": "2026-10-06T13:45:45.430Z",
+          "topic": "种菜与田园",
+          "kind": "case",
+          "stage": "个人实践与观点",
+          "region": "Somerset, UK"
+        }
+      ]
+    },
+    {
+      "title": "Charles Dowding：菜园日志，也会随天气修正",
+      "body": "10 月 1 日的英国 Homeacres 秋季日志记录了覆盖、浇水与收获。作者补充了一场突来的风雨，把 9 月雨量修正为 52 毫米。这种持续记录很适合小菜园：今天记一次土壤湿润情况，下次浇水前再对照。数值属于英国当地，不能当自家的用水标准。我们也不把日志里的非受控效果判断当成已证实方法。",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "c88829c62729a876",
+          "name": "Charles Dowding",
+          "url": "https://charlesdowding.co.uk/blogs/homeacres/autumns-no-dig-potential",
+          "date": "2026-10-01",
+          "checkedAt": "2026-10-06T13:45:45.430Z",
+          "topic": "种菜与田园",
+          "kind": "case",
+          "stage": "个人实践与观点",
+          "region": "Somerset, UK"
+        }
+      ]
+    },
+    {
+      "title": "松田祐树：草莓宣传里的措辞，值得多看一眼",
+      "body": "10 月 5 日，松田祐树比较了一段 Oishii Farm 视频中的口述和字幕。他指出，“完全无农药”的口述与“未使用化学农药”的字幕不同。作者没有确定原因。读者可以学的是核对措辞，进一步查看生产说明。单凭一段宣传，不能判断所有生产环节，更不能推出食品安全结论。这是一条待核实的个人观察。",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "e0de8a282cb9a1fc",
+          "name": "松田祐樹＠MD-Farm",
+          "url": "https://note.com/matsuda_mdfarm/n/nd04b3edd3b58",
+          "date": "2026-10-05",
+          "checkedAt": "2026-10-06T13:45:45.430Z",
+          "topic": "种菜与田园",
+          "kind": "case",
+          "stage": "个人实践与观点",
+          "region": "Japan"
+        }
+      ]
+    },
+    {
+      "title": "秘鲁白可可：品种潜力要与管理条件一起看",
+      "body": "台湾农业科技平台摘译了一项秘鲁可可研究，页面标注 10 月 5 日。研究覆盖 12 座小农可可园、持续 3 年，比较材料、配置和管理。产量差异与多项条件相关，不能简化成“多剪两次就增产”🌿。这不是中国阳台可可教程，但提醒我们：选品种时，也要看它需要怎样的管理。",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "0043215c7d6559fe",
+          "name": "農業科技新脈動",
+          "url": "https://agritech-foresight.atri.org.tw/article/contents/6332",
+          "date": null,
+          "checkedAt": "2026-10-06T13:45:45.430Z",
+          "topic": "种菜与田园",
+          "kind": "knowledge",
+          "stage": "种植资料",
+          "region": "Taiwan"
+        }
+      ]
+    },
+    {
+      "title": "Dittmar 家庭农场：田园味道与经营现实可以同时存在",
+      "body": "10 月 5 日，AgNavigator 走访美国伊利诺伊州 Dittmar 农场。这座 287 英亩的家庭农场提供南瓜、苹果采摘，也销售爆米花。传统农具、太阳能、无人机和迷宫规划软件在这里并存。向往田园生活，可以借鉴它保留农场气息的想法；但游客接待和经营并不轻松。商业农场的规模与收入模式，不能直接套到家庭小院。",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "3ed3374c10a2b21d",
+          "name": "AgNavigator",
+          "url": "https://www.agnavigator.com/Article/2026/10/05/pumpkin-patches-near-galena-a-visit-to-dittmar-farms-and-orchard-in-elizabeth-illinois/",
+          "date": "2026-10-05",
+          "checkedAt": "2026-10-06T13:45:45.430Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "international"
         }
       ]
     }
-  ],
-  "schemaVersion": 2,
-  "topic": "ai-agriculture",
-  "date": "2026-10-06",
-  "model": "claude-opus-4-8",
-  "usage": {
-    "cache_creation_input_tokens": 8762,
-    "cache_read_input_tokens": 0,
-    "input_tokens": 0,
-    "kiro_actual_input_tokens": 19820,
-    "kiro_billable_input_tokens": 8762,
-    "kiro_credits": 0.598520753482587,
-    "kiro_excluded_input_tokens": 11058,
-    "kiro_first_thinking_ms": null,
-    "kiro_first_tool_use_ms": 72121,
-    "kiro_first_visible_ms": null,
-    "kiro_total_ms": 72124,
-    "kiro_upstream_response_ms": 72121,
-    "output_tokens": 6106
-  },
-  "generatedAt": "2026-10-06T08:13:59.332Z",
-  "draftHash": "48bdcdab63f24462c1959b26a010502075ee842d0affd6c7d833d49b65335ae5",
-  "markdownHash": "fecb309a0716940cb1b47d99b12d6801e696c4992ce079b967dffcd3f30b521e"
+  ]
 }

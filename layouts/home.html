@@ -1,1 +1,0 @@
-{{ define "main" }}{{ range first 1 ((where site.RegularPages "Section" "daily").ByDate.Reverse) }}{{ partial "daily-reader.html" . }}{{ else }}<main id="main"><h1>秋秋 AI 农业日报</h1><p>通过真实来源校验的日报将在这里完整展示。</p></main>{{ end }}{{ end }}

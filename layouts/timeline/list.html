@@ -1,0 +1,390 @@
+{{ define "main" }}
+  {{ partial "sidebar.html" (dict "context" . "disableSidebar" true "displayPlaceholder" false) }}
+  {{- $dailyPages := slice -}}
+  {{- range .Site.RegularPages -}}
+    {{- if and .File (findRE "^[0-9]{4}-[0-9]{2}$" .Section) (findRE "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" .File.BaseFileName) -}}
+      {{- $dailyPages = $dailyPages | append . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $dailyPages = sort $dailyPages "File.Path" "desc" -}}
+  {{- $timelinePages := first 7 $dailyPages -}}
+  {{- $maxNodesPerDay := 3 -}}
+  {{- $signals := slice -}}
+  {{- $seenURLs := newScratch -}}
+
+  {{- range $page := $timelinePages -}}
+    {{- $dailyNodeCount := 0 -}}
+    {{- $raw := replace $page.RawContent "\r\n" "\n" -}}
+    {{- $sectionChunks := after 1 (split (replaceRE `(?m)^##\s+` "@@AIVORA_SECTION@@" $raw) "@@AIVORA_SECTION@@") -}}
+
+    {{- range $sectionChunk := $sectionChunks -}}
+      {{- $sectionLines := split $sectionChunk "\n" -}}
+      {{- $sectionHeading := trim (index $sectionLines 0) " *#\t\r" -}}
+      {{- $sectionBody := delimit (after 1 $sectionLines) "\n" -}}
+      {{- $category := "" -}}
+      {{- $categoryLabel := "" -}}
+
+      {{- if or (in $sectionHeading "开源") (in (lower $sectionHeading) "github") -}}
+        {{- $category = "github" -}}
+        {{- $categoryLabel = "GITHUB TRENDING" -}}
+      {{- else if or (in $sectionHeading "社媒") (in $sectionHeading "社交") -}}
+        {{- $category = "social" -}}
+        {{- $categoryLabel = "SOCIALMEDIA" -}}
+      {{- else if or (in $sectionHeading "前沿研究") (in $sectionHeading "论文") (in (lower $sectionHeading) "paper") -}}
+        {{- $category = "research" -}}
+        {{- $categoryLabel = "PAPER" -}}
+      {{- else if or (in $sectionHeading "产品") (in $sectionHeading "功能更新") -}}
+        {{- $category = "news" -}}
+        {{- $categoryLabel = "NEWS" -}}
+      {{- else if or (in $sectionHeading "行业展望") (in $sectionHeading "社会影响") (in $sectionHeading "趋势") (in $sectionHeading "值得关注") -}}
+        {{- $category = "news" -}}
+        {{- $categoryLabel = "NEWS" -}}
+      {{- else if in $sectionHeading "趣闻" -}}
+        {{- $category = "fun" -}}
+        {{- $categoryLabel = "FUN" -}}
+      {{- else if or (in $sectionHeading "焦点") (in $sectionHeading "重磅") -}}
+        {{- $category = "news" -}}
+        {{- $categoryLabel = "NEWS" -}}
+      {{- end -}}
+
+      {{- if $category -}}
+        {{- $itemChunks := after 1 (split (replaceRE `(?m)^###\s+` "@@AIVORA_ITEM@@" $sectionBody) "@@AIVORA_ITEM@@") -}}
+        {{- range $itemChunk := $itemChunks -}}
+          {{- $itemLines := split $itemChunk "\n" -}}
+          {{- $titleLine := trim (index $itemLines 0) " *#\t\r" -}}
+          {{- $body := delimit (after 1 $itemLines) "\n" -}}
+          {{- $title := $titleLine -}}
+          {{- $url := "" -}}
+          {{- $rank := "" -}}
+
+          {{- $rankMatch := findRESubmatch `^([0-9]+)\.\s+(.+)$` $titleLine -}}
+          {{- if gt (len $rankMatch) 0 -}}
+            {{- $rank = index (index $rankMatch 0) 1 -}}
+            {{- $title = trim (index (index $rankMatch 0) 2) " *\t\r" -}}
+          {{- end -}}
+
+          {{- $titleLink := findRESubmatch `^\[([^\]]+)\]\((https?://[^)]+)\)$` $title -}}
+          {{- if gt (len $titleLink) 0 -}}
+            {{- $title = index (index $titleLink 0) 1 -}}
+            {{- $url = index (index $titleLink 0) 2 -}}
+          {{- else -}}
+            {{- $bodyLink := findRESubmatch `(?:^|[^!])\[([^\]]+)\]\((https?://[^)]+)\)` $body -}}
+            {{- if gt (len $bodyLink) 0 -}}
+              {{- $url = index (index $bodyLink 0) 2 -}}
+            {{- end -}}
+          {{- end -}}
+
+          {{- $isKeyNode := false -}}
+          {{- if $rank -}}
+            {{- $isKeyNode = le (int $rank) $maxNodesPerDay -}}
+          {{- end -}}
+
+          {{- if and $url $isKeyNode (lt $dailyNodeCount $maxNodesPerDay) -}}
+            {{- $urlKey := lower (replaceRE `/+$` "" $url) -}}
+            {{- if not ($seenURLs.Get $urlKey) -}}
+              {{- $seenURLs.Set $urlKey true -}}
+              {{- $dailyNodeCount = add $dailyNodeCount 1 -}}
+              {{- $bodyClean := replaceRE `(?s)<video.*?</video>` "" $body -}}
+              {{- $bodyClean = replaceRE `(?s)<img.*?>` "" $bodyClean -}}
+              {{- $bodyClean = replaceRE `!\[[^\]]*\]\([^)]+\)` "" $bodyClean -}}
+              {{- $bodyClean = replaceRE `(?m)^---\s*$` "" $bodyClean -}}
+              {{- $summary := trim (replaceRE `\s+` " " ($bodyClean | markdownify | plainify)) " " -}}
+              {{- $image := "" -}}
+              {{- $imageMatch := findRESubmatch `!\[[^\]]*\]\((https?://[^)\s]+)(?:\s+"[^"]*")?\)` $body -}}
+              {{- if gt (len $imageMatch) 0 -}}
+                {{- $image = index (index $imageMatch 0) 1 -}}
+              {{- end -}}
+              {{- if ne (int $rank) 1 -}}
+                {{- $image = "" -}}
+              {{- end -}}
+              {{- $source := replaceRE `^https?://(?:www\.)?([^/]+).*$` "$1" $url -}}
+              {{- $signalCategory := $category -}}
+              {{- $signalLabel := $categoryLabel -}}
+              {{- $classificationText := lower (printf "%s %s" $title $bodyClean) -}}
+              {{- if eq $category "news" -}}
+                {{- if in $url "github.com/" -}}
+                  {{- $signalCategory = "github" -}}
+                  {{- $signalLabel = "GITHUB TRENDING" -}}
+                {{- else if or (in $url "x.com/") (in $url "twitter.com/") (in $url "t.me/") (in $url "okjike.com/") (in $url "reddit.com/") -}}
+                  {{- $signalCategory = "social" -}}
+                  {{- $signalLabel = "SOCIALMEDIA" -}}
+                {{- else if or (in $url "arxiv.org/") (in $url "openreview.net/") (in $classificationText "论文") (in $classificationText "研究") (in $classificationText "数学") (in $classificationText "量子") -}}
+                  {{- $signalCategory = "research" -}}
+                  {{- $signalLabel = "PAPER" -}}
+                {{- end -}}
+              {{- end -}}
+              {{- if or (eq $source "x.com") (eq $source "twitter.com") -}}
+                {{- $source = "X / Twitter" -}}
+              {{- else if eq $source "github.com" -}}
+                {{- $source = "GitHub" -}}
+              {{- else if eq $source "t.me" -}}
+                {{- $source = "Telegram" -}}
+              {{- else if eq $source "m.okjike.com" -}}
+                {{- $source = "即刻" -}}
+              {{- else if eq $source "mp.weixin.qq.com" -}}
+                {{- $source = "微信公众号" -}}
+              {{- else if in $source "36kr.com" -}}
+                {{- $source = "36氪" -}}
+              {{- end -}}
+              {{- $signals = $signals | append (dict
+                "date" $page.File.BaseFileName
+                "pageTitle" $page.Title
+                "pageURL" $page.RelPermalink
+                "category" $signalCategory
+                "categoryLabel" $signalLabel
+                "title" ($title | plainify)
+                "url" $url
+                "source" $source
+                "summary" ($summary | truncate 90)
+                "image" $image
+                "rank" $rank
+              ) -}}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $signalDates := slice -}}
+  {{- range $signals -}}
+    {{- if not (in $signalDates .date) -}}
+      {{- $signalDates = $signalDates | append .date -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $schemaItems := slice -}}
+  {{- range $index, $signal := $signals -}}
+    {{- $schemaItem := dict
+      "@type" "Thing"
+      "name" $signal.title
+      "url" $signal.url
+    -}}
+    {{- with $signal.summary -}}
+      {{- $schemaItem = merge $schemaItem (dict "description" .) -}}
+    {{- end -}}
+    {{- $schemaItems = $schemaItems | append (dict
+      "@type" "ListItem"
+      "position" (add $index 1)
+      "item" $schemaItem
+    ) -}}
+  {{- end -}}
+  {{- $timelineItemList := dict
+    "@type" "ItemList"
+    "name" "秋秋农场日报关键事件"
+    "numberOfItems" (len $schemaItems)
+    "itemListOrder" "https://schema.org/ItemListOrderDescending"
+    "itemListElement" $schemaItems
+  -}}
+  {{- $timelineSchema := dict
+    "@context" "https://schema.org"
+    "@type" "CollectionPage"
+    "@id" (printf "%s#ai-timeline" .Permalink)
+    "url" .Permalink
+    "name" .Title
+    "description" .Description
+    "inLanguage" (.Site.Language.LanguageCode | default .Lang)
+    "isAccessibleForFree" true
+    "mainEntity" $timelineItemList
+  -}}
+  {{- with index $timelinePages 0 -}}
+    {{- $timelineSchema = merge $timelineSchema (dict "dateModified" (.Date.Format "2006-01-02T15:04:05-07:00")) -}}
+  {{- end -}}
+
+  {{ partial "sidebar.html" (dict "context" . "disableSidebar" true) }}
+
+  <script type="application/ld+json">
+  {{ $timelineSchema }}
+  </script>
+
+  <div class="ai-timeline-ticker" aria-hidden="true">
+    <div>秋秋农场日报 // AI 动态 // 产品更新 // 开源项目 // 社媒精选 // 前沿研究</div>
+    <div>秋秋农场日报 // AI 动态 // 产品更新 // 开源项目 // 社媒精选 // 前沿研究</div>
+  </div>
+
+  <main class="ai-timeline ai-timeline--signals" data-ai-timeline>
+    <header class="ai-timeline-hero">
+      <p class="ai-timeline-hero__boot">&gt;&gt; SIGNAL UPLINK / QIUQIU FARM DAILY</p>
+      <h1><span>AI 资讯</span> <span>时间线</span></h1>
+      <div class="ai-timeline-hero__description">
+        <span aria-hidden="true"></span>
+        <p>{{ .Description }}</p>
+      </div>
+      <div class="ai-timeline-hero__meta">
+        <span>{{ partial "utils/icon.html" (dict "name" "calendar" "attributes" "width=16 height=16") }} 最近 {{ len $timelinePages }} 期日报</span>
+        {{- with index $timelinePages 0 -}}
+          <span>最新同步 {{ replace .File.BaseFileName "-" "." }}</span>
+        {{- end -}}
+        <span>{{ len $signals }} 个关键节点</span>
+      </div>
+    </header>
+
+    <section class="ai-timeline-method" aria-labelledby="ai-timeline-method-title">
+      <p class="ai-timeline-method__label">EDITORIAL METHOD / 可核查</p>
+      <div>
+        <h2 id="ai-timeline-method-title">AI 时间线如何筛选关键事件</h2>
+        <p>系统读取最近 7 期已发布日报，每期最多保留 3 个高优先级节点，并对重复来源链接全局去重。每个节点都保留来源证据和日报上下文，方便读者核查事件与原始报道。</p>
+      </div>
+    </section>
+
+    <div class="ai-timeline-console" aria-label="时间线筛选">
+      <label class="ai-timeline-console__search">
+        {{ partial "utils/icon.html" (dict "name" "search" "attributes" "width=18 height=18") }}
+        <span class="sr-only">搜索时间线</span>
+        <input type="search" placeholder="搜索标题、摘要或来源..." data-timeline-query>
+      </label>
+      <div class="ai-timeline-console__filters" role="group" aria-label="按类别筛选">
+        <button type="button" class="is-active" data-timeline-category="" aria-pressed="true">全部节点</button>
+        <button type="button" data-timeline-category="news" aria-pressed="false">新闻</button>
+        <button type="button" data-timeline-category="github" aria-pressed="false">开源</button>
+        <button type="button" data-timeline-category="social" aria-pressed="false">社媒</button>
+        <button type="button" data-timeline-category="research" aria-pressed="false">研究</button>
+      </div>
+      <output class="ai-timeline-console__count" data-timeline-count>{{ len $signals }} 个节点</output>
+    </div>
+
+    <div class="ai-signal-stream" aria-live="polite">
+      {{- $renderCounter := newScratch -}}
+      {{- $renderCounter.Set "value" 0 -}}
+      {{- range $dateIndex, $date := $signalDates -}}
+        {{- $dateSignals := where $signals "date" $date -}}
+        <section class="ai-signal-session" data-timeline-session>
+          <header class="ai-signal-session__header">
+            <span>LOG_SESSION:</span>
+            <span class="ai-signal-session__date">{{ replace $date "-" "." }}</span>
+            {{- if eq $dateIndex 0 -}}<b>最新</b>{{- end -}}
+          </header>
+          <div class="ai-signal-session__items">
+            {{- range $dateSignals -}}
+              {{- $order := $renderCounter.Get "value" -}}
+              {{- $renderCounter.Add "value" 1 -}}
+              {{- $strength := 0 -}}
+              {{- if .rank -}}
+                {{- $strength = sub 110 (mul (int .rank) 10) -}}
+              {{- end -}}
+              <article class="ai-signal-card ai-signal-card--{{ .category }}{{ if .image }} has-media{{ end }}"
+                data-timeline-item
+                data-category="{{ .category }}"
+                data-order="{{ $order }}"
+                {{ if ge $order 24 }}hidden{{ end }}>
+                <div class="ai-signal-card__meta">
+                  <span class="ai-signal-card__date">{{ replace .date "-" "." }}</span>
+                  <span class="ai-signal-card__category">[{{ .categoryLabel }}]</span>
+                  <span class="ai-signal-card__source">{{ .source }}</span>
+                  <a class="ai-signal-card__uplink" href="{{ .url }}" target="_blank" rel="noopener noreferrer" aria-label="查看来源证据：{{ .title }}">
+                    来源证据
+                    {{ partial "utils/icon.html" (dict "name" "external-link" "attributes" "width=12 height=12") }}
+                  </a>
+                </div>
+                <div class="ai-signal-card__content">
+                  <div>
+                    <h2>{{ .title }}</h2>
+                    {{- with .summary -}}<p>{{ . }}</p>{{- end -}}
+                  </div>
+                  {{- with .image -}}
+                    <figure class="ai-signal-card__media">
+                      <img src="{{ . }}" alt="{{ $.Title }}时间线配图" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+                    </figure>
+                  {{- end -}}
+                </div>
+                <footer class="ai-signal-card__footer">
+                  {{- if .rank -}}
+                    <div class="ai-signal-card__priority">
+                      <span>DAILY_PRIORITY</span>
+                      <strong>TOP {{ printf "%02d" (int .rank) }}</strong>
+                    </div>
+                    <div class="ai-signal-card__meter" aria-label="当期日报优先级第 {{ .rank }} 名">
+                      <i style="--signal-strength: {{ $strength }}%"></i>
+                    </div>
+                  {{- else -}}
+                    <div class="ai-signal-card__priority">
+                      <span>SECTION_PICK</span>
+                      <strong>{{ .categoryLabel }}</strong>
+                    </div>
+                  {{- end -}}
+                  <a class="ai-signal-card__context" href="{{ .pageURL }}">日报上下文</a>
+                </footer>
+              </article>
+            {{- end -}}
+          </div>
+        </section>
+      {{- end -}}
+    </div>
+
+    <div class="ai-timeline__empty" data-timeline-empty hidden>
+      <strong>没有匹配的关键节点</strong>
+      <span>换一个关键词或类别再看看。</span>
+    </div>
+
+    <button class="ai-timeline-load" type="button" data-timeline-load>
+      加载更多节点
+      {{ partial "utils/icon.html" (dict "name" "arrow-down" "attributes" "width=16 height=16") }}
+    </button>
+  </main>
+
+  <script>
+    (() => {
+      const root = document.querySelector("[data-ai-timeline]");
+      if (!root) return;
+
+      const batchSize = 9;
+      const queryInput = root.querySelector("[data-timeline-query]");
+      const categoryButtons = Array.from(root.querySelectorAll("[data-timeline-category]"));
+      const countOutput = root.querySelector("[data-timeline-count]");
+      const emptyState = root.querySelector("[data-timeline-empty]");
+      const loadButton = root.querySelector("[data-timeline-load]");
+      const sessions = Array.from(root.querySelectorAll("[data-timeline-session]"));
+      const items = Array.from(root.querySelectorAll("[data-timeline-item]"));
+      let activeCategory = "";
+      let visibleLimit = batchSize;
+
+      const applyFilters = () => {
+        const query = queryInput.value.trim().toLocaleLowerCase("zh-CN");
+        const isFiltering = Boolean(query || activeCategory);
+        let matchedCount = 0;
+
+        items.forEach((item) => {
+          const matchesQuery = !query || item.textContent.toLocaleLowerCase("zh-CN").includes(query);
+          const matchesCategory = !activeCategory || item.dataset.category === activeCategory;
+          const matches = matchesQuery && matchesCategory;
+          const visible = matches && (isFiltering || matchedCount < visibleLimit);
+          item.hidden = !visible;
+          if (matches) matchedCount += 1;
+        });
+
+        sessions.forEach((session) => {
+          session.hidden = !session.querySelector("[data-timeline-item]:not([hidden])");
+        });
+
+        countOutput.textContent = `${matchedCount} 个节点`;
+        emptyState.hidden = matchedCount !== 0;
+        loadButton.hidden = isFiltering || visibleLimit >= matchedCount;
+      };
+
+      queryInput.addEventListener("input", () => {
+        visibleLimit = batchSize;
+        applyFilters();
+      });
+
+      categoryButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          activeCategory = button.dataset.timelineCategory;
+          visibleLimit = batchSize;
+          categoryButtons.forEach((candidate) => {
+            const active = candidate === button;
+            candidate.classList.toggle("is-active", active);
+            candidate.setAttribute("aria-pressed", String(active));
+          });
+          applyFilters();
+        });
+      });
+
+      loadButton.addEventListener("click", () => {
+        visibleLimit += batchSize;
+        applyFilters();
+      });
+
+      applyFilters();
+    })();
+  </script>
+{{ end }}

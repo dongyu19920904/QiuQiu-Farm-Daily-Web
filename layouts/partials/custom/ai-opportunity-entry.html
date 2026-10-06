@@ -1,0 +1,45 @@
+{{- $pages := slice -}}
+{{- range .Site.RegularPages -}}
+  {{- $base := .File.BaseFileName -}}
+  {{- if and (eq .Section "opportunity") (findRE "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" $base) -}}
+    {{- $pages = $pages | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- $latest := first 1 (sort $pages "File.Path" "desc") -}}
+{{- $rootLink := "/opportunity" | relLangURL -}}
+{{- $entryLink := $rootLink -}}
+{{- $entryTitle := "AI 商机日报" -}}
+{{- $entryText := "把每天的 AI 热点往前推一步，筛成更适合普通人落地、做内容、做产品或做账号的机会清单。" -}}
+{{- if gt (len $latest) 0 -}}
+  {{- $page := index $latest 0 -}}
+  {{- $entryLink = $page.RelPermalink -}}
+  {{- $entryTitle = printf "最新一期：%s" $page.Title -}}
+  {{- with $page.Description -}}
+    {{- $entryText = . -}}
+  {{- end -}}
+{{- end -}}
+
+<aside class="ai-opportunity-entry" aria-label="AI 商机入口">
+  <div class="ai-opportunity-entry__header">
+    <div>
+      <div class="ai-opportunity-entry__eyebrow">Opportunity Dispatch</div>
+      <h2 class="ai-opportunity-entry__headline">把热点转换成更能落地的机会</h2>
+    </div>
+    <div class="ai-opportunity-entry__signal">Daily Signal</div>
+  </div>
+  <div class="ai-opportunity-entry__body">
+    <div class="ai-opportunity-entry__copy">
+      <h3 class="ai-opportunity-entry__title">{{ $entryTitle }}</h3>
+      <p class="ai-opportunity-entry__text">{{ $entryText }}</p>
+      <div class="ai-opportunity-entry__meta" aria-hidden="true">
+        <span>项目商机</span>
+        <span>账号商机</span>
+        <span>每日更新</span>
+      </div>
+    </div>
+    <a class="ai-opportunity-entry__button" href="{{ $entryLink }}">
+      <span>进入商机页</span>
+      <span aria-hidden="true">→</span>
+    </a>
+  </div>
+</aside>

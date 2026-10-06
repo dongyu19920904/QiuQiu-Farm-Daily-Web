@@ -1,33 +1,41 @@
 ---
-title: 来源与更新说明
+title: 信息源与更新说明
 ---
-## 正在使用的公开来源
 
-- [中国农业科学院棉花研究所](https://cri.caas.cn/)：设施农业AI应用的机构原始报道。
-- [Iowa State AIIRA](https://aiira.iastate.edu/)：AI农业数字孪生研究计划。
-- [DeepForest](https://github.com/weecology/DeepForest)：航拍生态目标检测，MIT许可。
-- [PlantDoc](https://github.com/pratikkayal/PlantDoc-Dataset)：病害图像研究数据，CC BY许可。
-- [NASA Harvest / CropHarvest](https://github.com/nasaharvest/cropharvest)：遥感标注与模型基线，CC BY-SA许可。
-- [Wageningen University & Research](https://www.wur.nl/en/news/wur-leads-european-project-ai-better-understands-agricultural-systems)：农业基础模型研究。
-- [CGIAR AI Hub](https://www.cgiar.org/news-events/news/cgiar-ai-hub-turning-agricultural-science-ai-products)：农业数据、AI产品与农技服务；区分已发布能力和计划。
-- [USDA ARS Scientific Discoveries](https://scientificdiscoveries.ars.usda.gov/tags/new-technologies)：农业视觉、数据基础设施和农机研究。
-- [中国农科院农业信息所科研进展](https://aii.caas.cn/xwdt/kyjz/)：机器视觉、表型和遥感，直接采集公开索引，不猜RSS地址。
+日报面向向往田园生活、自给自足的普通读者。农业 AI 是重点，也选种菜、土壤、水分管理、家庭菜园和真实乡村实践。
 
-网页或公开API按许可与访问规则低频读取，原文不镜像。代码更新时间不冒充新闻日期。无合适图片授权时保留文字。
+## 已接入的公开订阅源
 
-## 内容怎么选
+2026-10-06 实测 15 个 RSS/Atom，11 个可以解析。下列日期是本次订阅中最新条目的日期，不等于每天更新承诺。每篇文章还需去重、读源和审核。
 
-AI能力与农业场景必须同时有来源支持；同事件去重，机构和主题保持多样性。说明能做什么、需要什么输入、适合谁、是否能直接试用，以及目前的限制。旧技术可以讲，但不当成当天新闻。无足够合格资料时保留最近完整一期。
+| 来源 | 最新条目 | 本次条目数 |
+|---|---|---|
+| [松田祐樹＠MD-Farm](https://note.com/matsuda_mdfarm/rss) | 2026-10-06 | 25 |
+| [農業科技新脈動](https://agritech-foresight.atri.org.tw/rss/rss/13) | 2026-10-06 | 20 |
+| [AgFunderNews](https://agfundernews.com/feed) | 2026-10-05 | 50 |
+| [SMART AGRI](https://smartagri-jp.com/rss) | 2026-10-06 | 20 |
+| [Hortidaily](https://www.hortidaily.com/rss.xml/) | 2026-10-06 | 28 |
+| [AgNavigator](https://www.agnavigator.com/arc/outboundfeeds/rss/) | 2026-10-06 | 20 |
+| [Global Ag Tech Initiative](https://www.globalagtechinitiative.com/feed/) | 2026-09-28 | 10 |
+| [AI in Ag UPDATE](https://aiin.ag/feed/) | 2026-09-27 | 10 |
+| [Garden Betty · Linda Ly](https://gardenbetty.com/feed/) | 2026-10-05 | 5 |
+| [Huw Richards · The Edible Garden](https://huwrichards.substack.com/feed) | 2026-09-19 | 20 |
+| [Charles Dowding · Homeacres](https://charlesdowding.co.uk/blogs/homeacres.atom) | 2026-10-01 | 30 |
 
-## Folo农业清单
+[下载已验证来源的 OPML](/downloads/ai-agriculture-sources.opml)，可以导入 Folo。原有 12 个 Folo ID 均已保留为字符串，并与公开原站订阅分别记录；本站采集公开源不依赖 Folo 登录。当前没有宣称已在你的 Folo 账户中完成新增订阅。
 
-本站已筛选并实测两条RSS，可[下载农业专用 OPML](/downloads/ai-agriculture-sources.opml)后导入 Folo。公开来源直接接入生成器，网站更新不依赖Folo登录。
+## 怎样找作者，再在 Folo 搜索
 
-| 来源 | 实测情况与限制 |
-|---|---|
-| [AgriScienceFM RSS](https://www.agriscience.fm/feed/) | WUR项目的农业基础模型研究。2026-10-05实测1条，原日期2026-07-15，更新低频。 |
-| [USDA ARS Research News RSS](https://www.ars.usda.gov/rss/?productName=Research%20News) | 官方研究新闻，需再筛农业AI。2026-10-05实测8条，最新2025-01-08；官网索引补充，不能依赖它获取当日新闻。 |
+先找持续记录播种、土壤、浇水、采收和失败过程的作者，查看所在地区与实际方法，再到 Folo 的发现页搜索作者全名、账号或个人网站地址。X、小红书作者也可以用这条路径。找到订阅后要核对主页身份、最近十条内容和更新时间，不能仅看名称相似或订阅人数。
 
-搜索优先机构名和技术主题，如 `Wageningen agricultural AI`、`CGIAR artificial intelligence`、`中国农科院 机器视觉 表型`。结果回到机构原文核对，不把名称相近的转载当官方订阅。
+已核对公开个人网站的候选包括 [Garden Betty / Linda Ly](https://gardenbetty.com/)、[Charles Dowding](https://charlesdowding.co.uk/blogs/homeacres)、[Huw Richards](https://huwrichards.substack.com/about) 和 [Homestead and Chill](https://homesteadandchill.com/)。英国、美国的月份、耐寒分区和品种建议要结合当地条件；付费预览不用于编写完整教程。
 
-Folo账户内保存仍待登录完成确认。未核实的RSSHub路线、媒体订阅和feed/list ID不启用，不读取其他私人订阅或搬迁旧Cookie。素材不足保留最近合格一期。
+Folo 可先搜 `Garden Betty`、`Charles Dowding`、`Huw Richards`、`松田祐樹 MD-Farm`；中文主题可从 `阳台种菜`、`家庭菜园`、`不翻土`、`自给自足`、`堆肥`、`滴灌` 扩展。主题搜索用于发现作者，并不表示已验证任何特定小红书账号。
+
+## 来源限制与筛选
+
+本次未成功解析：Remote Sensing、Precision Farming Dealer、Agri-TechE、上下游新聞。保留来源记录以便后续验证，但不用失败内容凑数。慢更新机构与研究资料用于背景，不冒充当天新闻。Garden Betty 等作者文章可能是旧文更新，正文会说明。部分农业媒体报道来自企业，标明企业归因，不当成独立效果评测。
+
+新闻优先近三日，个人实践可引用近三十日并注明日期，知识资料单独标注。同事件跨媒体合并，避免一家媒体占满版面。没有完整、合格的新稿时保留上一期。
+
+配图授权未核实时不放图，来源文章不镜像。农药用量、喷施频率、安全间隔与食品安全操作需官方适用依据。

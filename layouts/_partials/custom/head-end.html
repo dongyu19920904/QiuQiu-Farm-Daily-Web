@@ -1,5 +1,0 @@
-{{ $article := . }}{{ if .IsHome }}{{ range first 1 ((where site.RegularPages "Section" "daily").ByDate.Reverse) }}{{ $article = . }}{{ end }}{{ end }}
-{{ if eq $article.Section "daily" }}{{ $published := $article.Params.published_at | default ($article.Date.Format "2006-01-02T15:04:05Z07:00") }}{{ $modified := $article.Lastmod.Format "2006-01-02T15:04:05Z07:00" }}
-<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "Article" "headline" $article.Title "datePublished" $published "dateModified" $modified "mainEntityOfPage" $article.Permalink "author" (dict "@type" "Organization" "name" "秋秋 AI 农业日报") "publisher" (dict "@type" "Organization" "name" "秋秋 AI 农业日报") | jsonify | safeJS }}</script>
-{{ end }}{{ if not .IsHome }}<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" (slice (dict "@type" "ListItem" "position" 1 "name" "首页" "item" site.BaseURL) (dict "@type" "ListItem" "position" 2 "name" .Title "item" .Permalink)) | jsonify | safeJS }}</script>{{ end }}
-{{ if eq .Type "farm" }}<link rel="stylesheet" href="/css/site.css">{{ end }}

@@ -1,0 +1,10 @@
+{
+  "name": "qiuqiu-farm-daily",
+  "domains": [
+    "qiuqiu-farm-daily.pages.dev",
+    "farm.aibioo.cn"
+  ],
+  "deployment": "43d87743-1e0b-4939-8549-f25b08ed9e2b",
+  "created": "2026-10-06T08:14:35.144205Z",
+  "commit": "73b9e00114b70b0dd07a74b6cf1cc034af201ba9"
+}

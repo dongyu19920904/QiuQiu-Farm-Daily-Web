@@ -1,0 +1,18 @@
+{{- $target := "https://supply.aivora.cn/opportunities" -}}
+<!doctype html>
+<html lang="{{ .Site.Language.Lang }}" dir="{{ .Site.Language.LanguageDirection | default `ltr` }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, follow">
+    <meta http-equiv="refresh" content="0; url={{ $target }}">
+    <link rel="canonical" href="{{ $target }}">
+    <title>AI 账号商家经营日报已迁移</title>
+    <script>window.location.replace({{ $target | jsonify | safeJS }});</script>
+  </head>
+  <body>
+    <main>
+      <p>AI 账号商家经营日报已迁移到爱窝啦·货源雷达。<a href="{{ $target }}">打开今日经营台</a></p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+{{ define "main" }}
+  {{ partial "sidebar.html" (dict "context" . "disableSidebar" true "displayPlaceholder" false) }}
+  {{- $isZh := eq .Language.Lang "zh" -}}
+  {{- $dailyPages := slice -}}
+  {{- range .Site.RegularPages -}}
+    {{- if and .File (findRE "^[0-9]{4}-[0-9]{2}$" .Section) (findRE "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" .File.BaseFileName) -}}
+      {{- $dailyPages = $dailyPages | append . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $dailyPages = sort $dailyPages "File.Path" "desc" -}}
+  {{- $months := slice -}}
+  {{- range $dailyPages -}}
+    {{- if not (in $months .Section) -}}
+      {{- $months = $months | append .Section -}}
+    {{- end -}}
+  {{- end -}}
+
+  <main class="ai-archive">
+    <header class="ai-archive__header">
+      <div class="ai-archive__eyebrow">QIUQIU FARM DAILY ARCHIVE</div>
+      <div class="ai-archive__heading">
+        <div>
+          <h1>{{ .Title }}</h1>
+          <p>{{ .Description }}</p>
+        </div>
+        {{- if gt (len $dailyPages) 0 -}}
+          {{- with index $dailyPages 0 -}}
+            <a class="ai-archive__latest" href="{{ .RelPermalink }}">
+              <span>{{ if $isZh }}阅读最新一期{{ else }}Read latest{{ end }}</span>
+              {{ partial "utils/icon.html" (dict "name" "arrow-right" "attributes" "width=17 height=17") }}
+            </a>
+          {{- end -}}
+        {{- end -}}
+      </div>
+      <div class="ai-archive__stats">
+        <span>{{ len $dailyPages }} {{ if $isZh }}期日报{{ else }}editions{{ end }}</span>
+        <span>{{ len $months }} {{ if $isZh }}个月份{{ else }}months{{ end }}</span>
+      </div>
+    </header>
+
+    <div class="ai-archive__months">
+      {{- range $monthIndex, $month := $months -}}
+        {{- $monthPages := where $dailyPages "Section" $month -}}
+        <details class="ai-archive-month"{{ if eq $monthIndex 0 }} open{{ end }}>
+          <summary>
+            <span>{{ replace $month "-" " / " }}</span>
+            <small>{{ len $monthPages }} {{ if $isZh }}期{{ else }}editions{{ end }}</small>
+          </summary>
+          <ol class="ai-archive-month__list">
+            {{- range $pageIndex, $page := $monthPages -}}
+              {{- $leadMatches := findRESubmatch `(?m)^###\s+[*]*1\.\s+\[([^\]]+)\]` $page.RawContent -}}
+              {{- $lead := "" -}}
+              {{- if gt (len $leadMatches) 0 -}}
+                {{- $leadMatch := index $leadMatches 0 -}}
+                {{- if gt (len $leadMatch) 1 -}}
+                  {{- $lead = index $leadMatch 1 -}}
+                {{- end -}}
+              {{- end -}}
+              <li>
+                <a href="{{ $page.RelPermalink }}">
+                  <span class="ai-archive-month__date">
+                    <span>{{ replace $page.File.BaseFileName "-" "." }}</span>
+                    {{- if and (eq $monthIndex 0) (eq $pageIndex 0) -}}
+                      <strong>{{ if $isZh }}最新{{ else }}Latest{{ end }}</strong>
+                    {{- end -}}
+                  </span>
+                  <span class="ai-archive-month__lead">
+                    {{- if $lead -}}
+                      {{ $lead | truncate 68 }}
+                    {{- else -}}
+                      {{ $page.Title }}
+                    {{- end -}}
+                  </span>
+                </a>
+              </li>
+            {{- end -}}
+          </ol>
+        </details>
+      {{- end -}}
+    </div>
+  </main>
+{{ end }}

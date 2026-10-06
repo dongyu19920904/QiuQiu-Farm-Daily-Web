@@ -1,0 +1,25 @@
+{{ define "main" }}
+  {{- $isDailyHome := .IsHome -}}
+  {{- $isOpportunityHome := eq .Section "opportunity" -}}
+  <div class='hx:mx-auto hx:flex hextra-max-page-width{{ if $isDailyHome }} ai-daily-layout{{ end }}{{ if $isOpportunityHome }} ai-opportunity-layout ai-opportunity-home{{ end }}'>
+    {{ partial "sidebar.html" (dict "context" .) }}
+    {{ partial "toc.html" . }}
+    <article class="hx:w-full hx:break-words hx:flex hx:min-h-[calc(100vh-var(--navbar-height))] hx:min-w-0 hx:justify-center hx:pb-8 hx:pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+      <main class="hx:w-full hx:min-w-0 hx:max-w-6xl hx:px-6 hx:pt-4 hx:md:px-12{{ if $isDailyHome }} ai-daily-shell{{ end }}{{ if $isOpportunityHome }} ai-opportunity-shell{{ end }}">
+        {{ partial "breadcrumb.html" (dict "page" . "enable" true) }}
+        {{ if $isDailyHome }}
+          {{ partial "custom/daily-masthead.html" . }}
+        {{ end }}
+        <div class="content{{ if $isDailyHome }} ai-daily-content{{ end }}{{ if $isOpportunityHome }} ai-opportunity-content{{ end }}">
+          {{ if and .Title (not $isDailyHome) }}<h1>{{ .Title }}</h1>{{ end }}
+          {{ .Content }}
+        </div>
+        {{ if not $isOpportunityHome }}
+          {{ partial "components/last-updated.html" . }}
+        {{ end }}
+        {{ partial "components/pager.html" . }}
+        {{ partial "components/comments.html" . }}
+      </main>
+    </article>
+  </div>
+{{ end }}

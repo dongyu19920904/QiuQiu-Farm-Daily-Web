@@ -1,0 +1,10 @@
+{
+  "pagesProject": "qiuqiu-farm-daily",
+  "runtime": "Node/Actions adapter; no Worker or KV deployed",
+  "generatorRepository": "dongyu19920904/QiuQiu-Farm-Daily-Generator",
+  "backendReference": "1a2eb2d71a87f67ed428bea3af258dcf8d9697d6",
+  "originalContentImported": false,
+  "webRepository": "dongyu19920904/QiuQiu-Farm-Daily-Web",
+  "frontendReference": "baab4f4ca32ddfdec76234218d0063aacdcbaef4",
+  "originalWorkflowsImported": false
+}

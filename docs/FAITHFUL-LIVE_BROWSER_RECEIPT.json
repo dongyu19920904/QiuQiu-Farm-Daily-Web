@@ -1,0 +1,30 @@
+{
+  "url": "https://7d8cd849.qiuqiu-farm-daily.pages.dev",
+  "testedAt": "2026-10-06T14:37:46.280Z",
+  "browser": "151.0.7922.34",
+  "checks": [
+    {
+      "label": "desktop",
+      "width": 1280,
+      "scroll": 1280,
+      "font": "17px",
+      "images": true,
+      "theme": "light/dark persisted",
+      "search": "latest and history full text",
+      "reading": "home/daily/archive/static",
+      "game": "sow/water/reload"
+    },
+    {
+      "label": "mobile",
+      "width": 390,
+      "scroll": 390,
+      "font": "17px",
+      "images": true,
+      "theme": "light/dark persisted",
+      "search": "latest and history full text",
+      "reading": "home/daily/archive/static",
+      "game": "sow/water/reload"
+    }
+  ],
+  "pageErrors": []
+}
