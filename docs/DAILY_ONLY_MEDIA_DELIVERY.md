@@ -10,8 +10,8 @@
 
 后续日报生成接入授权媒体库：按内容匹配，最多四幅、不重复、不在 FAQ 重复配图；无合适图则不填充；模型输出未经授权的图址会被拒绝。审核和全文数据忽略受管理的图片短代码，避免图片元数据成为新闻事实。定时仍为北京时间 08:37、09:49；合格稿跳过、失败保留内容、并发锁等不变。Actions 修正公共文章 SHA 回执的提交范围（static/editions）。
 
-验证：38 项生成器测试（包含3项配图/幂等/事实不变测试）及13项保留源码测试通过；Hugo 0.147.9 构建、canonical/Article/Breadcrumb、日期、sitemap、robots、RSS、全文历史搜索检查通过。Chromium 151 在 1280px 和390px、日夜模式检查通过：无横向溢出、正文17px、图片加载成功、四幅图有归属和许可、停用模块404、全文搜索可命中历史正文。截图及回执见 DAILY_ONLY_STATIC_RECEIPT.json、DAILY-ONLY-LOCAL_BROWSER_RECEIPT.json 和 screenshots/daily-only-local-*。
+验证：38 项生成器测试（包含3项配图/幂等/事实不变测试）及13项保留源码测试通过；Hugo 0.147.9 构建、canonical/Article/Breadcrumb、日期、sitemap、robots、RSS、全文历史搜索检查通过。Chromium 151 在 1280px 和390px、日夜模式检查通过：无横向溢出、正文17px、图片加载成功、四幅图有归属和许可、停用模块在构建中不存在，线上旧地址重定向到主日报、全文搜索可命中历史正文。截图及回执见 DAILY_ONLY_STATIC_RECEIPT.json、DAILY-ONLY-LOCAL_BROWSER_RECEIPT.json 和 screenshots/daily-only-local-*。
 
-发布状态：待 SSH 推送两个独立农业仓库并由既有 qiuqiu-farm-daily Pages 项目发布，待实际 farm.aibioo.cn 浏览器复核。域名、Secrets、Cloudflare 项目、原 AI/BioAI 项目均无配置迁移。
+第一次发布已通过 Actions 37548170848，部署 584beafb-1a7d-42ca-a4c7-b595726e6ea7，文章SHA及四幅图线上生效。实际浏览器发现已删除的旧模块仍命中边缘缓存（s-maxage=604800）；增加仅对应退役路径的 Pages _redirects 返回主日报，并替换原来的外部公益404页为本站错误页。第二次发布及完整生产浏览器复核待完成。域名、Secrets、Cloudflare 项目、原 AI/BioAI 项目均无配置迁移。
 
 回滚：Cloudflare Pages 的 qiuqiu-farm-daily 项目将生产回滚至 8afeb3fb-edf6-4994-bd47-6f02585d3061。需要持久回滚时还应 git revert 本次农业两仓库提交后重新运行农业工作流，避免后续定时覆盖。保留内容目录和图像许可记录；不删除旧项目、不修改 DNS 或旧 Worker。
