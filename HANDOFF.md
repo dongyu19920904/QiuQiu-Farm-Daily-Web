@@ -1,11 +1,17 @@
 # 交接与恢复
 
-按已保存的忠实重建方案继续，不要重做设计。现工作目录是两个 Rebuild 候选，原 AI 两个目录和农业旧目录 dirty 文档均保留，不能 reset/rebase/覆盖。
+生产已切换忠实重建，先读TASK_STATE.md及前端docs/FAITHFUL_DELIVERY.md，按批准方案继续，不重做设计。两个Rebuild目录为权威源码；原AI和农业旧目录dirty文档保留，不reset/rebase/覆盖。
 
-当前源码来自原前端 baab4f4ca32ddfdec76234218d0063aacdcbaef4 / 原后端 1a2eb2d71a87f67ed428bea3af258dcf8d9697d6。只允许推送 QiuQiu-Farm-Daily-Web 和 QiuQiu-Farm-Daily-Generator，Pages 只能 qiuqiu-farm-daily。不要部署 upstream Worker 或执行旧业务模块。
+参照原前端baab4f4ca32ddfdec76234218d0063aacdcbaef4 / 后端1a2eb2d71a87f67ed428bea3af258dcf8d9697d6。仅允许写QiuQiu-Farm-Daily-Web、QiuQiu-Farm-Daily-Generator；Pages仅qiuqiu-farm-daily。不能部署upstream Worker或启用旧业务模块。
 
-先看 TASK_STATE.md 和 docs/FAITHFUL_DELIVERY.md（发布后补全）。当日首期为真实模型试稿经完整人工编辑、审核，不是故障兜底。生成器运行 src/faithful/cli.mjs；generate只出审核稿，auto用于定时完整链路，已有合格当天稿跳过。不要接受 run/faithful 旧试稿，必须匹配 evidence 审核哈希。
+生产https://farm.aibioo.cn/，当天/2026-10/2026-10-06/。部署11947651-a411-4800-ae9c-2692d0428eb1，对应前端958a48f；Actions37481169580。浏览器截图已更新为生产域名。
 
-回滚点：Cloudflare Pages 部署 43d87743-1e0b-4939-8549-f25b08ed9e2b，前端旧稳定主分支73b9e00114b70b0dd07a74b6cf1cc034af201ba9，生成器旧主分支2ae078ed0e4598027b9430f1f83d8e286bbca377。回滚前暂停农业daily.yml，保留当前证据，其他项目不涉及。
+生成器入口src/faithful/cli.mjs：auto采集/写作/独立审稿/接收；generate仅出稿；verify验证接收稿SHA；audit-existing仅复核接收稿绝不改稿。首期是实际模型试稿后完整人工编辑审核，不能接受run/faithful未经审核草稿。独立审核每批3条、保留整篇检查日期/重复；引句仅规范弯引号及空白后与原文连续匹配，不接受改写/拼接/虚构，任一批失败不发布。
 
-本机密钥仅DPAPI及独立农业Secrets，不能输出值。初次初始化setup/adapt/migrate脚本不可重复执行，它们是建立候选的历史记录。未登录/浏览器接口问题只阻塞Folo账户订阅，公开RSS已正常接入并可导入OPML。
+下个新日期完整无人值守运行尚未观察。查看私有Actions artifact及evidence失败记录，修复实际问题后补跑，不伪造新闻或换旧稿日期。恢复已审同日部署：workflow_dispatch指定日期且force_deploy=true。
+
+回滚：先暂停农业daily.yml并保存证据，在农业Pages回滚43d87743-1e0b-4939-8549-f25b08ed9e2b；旧前端73b9e00114b70b0dd07a74b6cf1cc034af201ba9，旧生成器2ae078ed0e4598027b9430f1f83d8e286bbca377。代码恢复用独立分支/revert验证，不reset原项目或覆盖dirty农业目录，不改原AI/BioAI及DNS。
+
+凭据仅DPAPI及独立农业Secrets，不能输出值。setup/adapt/migrate首次脚本不可重复执行。Folo账户作者订阅受浏览器阻塞；公开RSS/OPML正常。X/小红书先找真实作者，再在Folo搜索已有源，核对身份/近期日期/正文后接入。实际套餐及API余额未知，不购买服务。
+
+2026-10-06T15:22:34Z补记：独立真实模型5批复核全部15个来源小节通过，原文段ID及全覆盖校验通过，已发表文章未改。35项生成器与13项游戏/雷达测试通过，共48项。JSON语法恢复不会改变拒绝状态或接收截断结果；未完成项仍以首个未来日期自动运行、Folo账户搜索及计费权限为准。

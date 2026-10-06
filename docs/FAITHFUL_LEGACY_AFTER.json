@@ -1,0 +1,18 @@
+{
+  "dnsChanged": false,
+  "originalLocalDirectoriesUnchanged": true,
+  "secretsChanged": false,
+  "checkedAt": "2026-10-06T14:47:21.5021753Z",
+  "checks": [
+    {
+      "cronUnchanged": true,
+      "deploymentUnchanged": true,
+      "name": "cloudflare-ai-lnsight-daily"
+    },
+    {
+      "cronUnchanged": true,
+      "deploymentUnchanged": true,
+      "name": "cloudflare-bioai-daily"
+    }
+  ]
+}
