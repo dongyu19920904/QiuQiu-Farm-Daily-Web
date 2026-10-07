@@ -1,0 +1,44 @@
+{
+  "url": "https://farm.aibioo.cn",
+  "testedAt": "2026-10-07T07:47:17.737Z",
+  "browser": "151.0.7922.34",
+  "checks": [
+    {
+      "label": "desktop",
+      "width": 1280,
+      "scroll": 1280,
+      "font": "17px",
+      "images": true,
+      "theme": "light/dark persisted",
+      "search": "latest and history full text",
+      "reading": "home/daily/archive/static",
+      "media": "four attributed matching figures; no broken images",
+      "removedModules": "redirect to main daily"
+    },
+    {
+      "label": "tablet",
+      "width": 768,
+      "scroll": 768,
+      "font": "17px",
+      "images": true,
+      "theme": "light/dark persisted",
+      "search": "latest and history full text",
+      "reading": "home/daily/archive/static",
+      "media": "four attributed matching figures; no broken images",
+      "removedModules": "redirect to main daily"
+    },
+    {
+      "label": "mobile",
+      "width": 390,
+      "scroll": 390,
+      "font": "17px",
+      "images": true,
+      "theme": "light/dark persisted",
+      "search": "latest and history full text",
+      "reading": "home/daily/archive/static",
+      "media": "four attributed matching figures; no broken images",
+      "removedModules": "redirect to main daily"
+    }
+  ],
+  "pageErrors": []
+}

@@ -1,3 +1,7 @@
+2026-10-07 农场视觉换皮已上线 https://farm.aibioo.cn/ 。前端599189101eecd6b65394db209332c8bb9ded7402；发布Actions37589123054、前端CI37589120408成功，SKIP已审核2026-10-07，不采集、不调用模型。15:47实际域名1280/768/390日夜/菜单/搜索/正文/配图/归档/跳转通过。41业务文件/11HTML语义隔离通过，最新文章SHA e1f77d5a7e5c548a15aa3d3572fa3e033617f3b0f3c0ab1f21ae96652b09f54c 保持。只改前端外观，不改来源/后端/JS/路由/SEO/Secrets/DNS/Cron；原AI/BioAI未动。详细 docs/FARM_VISUAL_DELIVERY.md、线上回执FARM-THEME-LIVE_BROWSER_RECEIPT.json。D盘参考和基线任务缓存清理被策略拒绝，已保留，不绕过；其他验收完成。
+
+---
+
 2026-10-07 农场视觉换皮：原CSS/Hextra/运行JS保留，仅新增Farm Theme、原创5.8KB场景SVG与三处模板装饰。已合入远端正常10月7日内容更新（2a98fe1），不改其文章。13测试、Hugo、41业务文件/11HTML语义隔离、1280/768/390日夜/搜索/菜单/阅读通过。768px侧栏遮挡只做CSS修复；未加游戏或假商店。当前分支codex/farm-visual-theme，准备沿既有Pages链路重发已审核当天稿；详细 docs/FARM_VISUAL_DELIVERY.md。生成器试验分支未合入，原AI/BioAI、来源、API、Cron、DNS、Secrets不变。
 
 ---

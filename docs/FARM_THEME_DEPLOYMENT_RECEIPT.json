@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-10-07T15:47:07.7658488+08:00",
+  "frontendCommit": "599189101eecd6b65394db209332c8bb9ded7402",
+  "preservedContentBaseline": "2a98fe1000bb9760ab5050ebd55c348d6a7acf99",
+  "workflowRun": 37589123054,
+  "workflowUrl": "https://github.com/dongyu19920904/QiuQiu-Farm-Daily-Generator/actions/runs/37589123054",
+  "conclusion": "success",
+  "frontendVerifyRun": 37589120408,
+  "deploymentUrl": "https://ecf9da0b.qiuqiu-farm-daily.pages.dev",
+  "customDomain": "https://farm.aibioo.cn/",
+  "acceptedDate": "2026-10-07",
+  "articleSha256": "e1f77d5a7e5c548a15aa3d3572fa3e033617f3b0f3c0ab1f21ae96652b09f54c",
+  "generation": "SKIP accepted 2026-10-07; VERIFY accepted; no collection or model invocation",
+  "backendCodeChanged": false,
+  "dnsOrSecretsChanged": false,
+  "liveBrowserVerified": true,
+  "liveBrowserReceipt": "docs/FARM-THEME-LIVE_BROWSER_RECEIPT.json",
+  "taskReferenceCacheCleanup": "Policy rejected (blocked by policy); reference/baseline files retained; no bypass attempted"
+}

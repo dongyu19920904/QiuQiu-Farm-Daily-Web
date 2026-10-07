@@ -29,7 +29,11 @@
 
 ## 发布
 
-仅使用农业项目现有Pages链路，以已审核的2026-10-07执行force_deploy；不改生成器工作流，不重新写新闻。部署及实际域名回执待发布完成后补入本节。
+仅使用农业项目现有Pages链路，以已审核的2026-10-07执行force_deploy；不改生成器工作流，不重新写新闻。发布成功：前端代码599189101eecd6b65394db209332c8bb9ded7402；[发布Actions 37589123054](https://github.com/dongyu19920904/QiuQiu-Farm-Daily-Generator/actions/runs/37589123054)，日志明确SKIP accepted / VERIFY accepted 2026-10-07，跳过采集与模型调用；[前端CI 37589120408](https://github.com/dongyu19920904/QiuQiu-Farm-Daily-Web/actions/runs/37589120408)成功。
+
+部署地址 https://ecf9da0b.qiuqiu-farm-daily.pages.dev ，实际域名 https://farm.aibioo.cn/ 。2026-10-07 15:47北京时间实际域名Chromium验收完成：1280/768/390日夜、菜单、主题刷新持久化、正文、来源/配图、往期、搜索、长查询、已停用路径301回首页均通过，无溢出和JS错误。见 FARM-THEME-LIVE_BROWSER_RECEIPT.json、FARM_THEME_DEPLOYMENT_RECEIPT.json，截图 docs/screenshots/farm-theme-live-*。现有定时任务随后正常运行并跳过已合格稿，未再次部署。
+
+缓存包装器按原规则维护进程级D盘TEMP/TMP。参考素材、独立基线归档的任务清理请求被自动审批策略拒绝，仅返回blocked by policy；没有尝试换命令绕过。保留 D:/CodexCache/previews/qiuqiu-farm-theme-reference、qiuqiu-farm-theme-baseline-2a98fe1 和同名.tar。共享Hugo/npm/浏览器缓存照常保留，没有删除未知缓存、凭据或会话。
 
 ## 回滚与后续
 
