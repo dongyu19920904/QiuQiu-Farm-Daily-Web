@@ -4,6 +4,9 @@
 {{- end -}}
 {{- $displayDate := replaceRE `^.*?([0-9]{4})[/-]([0-9]{1,2})[/-]([0-9]{1,2}).*$` `$1 / $2 / $3` .Title -}}
 
+<div class="farm-scene" aria-hidden="true">
+  <img src="{{ "images/farm-theme/landscape.svg" | relURL }}" width="1200" height="320" alt="" fetchpriority="high" decoding="async">
+</div>
 <header class="ai-daily-masthead">
   <div class="ai-daily-masthead__kicker">
     <span class="ai-daily-masthead__kicker-icon" aria-hidden="true">

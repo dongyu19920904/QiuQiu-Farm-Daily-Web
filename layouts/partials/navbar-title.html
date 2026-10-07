@@ -1,6 +1,7 @@
 {{- $logoLink := .Site.Home.RelPermalink -}}
 
-<a class="hx:flex hx:items-center hx:hover:opacity-75 hx:ltr:mr-auto hx:rtl:ml-auto" href="{{ $logoLink }}">
+<a class="farm-brand hx:flex hx:items-center hx:hover:opacity-75 hx:ltr:mr-auto hx:rtl:ml-auto" href="{{ $logoLink }}">
+  <img class="farm-brand__icon" src="{{ "images/sprout.svg" | relURL }}" width="30" height="30" alt="" aria-hidden="true">
   <span class="hx:mr-2 hx:font-extrabold hx:inline hx:select-none hx:whitespace-nowrap" title="{{ .Site.Title }}" style="font-size: 1.1rem;">
     {{ site.Title }}
   </span>

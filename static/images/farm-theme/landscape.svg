@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" fill="none">
+ <defs>
+  <linearGradient id="sky" x2="0" y2="320" gradientUnits="userSpaceOnUse"><stop stop-color="#75c9f5"/><stop offset="1" stop-color="#e8f6dc"/></linearGradient>
+  <linearGradient id="meadow" x2="0" y2="320" gradientUnits="userSpaceOnUse"><stop stop-color="#c1e477"/><stop offset="1" stop-color="#6caf43"/></linearGradient>
+  <linearGradient id="roof" x2="0" y2="190" gradientUnits="userSpaceOnUse"><stop stop-color="#f6c667"/><stop offset="1" stop-color="#cb8240"/></linearGradient>
+  <linearGradient id="soil" x2="0" y2="100" gradientUnits="userSpaceOnUse"><stop stop-color="#bd784d"/><stop offset="1" stop-color="#925933"/></linearGradient>
+  <g id="cloud" fill="#fff" opacity=".85"><ellipse cx="0" cy="0" rx="55" ry="17"/><circle cx="-19" cy="-12" r="20"/><circle cx="12" cy="-16" r="27"/><circle cx="42" cy="-4" r="15"/></g>
+  <g id="tree"><path d="M0 45v49" stroke="#825638" stroke-width="11" stroke-linecap="round"/><ellipse cy="39" rx="37" ry="43" fill="#4d9b55"/><ellipse cx="-11" cy="21" rx="23" ry="30" fill="#72b961"/><path d="m0 77 13-15" stroke="#825638" stroke-width="6" stroke-linecap="round"/></g>
+  <g id="crop"><path d="M0 8V-6" stroke="#356d2f" stroke-width="4" stroke-linecap="round"/><ellipse cx="-8" cy="-6" rx="12" ry="6" transform="rotate(30 -8 -6)" fill="#79c64b"/><ellipse cx="8" cy="-9" rx="12" ry="6" transform="rotate(-30 8 -9)" fill="#a1d660"/></g>
+  <g id="tomato"><use href="#crop"/><circle cx="-5" cy="0" r="6" fill="#ef7950"/><circle cx="6" cy="2" r="6" fill="#e95b43"/><circle cx="-7" cy="-2" r="2" fill="#ffbe8b"/></g>
+  <g id="fence" stroke="#a77345" stroke-width="3" stroke-linejoin="round"><path d="M0 12h75v8H0zm0 18h75v8H0z" fill="#d6a66b"/><path d="M4 46V5l5-5 5 5v41zm58 0V5l5-5 5 5v41z" fill="#efd19a"/></g>
+ </defs>
+ <path fill="url(#sky)" d="M0 0h1200v320H0z"/>
+ <circle cx="975" cy="48" r="32" fill="#fff1a1"/><circle cx="975" cy="48" r="43" fill="#fff1a1" opacity=".25"/>
+ <use href="#cloud" x="115" y="52"/><use href="#cloud" x="450" y="43" transform="scale(.8 1)"/><use href="#cloud" x="783" y="70"/><use href="#cloud" x="1100" y="83" transform="scale(.9 .8)"/>
+ <path d="m0 170 120-74 89 45 137-74 106 89 147-78 104 53 162-58 169 87 166-69v149H0" fill="#88bfad"/>
+ <path d="M0 180c100-58 188-14 280-24 146-18 231-51 362-18 170 44 249-24 396-7 82 10 123 33 162 25v164H0" fill="#91c779"/>
+ <path d="M0 214c200-36 348 10 524-29 203-46 387 15 676-8v143H0" fill="url(#meadow)"/>
+ <path d="M745 177c-27 31-100 35-83 62 20 24 91 42 77 81h134c-9-42-114-64-138-78-36-21 10-34 45-62" fill="#efda9a"/>
+ <path d="M768 191c-22 16-24 30-16 34m-20 49 18 8m-3 25 22 8" stroke="#dcc384" stroke-width="8" stroke-linecap="round"/>
+ <!-- Original cottage, roof tiles and greenhouse; no game artwork reused. -->
+ <ellipse cx="909" cy="222" rx="101" ry="15" fill="#508a42" opacity=".25"/>
+ <path d="M828 141h140v76H828z" fill="#ffedb9" stroke="#986839" stroke-width="5"/>
+ <path d="m811 148 47-60h101l36 60z" fill="url(#roof)" stroke="#966239" stroke-width="6" stroke-linejoin="round"/>
+ <path d="m824 147 35-49h94l29 49M855 100l-27 46m52-46-16 46m40-46-4 46m29-46 10 46m-101-27h122" stroke="#e9aa56" stroke-width="5" stroke-linecap="round"/>
+ <path d="M933 94V64h20v47" fill="#c4ae93" stroke="#916c4b" stroke-width="4"/>
+ <path d="M875 217v-50q19-22 38 0v50" fill="#ad764b" stroke="#895635" stroke-width="4"/>
+ <circle cx="904" cy="188" r="3" fill="#ffe091"/>
+ <path d="M838 160h24v27h-24zm90 0h25v27h-25z" fill="#a6dbea" stroke="#a17644" stroke-width="4"/>
+ <path d="M850 160v27m-12-14h24m78-13v27m-12-14h25" stroke="#fff5d7" stroke-width="3"/>
+ <path d="M820 217h157v8H820z" fill="#b59267"/>
+ <g transform="translate(1050 157)"><path d="M0 56V26a43 43 0 0 1 86 0v30z" fill="#bde7da" fill-opacity=".8" stroke="#729d79" stroke-width="4"/><path d="M17 54V26a26 26 0 0 1 52 0v29M43-16v70M0 28h86" stroke="#f4f7d5" stroke-width="3"/><use href="#crop" x="22" y="42"/><use href="#crop" x="64" y="42"/></g>
+ <use href="#tree" x="69" y="99"/><use href="#tree" x="177" y="124" transform="rotate(-5 177 124)"/><use href="#tree" x="1157" y="134"/>
+ <g transform="translate(36 238) scale(.9)"><use href="#fence"/><use href="#fence" x="72"/><use href="#fence" x="144"/></g>
+ <g transform="translate(968 239) scale(.85)"><use href="#fence"/><use href="#fence" x="72"/></g>
+ <!-- Three-dimensional vegetable beds, illustrated only. -->
+ <path d="m300 204 235 0 70 48H363z" fill="#b77a49" stroke="#d8aa72" stroke-width="7" stroke-linejoin="round"/>
+ <path d="m362 255 244 0v13H362z" fill="#835736"/>
+ <path d="m366 201 53 48m14-48 50 48m14-48 52 48" stroke="#995f3a" stroke-width="5"/>
+ <g><use href="#crop" x="348" y="218"/><use href="#crop" x="415" y="218"/><use href="#crop" x="482" y="218"/><use href="#tomato" x="389" y="239"/><use href="#tomato" x="456" y="239"/><use href="#tomato" x="523" y="239"/></g>
+ <path d="m268 275 265 0 76 45H332z" fill="#b57a4f" stroke="#d8aa72" stroke-width="7" stroke-linejoin="round"/>
+ <path d="m340 278 53 42m19-42 53 42m19-42 53 42" stroke="#995f3a" stroke-width="5"/>
+ <g><use href="#crop" x="322" y="286"/><use href="#crop" x="395" y="286"/><use href="#crop" x="468" y="286"/><use href="#crop" x="365" y="311"/><use href="#crop" x="438" y="311"/><use href="#crop" x="511" y="311"/></g>
+ <path d="m5 318 18-16-2 16m154 0 13-18 2 18m796-34 12-17 3 17m91 29 16-19-3 19" stroke="#5c9e40" stroke-width="5" stroke-linecap="round"/>
+ <g fill="#ffe796"><circle cx="236" cy="231" r="4"/><circle cx="256" cy="258" r="3"/><circle cx="1000" cy="293" r="4"/><circle cx="1173" cy="263" r="4"/></g>
+ <g fill="#f0f2df"><circle cx="246" cy="239" r="3"/><circle cx="1035" cy="285" r="3"/><circle cx="199" cy="301" r="4"/></g>
+</svg>

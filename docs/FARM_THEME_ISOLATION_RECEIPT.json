@@ -1,0 +1,22 @@
+{
+  "verifiedAt": "2026-10-07T07:19:06.337Z",
+  "businessFiles": 39,
+  "pages": 10,
+  "unchanged": [
+    "content",
+    "data",
+    "i18n",
+    "runtime JS",
+    "workflow",
+    "hugo configuration",
+    "headings",
+    "links",
+    "schemas",
+    "canonical",
+    "search index",
+    "RSS",
+    "sitemap",
+    "robots",
+    "redirects"
+  ]
+}

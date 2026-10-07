@@ -1,5 +1,7 @@
 # 素材与代码许可记录
 
+- Farm Theme 风景：static/images/farm-theme/landscape.svg，本项目于2026-10-07独立编写的原创矢量图，MIT。CSS木牌、木框、按钮和月夜装饰同为原创。QQ农场参考项目的图像仅在任务临时目录观察构图，没有纳入源码或正式网站；不新增第三方字体依赖。
+
 - 游戏和品牌 SVG：static/images/radish.svg、lettuce.svg、carrot.svg、tomato.svg、sprout.svg，原农业项目首次制作的原创 SVG；按该项目 MIT 许可继续使用，未使用 QQ 农场图像。
 - Hextra 主题：themes/hextra/LICENSE，保留 MIT 文本；此版本来自核实的原 AI 日报前端远端，不导入其 Git 历史。
 - FlexSearch：沿用原 AI 日报的 Apache-2.0 库及主题引用；现有第三方版权声明保留。

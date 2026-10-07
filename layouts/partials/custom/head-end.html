@@ -184,3 +184,6 @@
 
 {{- end }}
 {{ "<!-- LEAVING partial seo-schema.html -->" | safeHTML }}
+{{/* Visual layer only: keep Hextra runtime, routes and SEO above intact. */}}
+{{- $farmTheme := resources.Get "css/farm-theme.css" | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ $farmTheme.RelPermalink }}" integrity="{{ $farmTheme.Data.Integrity }}">
