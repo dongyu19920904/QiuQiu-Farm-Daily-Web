@@ -7,6 +7,11 @@ const business={};
 for(const dir of ['content','data','i18n','static/js','.github/workflows'])for(const file of await files(dir))business[file]=sha(await readFile(file));
 business['hugo.yaml']=sha(await readFile('hugo.yaml'));
 const generated={};for(const file of ['index.json','index.xml','sitemap.xml','robots.txt','_redirects'])generated[file]=sha(await readFile('public/'+file));
+// Hugo's Plain may preserve a CR from Windows template line endings where the
+// clean Git archive emits one space. Normalize only that character in body;
+// all words, LF paragraph breaks, entry order, titles, dates and URLs stay exact.
+const index=JSON.parse(await readFile('public/index.json','utf8'));
+generated['index.json']=sha(JSON.stringify(index.map(e=>({...e,body:e.body.replace(/\r/g,' ')}))));
 const semantics={};
 for(const file of (await files('public')).filter(p=>p.endsWith('.html'))){const html=await readFile(file,'utf8');semantics[file]={
  headings:[...html.matchAll(/<h([1-6])\b[^>]*>([\s\S]*?)<\/h\1>/g)].map(m=>m[0]),

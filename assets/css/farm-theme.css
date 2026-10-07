@@ -128,7 +128,7 @@ body .ai-daily-masthead__title::before, body .ai-daily-masthead__title::after { 
 body .ai-daily-masthead__deck { color: var(--farm-muted); font: 500 16px/1.7 var(--farm-reading-font); margin-bottom: 14px; }
 body .ai-daily-masthead__deck > span { display: none; }
 body .ai-daily-masthead__footer { border-color: var(--farm-line); padding-top: 12px; margin-top: 14px; gap: 10px; flex-wrap: wrap; }
-body .ai-daily-masthead__date { border: 0; border-radius: 9px; background: var(--farm-green-soft); color: var(--farm-ink); padding: 6px 10px; font: 700 14px/1.4 var(--farm-reading-font); }
+body .ai-daily-masthead__date { border: 0; clip-path: none; border-radius: 9px; background: var(--farm-green-soft); color: var(--farm-ink); padding: 6px 10px; font: 700 14px/1.4 var(--farm-reading-font); }
 body .ai-daily-masthead__meta { color: var(--farm-muted) !important; font: 500 13px/1.5 var(--farm-reading-font); gap: 12px; flex-wrap: wrap; }
 body .ai-daily-masthead__meta > a { color: var(--farm-link); min-height: 44px; padding: 6px 10px; border: 1px solid var(--farm-line); border-radius: 10px; background: var(--farm-paper); }
 body .ai-daily-content {
@@ -189,10 +189,12 @@ body .reading-sidebar nav a { display: block; min-height: 44px; padding: 10px 12
 body .reading-sidebar :is(summary, .sidebar-caption) { padding: 10px 4px; font-weight: 700; color: var(--farm-ink); }
 body .search-result { margin: 12px 0; padding: 16px; border: 1px solid var(--farm-line); border-radius: 14px; background: var(--farm-cream); }
 body .search-result p { color: var(--farm-muted); }
+body .search-result :is(h2, h3) { color: var(--farm-link) !important; font-family: var(--farm-reading-font); }
 body .ai-archive { padding-top: 28px; }
 body .ai-archive__header { padding: 24px; border: 3px solid var(--farm-wood); border-radius: 20px; background: var(--farm-cream); box-shadow: var(--farm-shadow); }
 body .ai-archive__heading h1 { color: var(--farm-ink); font-size: clamp(28px, 4vw, 42px); line-height: 1.3; }
 body .ai-archive__heading p, body .ai-archive__eyebrow, body .ai-archive__stats { color: var(--farm-muted); }
+body .ai-archive__eyebrow { color: var(--farm-muted) !important; font-family: var(--farm-reading-font); }
 body .ai-archive__latest { background: #42792c; border: 2px solid #315c22; border-radius: 12px; color: #fff6d8; box-shadow: inset 0 2px #ffffff25, 0 3px #315c22; }
 body .ai-archive__months { gap: 18px; margin-top: 26px; }
 body .ai-archive-month { padding: 0 20px; border: 2px solid var(--farm-line); border-radius: 16px; background: var(--farm-paper); }
@@ -215,6 +217,17 @@ body :is(a, button, input, summary):focus-visible { outline: 3px solid var(--far
   .ai-daily-shell { padding-left: 18px; padding-right: 18px; }
   body .ai-daily-masthead { padding: 20px; }
   body .ai-daily-content { padding: 22px; }
+}
+/* Match the existing 768–900px hamburger rule, including Hextra's exact-768px
+   fixed-sidebar / max-md transform boundary. Keep the original class toggles. */
+@media (max-width: 900px) {
+  body .hextra-sidebar-container {
+    position: fixed; top: 0; bottom: 0; width: 100%; height: 100dvh;
+    z-index: 19; padding-top: 80px; background: var(--farm-paper) !important;
+  }
+  body .hextra-sidebar-container[class*="translate3d(0,-100%,0)"] { transform: translate3d(0,-100%,0); }
+  body .hextra-sidebar-container[class*="translate3d(0,0,0)"] { transform: translate3d(0,0,0); }
+  body .hextra-sidebar-container > div:first-child { display: block; }
 }
 @media (max-width: 767px) {
   body .hextra-nav-container nav { padding-left: 12px; padding-right: 12px; gap: 6px; }

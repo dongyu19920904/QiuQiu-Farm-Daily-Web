@@ -4,6 +4,8 @@
 
 权威前端为 QiuQiu-Farm-Daily-Web-Rebuild，基线 b7626d65f82dfc15f4c99d3d3b060a97d2ecdd80，干净 main；本次分支 codex/farm-visual-theme。技术栈 Hugo 0.147.9 / Hextra，Node 仅用于验收。没有 app/src React 页面、数据库或前端业务 API。现有页面为最新日报、历史详情、归档和搜索；已停用的其他模块保持停用，不新增虚构仓库、商店或金币余额。
 
+实施中发现自动任务正常发布10月7日文章，已fetch并merge远端2a98fe1（没有reset/rebase）；以该远端版本的独立Git归档重新构建业务对照，保留其全部文章和数据。索引比较只规范正文中的CR为空格（Hugo在Windows工作树与干净Git归档构建的行尾差异），词句、LF段落、标题、日期、URL与条目顺序仍精确比较，不修改实际索引生成逻辑。
+
 现有入口：assets/css/custom.css（历史主题），layouts/partials/custom/head-end.html（全站扩展），layouts/docs/list.html / single.html、layouts/daily/single.html（正文），custom/daily-masthead.html（公告板），navbar-title.html（品牌），archive/list.html（往期），search/single.html（独立搜索），custom/footer.html（页脚）。Hextra 原生 html.dark、移动菜单、目录与 FlexSearch；search 页继续使用原 search.js 和 site.css。
 
 ## 实施
