@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 2,
+  "date": "2026-10-07",
+  "url": "/2026-10/2026-10-07/",
+  "articleSha256": "e1f77d5a7e5c548a15aa3d3572fa3e033617f3b0f3c0ab1f21ae96652b09f54c",
+  "topic": "agriculture-and-rural-life",
+  "format": "faithful-original-daily",
+  "generatedAt": "2026-10-07T06:28:28.299Z",
+  "items": [
+    {
+      "title": "沙特与联合国粮农组织在坦桑尼亚启动抗旱椰枣种植项目",
+      "body": "抗旱作物落地非洲。 沙特人道援助中心与联合国粮农组织在坦桑尼亚多多马启动椰枣种植项目，向 250 名小农提供 3,000 株椰枣苗及灌溉设备。椰枣能耐干旱气候🌴，适合半干旱地区替代传统作物。项目还将培训农技推广人员，帮助当地建立长期种植能力。\n\n---",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "cd59e403907ad242",
+          "name": "Farmers Review Africa",
+          "url": "https://farmersreviewafrica.com/saudi-arabia-fao-launch-drought-resilient-date-palm-project-in-tanzania/",
+          "date": "2026-10-05",
+          "checkedAt": "2026-10-07T06:24:23.677Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "Africa"
+        }
+      ]
+    },
+    {
+      "title": "Rainbow Crops 用多重基因编辑和 AI 加速复杂性状育种",
+      "body": "复杂性状不再靠单基因。 比利时 Rainbow Crops 同时编辑多个基因并用 AI 筛选最佳组合，针对玉米、高粱和水稻的抗旱耐热性状。公司获得盖茨基金会 700 万美元资助，已在玉米田完成概念验证🌽。CEO 表示瓶颈在田间验证而非技术。\n\n---",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "5ea013067a347df5",
+          "name": "iGrow News",
+          "url": "https://igrownews.com/giacomo-bastianelli-on-rainbow-crops-ai-multiplex-gene-editing/",
+          "date": "2026-10-06",
+          "checkedAt": "2026-10-07T06:24:23.677Z",
+          "topic": "农业AI",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "international"
+        }
+      ]
+    },
+    {
+      "title": "美国农场网络 FBN 与谷歌联手打造农场 AI 情境引擎",
+      "body": "AI 开始理解整个农场。 FBN 与谷歌 AI 未来基金共同开发农业首个 AI 情境引擎，让 AI 助手从作物、市场、设备和环境数据中做综合决策。FBN 将提前使用谷歌前沿模型。今年秋季向 14 万以上会员推出早期版本，现有 Norm 助手已服务三年。\n\n---",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "f150f2030ddef03f",
+          "name": "iGrow News",
+          "url": "https://igrownews.com/fbn-latest-news/",
+          "date": "2026-10-06",
+          "checkedAt": "2026-10-07T06:24:23.677Z",
+          "topic": "农业AI",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "international"
+        }
+      ]
+    },
+    {
+      "title": "荷兰 Enza Zaden 和法国 Limagrain 联手对抗番茄褐色皱纹果病毒",
+      "body": "抗性育种需要长期有效。 荷兰种子公司 Enza Zaden 与法国 Limagrain 蔬菜种子宣布共享技术和知识产权，联合开发针对 ToBRFV 的持久抗性品种🍅。该病毒严重影响番茄产量和品质，已在全球蔓延。两家公司各自已推出抗性品种。合作目标是延长抗性有效期并向第三方开放授权。\n\n---",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "c07c1079ac07066d",
+          "name": "iGrow News",
+          "url": "https://igrownews.com/enza-zaden-latest-news/",
+          "date": "2026-10-07",
+          "checkedAt": "2026-10-07T06:24:23.677Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "international"
+        }
+      ]
+    },
+    {
+      "title": "柏林 Hexafarms 融资 480 万欧元用 AI 和传感器优化温室产量",
+      "body": "商业种植者仍在浪费数据。 柏林 Hexafarms 融资 480 万欧元，通过传感器、机器人和机器学习帮助温室种植者提高产量📊。公司已服务 13 国超 50 家种植者，声称拥有的作物数据超过大型种子育种商。创始人认为即使顶级种植者也未充分利用现有数据。\n\n---",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "a3b9f1e7c84b8a6f",
+          "name": "AgNavigator",
+          "url": "https://www.agnavigator.com/Article/2026/10/06/can-computers-grow-better-crops-hexafarms-raises-48m-to-find-out/",
+          "date": "2026-10-06",
+          "checkedAt": "2026-10-07T06:24:23.677Z",
+          "topic": "农业AI",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "international"
+        }
+      ]
+    },
+    {
+      "title": "中国畜牧业进入零增长时代强调 AI 和智能养殖",
+      "body": "猪肉消费见顶后转向提质。 中国农业农村部发布国家畜牧兽医发展规划，2030 年前不再设定肉类总产量增长目标。2025 年肉蛋奶总产量超 1.75 亿吨，肉类产量首次突破 1 亿吨。规划明确加快人工智能应用和智能养殖发展🤖。牧原集团等大型养殖企业已用 AI 改善动物福利。\n\n---",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "66479e25513f8389",
+          "name": "AgNavigator",
+          "url": "https://www.agnavigator.com/Article/2026/10/07/china-emphasises-ai-and-smart-livestock-farming-as-pork-industry-enters-post-growth-era/",
+          "date": "2026-10-07",
+          "checkedAt": "2026-10-07T06:24:23.677Z",
+          "topic": "农业AI",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "international"
+        }
+      ]
+    },
+    {
+      "title": "南非种牛育种者呼吁精准选种替代视觉评估",
+      "body": "养牛还没跟上种粮精准度。 南非 RPO 自由省主席 Pieter Meyer 认为现代种粮者已经精准化，但多数养牛者尚未掌握精准选种和遗传进展价值。他家农场 2021 年建立 Vytelle 净采食量测试站。2025 年淘汰西门塔尔和婆罗门牛群，只保留森布拉品种🐄。\n\n---",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "6c9f9a0eea3d14b2",
+          "name": "AgriOrbit",
+          "url": "https://agriorbit.com/the-middle-ground-is-the-best-course/",
+          "date": "2026-10-07",
+          "checkedAt": "2026-10-07T06:24:23.677Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "South Africa"
+        }
+      ]
+    },
+    {
+      "title": "GEA 推出半地下批次挤奶机器人降低建设成本",
+      "body": "固定时间自动挤奶。 GEA 发布 DairyRobot R9600 半地下批次挤奶方案，结合固定挤奶时间和自动化流程。半地下结构只需约 1 米深度或利用现有挤奶坑，无需完整地下室。批次挤奶让奶牛分组在固定时间窗口完成挤奶🥛，便于协调员工和日常安排。\n\n---",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "fd15de58326fafd0",
+          "name": "Farmers Review Africa",
+          "url": "https://farmersreviewafrica.com/gea-expands-batch-milking-portfolio-with-semi-subway-installation-concept/",
+          "date": "2026-10-06",
+          "checkedAt": "2026-10-07T06:24:23.677Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "Africa"
+        }
+      ]
+    },
+    {
+      "title": "Chipotle 用蔬菜做乐器在 Abbey Road 录制品牌曲",
+      "body": "食材变成乐器上录音棚。 Chipotle 与伦敦蔬菜管弦乐团在 Abbey Road 二号棚用蔬菜录制原创曲。玉米做成长笛🌽，墨西哥辣椒做成小号，青椒和牛油果核做成号角。乐器需在合适成熟度制作和演奏，可用时间不到一天。项目耗时三个月实验。\n\n---",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "5c3839a6e1287feb",
+          "name": "FreshPlaza",
+          "url": "https://www.freshplaza.com/asia/article/9880441/vegetables-turned-into-musical-instruments-for-restaurant-campaign/",
+          "date": "2026-10-06",
+          "checkedAt": "2026-10-07T06:24:23.677Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "international"
+        }
+      ]
+    },
+    {
+      "title": "摩洛哥出口商 AGCO 经历最难一季后逐步恢复",
+      "body": "洪水和战争让出口量减半。 摩洛哥果蔬包装出口商 AGCO 在 2026 年遭遇最艰难一季，季初北部洪水后又因中东战争和货运中断失去海湾市场。出口量减少 50%。联合经理 Lamia Adlouni 说这比疫情高峰期更难。樱桃番茄和西瓜需求相对稳定🍅，草莓受冲击最大。\n\n---",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "dd8126fea5a3008c",
+          "name": "FreshPlaza",
+          "url": "https://www.freshplaza.com/asia/article/9880480/this-was-by-far-our-most-difficult-season/",
+          "date": "2026-10-06",
+          "checkedAt": "2026-10-07T06:24:23.677Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "international"
+        }
+      ]
+    },
+    {
+      "title": "霜冻前七项菜园任务容易被忽略",
+      "body": "秋季头场霜冻会让大部分作物停止生长。 Rural Sprout 整理了霜冻前必做的七项准备，包括清理旧作物和松土、移除根系和石块、收获耐寒蔬菜🥬。文章区分了霜冻(地面温度降至 32°F)和冻结(空气温度也降至 32°F)。后者对植物组织损伤更严重，需要分别应对。\n\n---",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "e2ab20524ee97c4f",
+          "name": "Rural Sprout",
+          "url": "https://www.ruralsprout.com/garden-tasks-first-frost/",
+          "date": "2026-10-06",
+          "checkedAt": "2026-10-07T06:24:23.677Z",
+          "topic": "种菜与田园",
+          "kind": "case",
+          "stage": "个人实践与观点",
+          "region": "US/UK; adapt climate, season, indoor/outdoor, light and variety"
+        }
+      ]
+    },
+    {
+      "title": "美国本土多年生 Joe Pye Weed 值得每个院子种一棵",
+      "body": "邻居的植物爬进来意外成了宝。 Rural Sprout 作者分享 Joe Pye Weed 从邻居院子钻进自家后的经历，这种北美本土多年生植物吸引传粉昆虫🦋、耐阴耐湿、花期长达晚夏至秋季。作者属于\"看到不认识的植物先让它长长看\"那类园丁。文章建议给它足够空间，适合花园后部或边界种植。",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "77d79d52d72fc803",
+          "name": "Rural Sprout",
+          "url": "https://www.ruralsprout.com/joe-pye-weed/",
+          "date": "2026-10-05",
+          "checkedAt": "2026-10-07T06:24:23.677Z",
+          "topic": "种菜与田园",
+          "kind": "case",
+          "stage": "个人实践与观点",
+          "region": "US/UK; adapt climate, season, indoor/outdoor, light and variety"
+        }
+      ]
+    }
+  ]
+}
