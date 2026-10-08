@@ -5,7 +5,7 @@
 {{- $displayDate := replaceRE `^.*?([0-9]{4})[/-]([0-9]{1,2})[/-]([0-9]{1,2}).*$` `$1 / $2 / $3` .Title -}}
 
 <div class="farm-scene" aria-hidden="true">
-  <img src="{{ "images/farm-theme/landscape.svg" | relURL }}" width="1200" height="320" alt="" fetchpriority="high" decoding="async">
+  <img src="{{ "images/farm-theme/farm-scene.svg" | relURL }}" width="1200" height="440" alt="" fetchpriority="high" decoding="async">
 </div>
 <header class="ai-daily-masthead">
   <div class="ai-daily-masthead__kicker">
@@ -39,3 +39,20 @@
     </div>
   </div>
 </header>
+{{- $article := . -}}
+{{- if .IsHome -}}
+  {{- $editions := slice -}}
+  {{- range site.RegularPages -}}{{- if findRE `^\d{4}-\d{2}$` .Section -}}{{- $editions = $editions | append . -}}{{- end -}}{{- end -}}
+  {{- if $editions -}}{{- $article = index (sort $editions "Date" "desc") 0 -}}{{- end -}}
+{{- end -}}
+{{- $headings := findRE `(?m)^##\s+[^\r\n]+` $article.RawContent -}}
+{{- if $headings -}}
+<nav class="farm-section-nav" aria-label="本期栏目">
+  {{- range $index, $heading := $headings -}}
+    {{- $label := replaceRE `^##\s+` "" $heading | replaceRE `\*\*` "" | strings.TrimSpace -}}
+    {{- $short := $label -}}
+    {{- if in $label "摘要" -}}{{- $short = "今日摘要" -}}{{- else if in $label "焦点" -}}{{- $short = "今日焦点" -}}{{- else if in $label "实用" -}}{{- $short = "菜园实用课" -}}{{- else if in $label "社媒" -}}{{- $short = "田园实践" -}}{{- else if in $label "研究" -}}{{- $short = "农业研究" -}}{{- else if in $label "更新" -}}{{- $short = "智慧农场" -}}{{- else if in $label "行业" -}}{{- $short = "行业观察" -}}{{- else if in $label "问题" -}}{{- $short = "今日问答" -}}{{- end -}}
+    <a href="#{{ $label | anchorize }}" aria-label="跳到{{ $label }}"><span aria-hidden="true" class="farm-section-nav__icon">{{ if eq $index 0 }}📋{{ else if in $label "焦点" }}🌾{{ else if in $label "实用" }}🥬{{ else if in $label "社媒" }}🏡{{ else if in $label "研究" }}🌱{{ else if in $label "更新" }}🚜{{ else }}📖{{ end }}</span><span>{{ $short }}</span></a>
+  {{- end -}}
+</nav>
+{{- end -}}

@@ -1,4 +1,5 @@
 /* Farm skin. All controls and editorial DOM remain owned by the existing theme. */
+@font-face { font-family: "ZCOOL KuaiLe Farm"; src: url('/fonts/farm-theme/zcool-kuaile-headings.ttf') format('truetype'); font-style: normal; font-weight: 400; font-display: swap; }
 html:root {
   --farm-sky: #75c9f5;
   --farm-grass: #89c94a;
@@ -16,6 +17,7 @@ html:root {
   --farm-ground: #edf3d7;
   --farm-shadow: 0 5px 0 #8c542e22, 0 12px 30px #3d632716;
   --farm-reading-font: "Microsoft YaHei UI", "PingFang SC", "Noto Sans CJK SC", "Noto Sans SC", "Source Han Sans SC", sans-serif;
+  --farm-title-font: "ZCOOL KuaiLe Farm", var(--farm-reading-font);
   --daily-font-reading: var(--farm-reading-font);
   --daily-font-body: var(--farm-reading-font);
   --daily-font-display: var(--farm-reading-font);
@@ -92,7 +94,7 @@ body .hextra-search-results a:hover { background: var(--farm-green-soft); }
 body .hextra-search-results mark { color: var(--farm-ink); background: var(--farm-green-soft); }
 .ai-daily-shell { padding-left: 24px; padding-right: 24px; }
 .farm-scene {
-  position: relative; overflow: hidden; height: clamp(156px, 17vw, 230px);
+  position: relative; overflow: hidden; height: clamp(170px, 20vw, 256px);
   max-width: 58rem; margin: 8px auto 0; border: 3px solid #ffffff90; border-bottom: 0;
   border-radius: 28px 28px 0 0; background: var(--farm-sky); pointer-events: none;
 }
@@ -120,7 +122,7 @@ body .ai-daily-masthead__kicker {
 }
 body .ai-daily-masthead__signal { animation: none; border-radius: 50%; background: var(--farm-green); }
 body .ai-daily-masthead h1 {
-  margin: 12px 0 10px; font: 900 clamp(28px, 3.2vw, 42px)/1.3 var(--farm-reading-font);
+  margin: 12px 0 10px; font: 400 clamp(30px, 3.5vw, 46px)/1.3 var(--farm-title-font);
   letter-spacing: .015em; color: var(--farm-ink); text-shadow: 0 2px 0 #c9855725;
 }
 body .ai-daily-masthead__title { color: var(--farm-ink); }
@@ -138,7 +140,7 @@ body .ai-daily-content {
 body .ai-daily-layout .ai-daily-content h2 {
   display: block; margin-top: 32px; padding: 10px 14px; border: 1px solid var(--farm-wood-deep); border-left: 1px solid var(--farm-wood-deep);
   border-radius: 9px 13px 9px 12px; color: #fff6d8 !important; background: linear-gradient(180deg, #986039, #80502e);
-  box-shadow: inset 0 1px #e7b98d, 0 3px 0 #573b2322; font: 800 21px/1.5 var(--farm-reading-font);
+  box-shadow: inset 0 1px #e7b98d, 0 3px 0 #573b2322; font: 400 23px/1.5 var(--farm-title-font);
 }
 body .ai-daily-layout .ai-daily-content > h2:first-of-type { margin-top: 0; padding: 10px 14px; }
 body .ai-daily-layout .ai-daily-content h2::after { content: none; }
@@ -263,3 +265,26 @@ body :is(a, button, input, summary):focus-visible { outline: 3px solid var(--far
   body .ai-daily-masthead, body .ai-daily-content { border: 0; background: #fff; box-shadow: none; }
   body .ai-daily-layout .ai-daily-content :is(h2, h3, p, li, strong) { color: #000 !important; background: transparent; box-shadow: none; }
 }
+.farm-section-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 24px; padding: 8px 0; }
+.farm-section-nav a { display: flex; align-items: center; gap: 8px; min-height: 48px; padding: 8px 14px; border: 2px solid #86602f; border-radius: 12px; background: linear-gradient(#ffdea2, #edbf77); box-shadow: inset 0 2px #fff3c4, 0 3px #9b703b; color: #513620; font: 400 17px/1.4 var(--farm-title-font); text-decoration: none; }
+.farm-section-nav a:hover { background: #fff0bd; transform: translateY(-1px); }
+.farm-section-nav__icon { font: 24px/1 sans-serif; }
+html.dark .farm-section-nav a { color: #fff0cf; background: linear-gradient(#705638,#59442e); border-color: #ac8554; box-shadow: inset 0 2px #b18b5a, 0 3px #30291e; }
+body .farm-brand span { font: 400 21px/1.2 var(--farm-title-font) !important; }
+body .ai-daily-masthead { background-image: radial-gradient(circle at 10px 10px, #ffffff55 0 1px, transparent 2px), linear-gradient(90deg, #c9855709 1px, transparent 1px); background-size: auto, 24px 24px; }
+body .ai-daily-layout .ai-daily-content h2 { scroll-margin-top: 88px; border-width: 3px; background-image: repeating-linear-gradient(0deg, transparent 0 12px, #ffffff06 13px 15px), linear-gradient(#a26d42,#81502f); box-shadow: inset 0 2px #edc093, inset 0 -2px #603b23, 0 4px #573b2328; }
+body .ai-daily-layout .ai-daily-content h3 { border-bottom: 3px solid var(--farm-line); box-shadow: inset 0 1px #ffffff55; }
+@media (max-width: 600px) {
+ .farm-section-nav { gap: 8px; margin-bottom: 18px; }
+ .farm-section-nav a { flex: 1 1 44%; padding: 8px; font-size: 16px; min-width: 0; overflow-wrap: anywhere; }
+ .farm-section-nav__icon { font-size: 21px; flex-shrink: 0; }
+ body .ai-daily-masthead h1 { font-family: var(--farm-title-font); font-weight: 400; }
+ body .ai-daily-layout .ai-daily-content h2 { font: 400 21px/1.6 var(--farm-title-font); }
+ .farm-scene img { object-fit: cover; object-position: 50% 50%; }
+}
+@media (prefers-reduced-motion: reduce) { .farm-section-nav a:hover { transform: none; } }
+@media (max-width: 600px) {
+ .farm-section-nav { flex-wrap: nowrap; overflow-x: auto; max-width: 100%; padding-bottom: 8px; scrollbar-width: thin; scrollbar-color: var(--farm-wood) transparent; }
+ .farm-section-nav a { flex: 0 0 auto; white-space: nowrap; padding: 9px 12px; }
+}
+@media print { .farm-section-nav { display: none; } }

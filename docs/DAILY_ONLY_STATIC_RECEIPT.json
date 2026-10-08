@@ -1,14 +1,25 @@
 {
-  "latest": "2026-10-07",
-  "editions": 4,
-  "searchEntries": 5,
+  "latest": "2026-10-08",
+  "editions": 5,
+  "searchEntries": 6,
   "removedModules": "not published, indexed or linked",
   "images": [
-    "ai-research",
-    "container-photo",
-    "greenhouse-data",
-    "tomato-photo"
+    {
+      "date": "2026-10-08",
+      "id": "garden-soil-photo",
+      "source": "https://content.ces.ncsu.edu/extension-gardener-handbook/1-soils-and-plant-nutrients"
+    },
+    {
+      "date": "2026-10-08",
+      "id": "vegetable-garden-photo",
+      "source": "https://content.ces.ncsu.edu/extension-gardener-handbook/16-vegetable-gardening"
+    },
+    {
+      "date": "2026-10-08",
+      "id": "container-photo",
+      "source": "https://content.ces.ncsu.edu/extension-gardener-handbook/18-plants-grown-in-containers"
+    }
   ],
   "staticSeo": "canonical/article/breadcrumb/sitemap/robots",
-  "checkedAt": "2026-10-07T07:32:02.799Z"
+  "checkedAt": "2026-10-08T06:04:03.560Z"
 }
