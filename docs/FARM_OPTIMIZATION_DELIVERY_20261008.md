@@ -17,7 +17,13 @@
 - 35个公开feed路线均解析，195条候选，40篇可核实原文；仍保留33个启用Folo源及2个补充RSS，并新增明确标为知识的推广资料，不登录抓取私密内容。
 - 144项生成器/原版写作SEO模型测试、13项前端保留状态测试通过；没有配置lint/typecheck，另作Node语法检查。Hugo 0.147.9与静态SEO/搜索/图片检查通过。
 - 独立复核覆盖20条正文加摘要，共21块、104个声明；原文段ID还原后逐字验证。接受稿SHA：`4fa9408aac7ed46dd5406a08da4657924c6ae570098838a95198aacdfe14c914`。
-- 桌面1280、平板768、手机390的真实Chromium日夜/菜单/锚点/搜索/往期/图片/溢出检查与截图见 `FARM-OPTIMIZED-LOCAL_BROWSER_RECEIPT.json`。线上回执与部署回执待实际发布后补记。
+- 桌面1280、平板768、手机390的真实Chromium日夜/菜单/锚点/搜索/往期/图片/溢出检查与截图见 `FARM-OPTIMIZED-LOCAL_BROWSER_RECEIPT.json`；真实域名同样通过，见 `FARM-OPTIMIZED-LIVE_BROWSER_RECEIPT.json`（2026-10-08T06:09:26Z）。照片截图在解码与绘制完成后拍摄，已目视核对手机原图；自然宽度不为零不能单独当作画面验证。
+
+## 实际发布
+
+站点：https://farm.aibioo.cn/ ，日报：https://farm.aibioo.cn/2026-10/2026-10-08/ 。生产产品提交：前端`92c54d223601e47b951eda86f860c05fa607e82c`，生成器`adb1bfafcdf9545e707596f73f4959e50625441b`。
+
+生成器发布 https://github.com/dongyu19920904/QiuQiu-Farm-Daily-Generator/actions/runs/37735757236 成功；前端CI https://github.com/dongyu19920904/QiuQiu-Farm-Daily-Web/actions/runs/37735758275 成功。Pages部署 https://177a662a.qiuqiu-farm-daily.pages.dev ，06:06:29Z通过实际域名SHA检查。本次部署`SKIP accepted 2026-10-08`、`VERIFY accepted`、`LIVE accepted`，没有再次采集/调用模型。当地真实浏览器回归与部署成功分别记录，不以CI代替浏览器。
 
 ## 定时、成本与恢复
 

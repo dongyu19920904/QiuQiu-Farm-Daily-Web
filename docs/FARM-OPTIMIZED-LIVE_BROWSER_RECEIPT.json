@@ -1,6 +1,6 @@
 {
-  "url": "http://127.0.0.1:60156",
-  "testedAt": "2026-10-08T06:11:50.217Z",
+  "url": "https://farm.aibioo.cn",
+  "testedAt": "2026-10-08T06:09:26.133Z",
   "browser": "151.0.7922.34",
   "checks": [
     {
@@ -13,7 +13,7 @@
       "search": "latest and history full text",
       "reading": "home/daily/archive/static",
       "media": "original article photos only; attributed and no broken images",
-      "removedModules": "not published (404)"
+      "removedModules": "redirect to main daily"
     },
     {
       "label": "tablet",
@@ -25,7 +25,7 @@
       "search": "latest and history full text",
       "reading": "home/daily/archive/static",
       "media": "original article photos only; attributed and no broken images",
-      "removedModules": "not published (404)"
+      "removedModules": "redirect to main daily"
     },
     {
       "label": "mobile",
@@ -37,7 +37,7 @@
       "search": "latest and history full text",
       "reading": "home/daily/archive/static",
       "media": "original article photos only; attributed and no broken images",
-      "removedModules": "not published (404)"
+      "removedModules": "redirect to main daily"
     }
   ],
   "pageErrors": []

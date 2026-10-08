@@ -1,3 +1,7 @@
+2026-10-08 优化已上线并实测 https://farm.aibioo.cn/ 。20条独立选读、8栏目（含摘要），11条园艺知识/作者实践/问答、9条农科产业；3张原文章授权照片，旧不对应配图撤下。原创等角菜地/木屋/温室、木牌入口、站酷快乐体标题，正文17px。144生成器+13前端测试、Hugo/SEO及1280/768/390实际域名日夜/搜索/往期/锚点/配图通过，截图见docs/screenshots/farm-optimized-live-*。生产前端92c54d2、生成器adb1bfa；Actions37735757236/37735758275成功，Pages177a662a，SHA4fa9408aac7ed46dd5406a08da4657924c6ae570098838a95198aacdfe14c914。部署SKIP/VERIFY/LIVE通过，不重复调用AI。方案与交付说明 docs/FARM_OPTIMIZATION_PLAN_20261008.md、docs/FARM_OPTIMIZATION_DELIVERY_20261008.md。旧AI/BioAI、DNS、Secrets、Cron、Worker/KV未操作。未来新日期无人值守完整生成仍待观察；本期有编辑校订。
+
+---
+
 2026-10-08 内容与农场视觉优化：docs/FARM_OPTIMIZATION_PLAN_20261008.md 已执行，详情 docs/FARM_OPTIMIZATION_DELIVERY_20261008.md。最新接受稿20条/8栏目（含摘要），3张精确原文章授权照片；SHA 4fa9408aac7ed46dd5406a08da4657924c6ae570098838a95198aacdfe14c914，21块/104声明独立复核通过。144生成器+13前端测试、Hugo/SEO/搜索/图片检查、本地1280/768/390日夜/锚点/菜单/往期回归通过，正文17px。原创等角菜地与站酷快乐体标题/木牌入口已完成；不增游戏业务。两仓库正在推送，真实Pages发布及域名浏览器验收待完成。旧AI/BioAI、DNS、Cron和Secrets不变。新日期无人值守生成仍待观察，本期有编辑校订。
 
 ---
