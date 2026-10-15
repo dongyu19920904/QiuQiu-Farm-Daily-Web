@@ -1,0 +1,589 @@
+{
+  "schemaVersion": 2,
+  "date": "2026-10-15",
+  "url": "/2026-10/2026-10-15/",
+  "articleSha256": "3b6607af8225578ca49000ed47881ff1037aee44ba6ee8100da9d84d7f6cfc07",
+  "topic": "agriculture-and-rural-life",
+  "format": "faithful-original-daily",
+  "generatedAt": "2026-10-15T04:07:15.702Z",
+  "items": [
+    {
+      "title": "芍药越冬靠\"冷够\"不靠保暖",
+      "body": "美国园艺经验：多数芍药品种需要经历冬季低温，才能在春季开花。暖区反而要注意是否积累了足够冷量。芍药越冬养护指南强调，种植深度应随气候带调整。USDA 3至5区的新植株可铺薄层透气覆盖物，6至8区则应避免额外保温。这是美国气候分区下的养护建议，种植条件需要按所在地核对。\n\n---",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "f2d1a6f2db410bee",
+          "name": "Gardeners Path",
+          "url": "https://gardenerspath.com/plants/flowers/winter-care-peony/",
+          "date": "2026-10-12",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "case",
+          "stage": "个人实践与观点",
+          "region": "US; adapt climate, season, indoor/outdoor, light and variety"
+        }
+      ]
+    },
+    {
+      "title": "英国菜园十月：免翻土盖堆肥照收菜",
+      "body": "英国萨默塞特的查尔斯·道丁10月11日记录了免翻土菜园。10月8日收获的番茄、黄瓜来自棚内，芹菜、茴香等来自露地。他用堆肥覆盖配合播种时间，未施化肥。道丁的十月收获记录中，该床5月已施过蘑菇堆肥，收完南瓜后这次只补1厘米自制堆肥。每年施2.5厘米是他的建议，不是硬性规定，更少用量也有可能。\n\n---",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "4b8e3b8dad108e40",
+          "name": "Charles Dowding · Homeacres",
+          "url": "https://charlesdowding.co.uk/blogs/homeacres/october-harvests",
+          "date": "2026-10-11",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "case",
+          "stage": "个人实践与观点",
+          "region": "Somerset, UK"
+        }
+      ]
+    },
+    {
+      "title": "种蒜前先算用量，别让菜畦种到一半断货",
+      "body": "美国Garden Betty的种蒜计算器，按菜畦尺寸、株距和蒜类型估算用量。输入采用英尺、英寸，重量结果是磅，不是斤。先核对工具的输入单位，再用自家菜畦数据试算。作者通常预留约10%的备用蒜瓣，给偏小或分瓣时受损的蒜瓣留余地。不同品种与商家规格会影响估算，买前还应看种蒜说明。\n\n---",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "25c623a7d081ec50",
+          "name": "Garden Betty · Linda Ly",
+          "url": "https://gardenbetty.com/garlic-planting-calculator/",
+          "date": "2026-10-11",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "case",
+          "stage": "个人实践与观点",
+          "region": "US; adapt to local climate, light and variety; adapt climate, season, indoor/outdoor, light and variety"
+        }
+      ]
+    },
+    {
+      "title": "香蕉怕冷，三种方法帮它安全过冬",
+      "body": "香蕉并非树木，而是巨型草本植物。它的\"树干\"是叶片层层卷成的假茎。叶子在55°F停止生长，32°F受冻害，地下茎在持续22°F低温下会死亡。Gardeners Path园艺指南介绍三种越冬方式：盆栽可搬入室内阳光充足处。保持土壤湿润但不积水；或修剪至约六英寸高后置于40–50°F阴暗处休眠。地栽植株可堆至少一英尺厚覆盖物保护根茎。也可挖出根茎存放于45–50°F处越冬。耐寒品种芭蕉（M. basjoo）可耐零下低温。\n\n---",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "62346de050e1db13",
+          "name": "Gardeners Path",
+          "url": "https://gardenerspath.com/plants/fruit-trees/overwinter-banana-plants/",
+          "date": "2026-10-11",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "case",
+          "stage": "个人实践与观点",
+          "region": "US; adapt climate, season, indoor/outdoor, light and variety"
+        }
+      ]
+    },
+    {
+      "title": "秋天室外仍可播种耐寒沙拉叶菜",
+      "body": "这是英国萨默塞特作者10月1日的秋季菜园记录，播种窗口与当地气候有关。charlesdowding.co.uk园艺博客提到。当地室外尚可播种lambs lettuce和claytonia。蚕豆他会等到十月底或十一月初，较寒冷气候可提前。当时跳甲仍在为害，他继续浇水帮助植株积累力量、抵抗虫害。他明确说浇水不能阻止跳甲，不把它当作治虫办法。\n\n---",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "c88829c62729a876",
+          "name": "Charles Dowding",
+          "url": "https://charlesdowding.co.uk/blogs/homeacres/autumns-no-dig-potential",
+          "date": "2026-10-01",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "case",
+          "stage": "个人实践与观点",
+          "region": "Somerset, UK"
+        }
+      ]
+    },
+    {
+      "title": "多伦多初创公司融资580万美元，研发可\"升级\"精准生物农药",
+      "body": "多伦多初创公司Molagri完成种前轮与种子轮共580万美元融资，开发基于病毒样颗粒的精准生物农药平台。技术原理是颗粒被害虫摄入后，利用受体差异进入害虫细胞，递送mRNA指令，由害虫自身细胞产生毒素。公司称蜜蜂等有益昆虫因缺乏相应受体不受影响，但靶向选择性尚未在商业田间条件下得到验证。初期目标害虫包括杏仁、开心果的脐橙虫及苹果的苹果蠹蛾。平台设计支持随抗药性演化调整配方，但商业表现、制造成本与田间效果均有待验证。AgFunderNews农业科技报道\n\n---",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "9254386c98900e7f",
+          "name": "AgFunderNews",
+          "url": "https://agfundernews.com/molagri-raises-5-8m-to-build-updatable-biopesticides",
+          "date": "2026-10-14",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "international"
+        }
+      ]
+    },
+    {
+      "title": "农业机器人赛道洗牌加速，新面孔占三成六",
+      "body": "农业机器人市场在洗牌。The Mixing Bowl两年一度的报告收录400家公司，比2024年多25%，其中36%是新面孔。另有20%的公司在两年间退出市场。农业机器人市场调查报道引用Michael Rose的观察：拖拉机与联合收割机上的导航、自动驾驶已有广泛采用。他认为风投退潮可反映行业成熟，未来更可能是人机协作，这是分析者判断。\n\n---",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "668df87b7dbe1774",
+          "name": "AgNavigator",
+          "url": "https://www.agnavigator.com/Article/2026/10/14/crop-robotics-landscape-inside-the-key-market-players-innovation-trends/",
+          "date": "2026-10-14",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "international"
+        }
+      ]
+    },
+    {
+      "title": "耐盐小麦融资五百万欧元，计划明年上市",
+      "body": "耐盐小麦要来了。瑞典OlsAro拿500万欧元种子轮，公司称目标2027年商业化。其AI平台正拓展抗旱耐热和氮肥效率方向。据追踪种子轮融资动态，水稻是下一个目标。目前还在田间试验阶段，没到农民手里。\n\n---",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "6e06aecda0105b4d",
+          "name": "AgNavigator",
+          "url": "https://www.agnavigator.com/Article/2026/10/14/olsaro-raises-5m-to-commercialise-salt-tolerant-wheat-as-it-expands-into-drought-and-nitrogen-efficiency-traits/",
+          "date": "2026-10-14",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "农业AI",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "international"
+        }
+      ]
+    },
+    {
+      "title": "农场用工软件被私募收购，创始人是种蓝莓的",
+      "body": "农场用工有了新金主。私募拿下PickTrace控股权，金额未披露。这软件管工人入职、考勤、工资和合规，专做特种作物。据iGrowNews私募收购报道，创始人兄弟在南加州种蓝莓、牛油果和柑橘的家族农场长大。公司称要加速产品开发，做成特种农业的中央系统。\n\n---",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "8935cb7e62938ca0",
+          "name": "iGrow News",
+          "url": "https://igrownews.com/picktrace-latest-news/",
+          "date": "2026-10-15",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "international"
+        }
+      ]
+    },
+    {
+      "title": "十月冬前整备：病虫害、农机、土壤逐项过关",
+      "body": "冬天不是虫害的终点，而是压缩来年虫口密度的窗口期。2026年日本多地遭遇持续强降雨，千叶、茨城等地仍有雨害未消，许多农户这季收尾和下季备耕都压在一起。日本农业IT媒体Smart Agri报道 农机检查不能只看\"能启动\"。播种施肥装置的实际出量是否符合设定同样要验证，春季开耕才发现偏差就错过农时了。大棚土壤因雨水少，盐分易积累，EC偏高不等于氮素充足，需结合pH和硝酸态氮一并核查。才能做到缺什么补什么，而不是年年照方抓药。",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "ee17783f820b83f7",
+          "name": "SMART AGRI",
+          "url": "https://smartagri-jp.com/management/15474",
+          "date": "2026-10-15",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "Japan"
+        }
+      ]
+    },
+    {
+      "title": "佛罗里达研究：花园能缓解日常暴雨积水压力",
+      "body": "佛罗里达研究发现，土壤状况决定花园能否有效减少径流。板结土壤阻碍渗水，而富含有机质的土壤能吸收更多雨水；树冠缓冲雨滴、根系稳固土层，也有助于减少水土流失。最实用的做法是建雨水花园：挖浅盆地，将屋顶和车道径流引入，让水慢慢渗透而非流入街道。美国佛罗里达大学农技推广站知识指出，雨水花园吸水能力显著强于普通草坪，且养护比排水设施简单。强台风或热带风暴来临时，任何花园都无法完全防洪，但日常暴雨压力可以明显缓解。\n\n---",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "0653b31cd531ff02",
+          "name": "UF IFAS",
+          "url": "https://blogs.ifas.ufl.edu/lakeco/2026/10/09/research-shows-that-gardens-can-play-an-important-role-in-reducing-stormwater-runoff/",
+          "date": null,
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "knowledge",
+          "stage": "种植资料",
+          "region": "Florida, US; adapt climate, season, indoor/outdoor, light and variety"
+        }
+      ]
+    },
+    {
+      "title": "泥炭土好用，但代价很重",
+      "body": "泥炭保水透气确实好用，却是全球最被低估的碳储库。泥炭地只占陆地面积3%，却储存了地球约44%的土壤碳——比所有森林加起来还多。每挖一把泥炭，就相当于把沉睡千年的碳暴露在空气里，迅速分解成二氧化碳和甲烷。泥炭积累极慢，大约每年只长一毫米，所谓\"可持续采收\"很多科学家并不认可。佛罗里达大学推广服务建议改用椰壳纤维、堆肥树皮或木纤维替代。园丁的选择对保护泥炭地生态系统影响不小。",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "6934269cfad3871c",
+          "name": "UF IFAS",
+          "url": "https://blogs.ifas.ufl.edu/lakeco/2026/10/11/environmental-cost-of-peat-far-outweighs-its-gardening-benefits/",
+          "date": null,
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "knowledge",
+          "stage": "种植资料",
+          "region": "Florida, US; adapt climate, season, indoor/outdoor, light and variety"
+        }
+      ]
+    },
+    {
+      "title": "奶油生菜从播种到留种全攻略",
+      "body": "北美博主10月14日更新的指南介绍了Buttercrunch，一种叶片厚实甜嫩的奶油生菜。这是凉季蔬菜，可种在地床或容器里。北美菜园主的种植记录提到，夏季要注意午后遮阴，冬季可借冷框或温室延长收获。保持土壤轻微湿润，干旱胁迫会让叶片变苦并促使抽薹。这是开放授粉品种，留种要让植株开花，等蒲公英状种头干燥后再收集。\n\n---",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "d409ff66abd84baf",
+          "name": "Savvy Gardening",
+          "url": "https://savvygardening.com/buttercrunch-lettuce/",
+          "date": "2026-10-14",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "case",
+          "stage": "个人实践与观点",
+          "region": "North America; adapt to local climate, light and variety; adapt climate, season, indoor/outdoor, light and variety"
+        }
+      ]
+    },
+    {
+      "title": "生菜遇霜冻还能撑多久",
+      "body": "耐寒性因品种而异，叶生菜通常比奶油生菜或脆叶结球类型更耐寒。这份美国生菜防霜养护指南建议，让植株逐步适应降温，别期待夏季高温或冬季严寒里照常生长。播种前先看种子包装上的成熟天数，给成熟与适应低温留足时间。适当的防霜覆盖有助于延长收获期，但持续严寒仍会让覆盖下的生菜死亡。",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "c83d081d35446e7c",
+          "name": "Gardeners Path",
+          "url": "https://gardenerspath.com/plants/vegetables/lettuce-frost-protection/",
+          "date": "2026-10-13",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "case",
+          "stage": "个人实践与观点",
+          "region": "US; adapt climate, season, indoor/outdoor, light and variety"
+        }
+      ]
+    },
+    {
+      "title": "AI作物传感器随Valtra拖拉机出厂预装，欧洲部分市场开售",
+      "body": "丹麦PerPlant与Valtra Unlimited合作，作物AI传感器可随新拖拉机出厂预装。10月随Valtra第六代T系列在部分欧洲市场销售，其他市场需另行申请。传感器合作发布报道介绍，车顶双摄像头扫描作物，可生成杂草地图。支持肥料、杀菌剂和生长调节剂的可变施用，适用于配套农机具。减少投入品的效果是公司自述，不能当作独立田间验证。",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "60c3c739ced97ebd",
+          "name": "AgFunderNews",
+          "url": "https://agfundernews.com/perplant-lands-valtra-deal-to-put-its-ai-crop-sensor-on-tractors-straight-from-the-factory",
+          "date": "2026-10-14",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "农业AI",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "international"
+        }
+      ]
+    },
+    {
+      "title": "本科生研究草莓抗病育种获NAPB博劳格学者称号",
+      "body": "草莓抗病育种迎来年轻研究者。肯塔基大学学生 Ella Shields 被 NAPB 评为2026年博劳格学者。HortiDaily草莓育种报道她主攻草莓对新拟盘多毛孢菌的抗性研究，这种病害会侵染草莓多个部位。导师 Sapkota 表示，她已成长为越来越独立的研究者，能独立开展实验并协助培训其他本科生。夏季项目聚焦离体叶片接种实验，筛选抗性遗传材料。Shields 毕业后将在肯塔基大学攻读硕士，继续推进草莓全株田间试验。",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "0f456ee431cdd785",
+          "name": "Hortidaily",
+          "url": "https://www.hortidaily.com/article/9882940/university-of-kentucky-student-gains-recognition-experience-as-plant-breeding-independent-researcher/",
+          "date": "2026-10-14",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "international"
+        }
+      ]
+    },
+    {
+      "title": "IsDB与IFAD联手调动7.5亿美元投资农村",
+      "body": "伊斯兰开发银行（IsDB）与国际农业发展基金（IFAD）新签合作协议，目标共同撬动最高7.5亿美元联合融资。农业投资机构合作协议报道双方将推进农业价值链、市场准入、乡村金融和气候适应等领域合作。协议还为扩大私营部门业务铺路，支持农业企业与农村中小企业发展。自1980年起，两机构已联合融资29个项目，总额约14.5亿美元。新目标体现规模跃升，但仍属计划融资，尚需转化为具体投资项目。\n\n---",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "b02fc28ddae4af83",
+          "name": "Farmers Review Africa",
+          "url": "https://farmersreviewafrica.com/isdb-and-ifad-scale-up-partnership-to-mobilize-us750-million-for-food-systems-and-rural-transformation/",
+          "date": "2026-10-14",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "Africa"
+        }
+      ]
+    },
+    {
+      "title": "肯尼亚与联合国粮农组织深化土壤健康合作",
+      "body": "土壤数据驱动决策是此次合作核心。肯尼亚农业与畜牧业发展部长穆塔希·卡格韦与粮农组织副总干事贝斯·贝赫多尔在罗马会面。重点讨论精准农业和土壤智能技术粮农组织罗马会议报道。双方计划强化KIAMIS农业管理信息系统，并组建土壤健康推广员团队带动农民优先关注土壤状况。合作还包括培训更多土壤科学家，属于能力建设计划。",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "3b13795728bd9384",
+          "name": "Farmers Review Africa",
+          "url": "https://farmersreviewafrica.com/kenya-fao-to-deepen-collaboration-on-soil-health-to-boost-agricultural-productivity/",
+          "date": "2026-10-14",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "Africa"
+        }
+      ]
+    },
+    {
+      "title": "堆肥到底能改善土壤保水力吗？",
+      "body": "能改善，但需要先测试才知道改善了多少。佛罗里达州一项种植知识项目发现，土壤保水能力（WHC）在施用堆肥后普遍提升。旱期土壤能留住水分更久UF/IFAS堆肥最佳管理实践项目报告。研究者还用显微镜拍下了土壤中的丛枝菌根真菌，这些肉眼看不到的菌丝正是土壤健康的指示物。项目为参与农户免费检测有机质、容重和土壤蛋白等指标，结果显示数据能帮助农户调整堆肥用量计划。此类检测目前面向佛州商业种植者，家庭菜园规模暂不在该项目范围内。",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "97134829c9669ce0",
+          "name": "UF IFAS",
+          "url": "https://blogs.ifas.ufl.edu/martinco/2026/10/13/compost-on-the-farm-expanding-growers-use-of-composting-best-practices/",
+          "date": null,
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "knowledge",
+          "stage": "种植资料",
+          "region": "Florida, US; adapt climate, season, indoor/outdoor, light and variety"
+        }
+      ]
+    },
+    {
+      "title": "今日摘要（事实核对）",
+      "body": "选读：芍药越冬靠\"冷够\"不靠保暖。\n选读：多伦多初创公司融资580万美元，研发可\"升级\"精准生物农药。\n选读：奶油生菜从播种到留种全攻略。",
+      "aiRole": "阅读本期的报道、实践及适用条件。",
+      "limitations": "原始发布时间和地区以来源及正文为准；企业效果与个人经验不等于独立验证。",
+      "source": [
+        {
+          "id": "f2d1a6f2db410bee",
+          "name": "Gardeners Path",
+          "url": "https://gardenerspath.com/plants/flowers/winter-care-peony/",
+          "date": "2026-10-12",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "case",
+          "stage": "个人实践与观点",
+          "region": "US; adapt climate, season, indoor/outdoor, light and variety"
+        },
+        {
+          "id": "4b8e3b8dad108e40",
+          "name": "Charles Dowding · Homeacres",
+          "url": "https://charlesdowding.co.uk/blogs/homeacres/october-harvests",
+          "date": "2026-10-11",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "case",
+          "stage": "个人实践与观点",
+          "region": "Somerset, UK"
+        },
+        {
+          "id": "25c623a7d081ec50",
+          "name": "Garden Betty · Linda Ly",
+          "url": "https://gardenbetty.com/garlic-planting-calculator/",
+          "date": "2026-10-11",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "case",
+          "stage": "个人实践与观点",
+          "region": "US; adapt to local climate, light and variety; adapt climate, season, indoor/outdoor, light and variety"
+        },
+        {
+          "id": "62346de050e1db13",
+          "name": "Gardeners Path",
+          "url": "https://gardenerspath.com/plants/fruit-trees/overwinter-banana-plants/",
+          "date": "2026-10-11",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "case",
+          "stage": "个人实践与观点",
+          "region": "US; adapt climate, season, indoor/outdoor, light and variety"
+        },
+        {
+          "id": "c88829c62729a876",
+          "name": "Charles Dowding",
+          "url": "https://charlesdowding.co.uk/blogs/homeacres/autumns-no-dig-potential",
+          "date": "2026-10-01",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "case",
+          "stage": "个人实践与观点",
+          "region": "Somerset, UK"
+        },
+        {
+          "id": "9254386c98900e7f",
+          "name": "AgFunderNews",
+          "url": "https://agfundernews.com/molagri-raises-5-8m-to-build-updatable-biopesticides",
+          "date": "2026-10-14",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "international"
+        },
+        {
+          "id": "668df87b7dbe1774",
+          "name": "AgNavigator",
+          "url": "https://www.agnavigator.com/Article/2026/10/14/crop-robotics-landscape-inside-the-key-market-players-innovation-trends/",
+          "date": "2026-10-14",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "international"
+        },
+        {
+          "id": "6e06aecda0105b4d",
+          "name": "AgNavigator",
+          "url": "https://www.agnavigator.com/Article/2026/10/14/olsaro-raises-5m-to-commercialise-salt-tolerant-wheat-as-it-expands-into-drought-and-nitrogen-efficiency-traits/",
+          "date": "2026-10-14",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "international"
+        },
+        {
+          "id": "8935cb7e62938ca0",
+          "name": "iGrow News",
+          "url": "https://igrownews.com/picktrace-latest-news/",
+          "date": "2026-10-15",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "international"
+        },
+        {
+          "id": "ee17783f820b83f7",
+          "name": "SMART AGRI",
+          "url": "https://smartagri-jp.com/management/15474",
+          "date": "2026-10-15",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "Japan"
+        },
+        {
+          "id": "0653b31cd531ff02",
+          "name": "UF IFAS",
+          "url": "https://blogs.ifas.ufl.edu/lakeco/2026/10/09/research-shows-that-gardens-can-play-an-important-role-in-reducing-stormwater-runoff/",
+          "date": null,
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "knowledge",
+          "stage": "种植资料",
+          "region": "Florida, US; adapt climate, season, indoor/outdoor, light and variety"
+        },
+        {
+          "id": "6934269cfad3871c",
+          "name": "UF IFAS",
+          "url": "https://blogs.ifas.ufl.edu/lakeco/2026/10/11/environmental-cost-of-peat-far-outweighs-its-gardening-benefits/",
+          "date": null,
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "knowledge",
+          "stage": "种植资料",
+          "region": "Florida, US; adapt climate, season, indoor/outdoor, light and variety"
+        },
+        {
+          "id": "d409ff66abd84baf",
+          "name": "Savvy Gardening",
+          "url": "https://savvygardening.com/buttercrunch-lettuce/",
+          "date": "2026-10-14",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "case",
+          "stage": "个人实践与观点",
+          "region": "North America; adapt to local climate, light and variety; adapt climate, season, indoor/outdoor, light and variety"
+        },
+        {
+          "id": "c83d081d35446e7c",
+          "name": "Gardeners Path",
+          "url": "https://gardenerspath.com/plants/vegetables/lettuce-frost-protection/",
+          "date": "2026-10-13",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "case",
+          "stage": "个人实践与观点",
+          "region": "US; adapt climate, season, indoor/outdoor, light and variety"
+        },
+        {
+          "id": "60c3c739ced97ebd",
+          "name": "AgFunderNews",
+          "url": "https://agfundernews.com/perplant-lands-valtra-deal-to-put-its-ai-crop-sensor-on-tractors-straight-from-the-factory",
+          "date": "2026-10-14",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "international"
+        },
+        {
+          "id": "0f456ee431cdd785",
+          "name": "Hortidaily",
+          "url": "https://www.hortidaily.com/article/9882940/university-of-kentucky-student-gains-recognition-experience-as-plant-breeding-independent-researcher/",
+          "date": "2026-10-14",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "international"
+        },
+        {
+          "id": "b02fc28ddae4af83",
+          "name": "Farmers Review Africa",
+          "url": "https://farmersreviewafrica.com/isdb-and-ifad-scale-up-partnership-to-mobilize-us750-million-for-food-systems-and-rural-transformation/",
+          "date": "2026-10-14",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "Africa"
+        },
+        {
+          "id": "3b13795728bd9384",
+          "name": "Farmers Review Africa",
+          "url": "https://farmersreviewafrica.com/kenya-fao-to-deepen-collaboration-on-soil-health-to-boost-agricultural-productivity/",
+          "date": "2026-10-14",
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "news",
+          "stage": "近期报道",
+          "region": "Africa"
+        },
+        {
+          "id": "97134829c9669ce0",
+          "name": "UF IFAS",
+          "url": "https://blogs.ifas.ufl.edu/martinco/2026/10/13/compost-on-the-farm-expanding-growers-use-of-composting-best-practices/",
+          "date": null,
+          "checkedAt": "2026-10-15T02:48:19.651Z",
+          "topic": "种菜与田园",
+          "kind": "knowledge",
+          "stage": "种植资料",
+          "region": "Florida, US; adapt climate, season, indoor/outdoor, light and variety"
+        }
+      ]
+    }
+  ]
+}
