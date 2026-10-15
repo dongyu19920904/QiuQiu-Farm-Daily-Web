@@ -11,6 +11,7 @@ try{
  await page.goto(`${base}/${date.slice(0,7)}/${date}/`,{waitUntil:'networkidle'});
  assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'),`${base}/${date.slice(0,7)}/${date}/`);
  const schemas=await page.locator('script[type="application/ld+json"]').allTextContents();
+ for(const schema of schemas)JSON.parse(schema);
  assert(schemas.some(s=>s.includes('BreadcrumbList')));
  assert(schemas.some(s=>/BlogPosting|TechArticle|"Article"/.test(s)&&s.includes(date)));
  await page.goto(base+'/search/',{waitUntil:'networkidle'});
